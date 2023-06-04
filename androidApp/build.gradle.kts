@@ -5,34 +5,43 @@ plugins {
 
 android {
     namespace = "com.tweener.kmmtemplate.android"
-    compileSdk = 33
+    compileSdk = Dependencies.Versions.Tropse.Android.compileSDK
+
     defaultConfig {
-        applicationId = "com.tweener.kmmtemplate.android"
-        minSdk = 24
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Dependencies.Versions.Tropse.packageName + ".android"
+        minSdk = Dependencies.Versions.Tropse.Android.minSDK
+        targetSdk = Dependencies.Versions.Tropse.Android.targetSDK
+        versionCode = Dependencies.Versions.Tropse.Android.versionCode
+        versionName = Dependencies.Versions.Tropse.versionName
     }
+
     buildFeatures {
         compose = true
+        buildConfig = true
     }
+
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.7"
     }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+        isCoreLibraryDesugaringEnabled = true
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -40,10 +49,33 @@ android {
 
 dependencies {
     implementation(project(":shared"))
-    implementation("androidx.compose.ui:ui:1.4.3")
-    implementation("androidx.compose.ui:ui-tooling:1.4.3")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
-    implementation("androidx.compose.foundation:foundation:1.4.3")
-    implementation("androidx.compose.material:material:1.4.3")
-    implementation("androidx.activity:activity-compose:1.7.1")
+
+    coreLibraryDesugaring(Dependencies.Libraries.Android.desugarJdkLibs)
+
+    // Compose
+    implementation(Dependencies.Libraries.Android.AndroidX.Compose.ui)
+    implementation(Dependencies.Libraries.Android.AndroidX.Compose.uiTooling)
+    implementation(Dependencies.Libraries.Android.AndroidX.Compose.uiToolingPreview)
+    implementation(Dependencies.Libraries.Android.AndroidX.Compose.foundation)
+    implementation(Dependencies.Libraries.Android.AndroidX.Compose.material)
+    implementation(Dependencies.Libraries.Android.AndroidX.Compose.materialIconsCore)
+    implementation(Dependencies.Libraries.Android.AndroidX.Compose.materialIconsExtended)
+    implementation(Dependencies.Libraries.Android.AndroidX.Compose.activity)
+    implementation(Dependencies.Libraries.Android.AndroidX.Compose.navigation)
+    implementation(Dependencies.Libraries.Android.AndroidX.Compose.lifecycleRuntime)
+
+    // Coroutines
+    implementation(Dependencies.Libraries.Coroutines.core)
+    implementation(Dependencies.Libraries.Coroutines.android)
+
+    // DI
+    implementation(Dependencies.Libraries.Kodein.viewModel)
+    implementation(Dependencies.Libraries.Kodein.compose)
+
+    // Napier
+    implementation(Dependencies.Libraries.napier)
+
+    // Image fetcher
+    implementation(Dependencies.Libraries.Android.glide)
+    implementation(Dependencies.Libraries.Android.glidePlaceholder)
 }

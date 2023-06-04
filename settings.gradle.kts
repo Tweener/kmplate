@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "KMMTemplate"
+rootProject.name = "My project name"
 include(":androidApp")
 include(":shared")
