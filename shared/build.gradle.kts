@@ -39,7 +39,8 @@ kotlin {
         framework {
             baseName = "shared"
 
-            // Add here any extra framework dependencies, ie.: export(project(":shared:data"))
+            // Add here any extra framework dependencies
+            export(project(":shared:data"))
         }
     }
 
@@ -48,7 +49,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                //put your multiplatform dependencies here
+                api(project(":shared:data"))
             }
         }
         val commonTest by getting {
