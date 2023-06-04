@@ -5,14 +5,14 @@ plugins {
 
 android {
     namespace = "com.tweener.kmmtemplate.android"
-    compileSdk = Dependencies.Versions.Tropse.Android.compileSDK
+    compileSdk = Dependencies.Versions.MyProject.Android.compileSDK
 
     defaultConfig {
-        applicationId = Dependencies.Versions.Tropse.packageName + ".android"
-        minSdk = Dependencies.Versions.Tropse.Android.minSDK
-        targetSdk = Dependencies.Versions.Tropse.Android.targetSDK
-        versionCode = Dependencies.Versions.Tropse.Android.versionCode
-        versionName = Dependencies.Versions.Tropse.versionName
+        applicationId = Dependencies.Versions.MyProject.packageName + ".android"
+        minSdk = Dependencies.Versions.MyProject.Android.minSDK
+        targetSdk = Dependencies.Versions.MyProject.Android.targetSDK
+        versionCode = Dependencies.Versions.MyProject.Android.versionCode
+        versionName = Dependencies.Versions.MyProject.versionName
     }
 
     buildFeatures {
@@ -21,7 +21,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.7"
+        kotlinCompilerExtensionVersion = Dependencies.Versions.Android.composeCompilerExtension
     }
 
     packaging {
@@ -39,11 +39,12 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+
         isCoreLibraryDesugaringEnabled = true
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = Dependencies.Versions.jvmTarget
     }
 }
 

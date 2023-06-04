@@ -13,7 +13,7 @@ kotlin {
     android {
         compilations.all {
             kotlinOptions {
-                jvmTarget = "1.8"
+                jvmTarget = Dependencies.Versions.jvmTarget
             }
         }
     }
@@ -34,7 +34,7 @@ kotlin {
         homepage = "Link to the Shared Module homepage"
         version = "1.0"
 
-        ios.deploymentTarget = Dependencies.Versions.Tropse.IOS.deploymentTarget
+        ios.deploymentTarget = Dependencies.Versions.MyProject.IOS.deploymentTarget
         podfile = project.file("../iosApp/Podfile")
         framework {
             baseName = "shared"
@@ -60,10 +60,10 @@ kotlin {
 }
 
 android {
-    namespace = Dependencies.Versions.Tropse.packageName
-    compileSdk = Dependencies.Versions.Tropse.Android.compileSDK
+    namespace = Dependencies.Versions.MyProject.packageName
+    compileSdk = Dependencies.Versions.MyProject.Android.compileSDK
 
     defaultConfig {
-        minSdk = Dependencies.Versions.Tropse.Android.minSDK
+        minSdk = Dependencies.Versions.MyProject.Android.minSDK
     }
 }

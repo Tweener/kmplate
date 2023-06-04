@@ -7,7 +7,7 @@ object Dependencies {
 
     object Versions {
 
-        object Tropse {
+        object MyProject {
             const val packageName = "com.tweener.changehere"
             const val versionName = "1.0"
 
@@ -23,6 +23,7 @@ object Dependencies {
             }
         }
 
+        const val jvmTarget = "1.8"
         const val kotlin = "1.8.21"
         const val gradle = "8.0.2"
         const val coroutines = "1.6.3-native-mt"
@@ -32,6 +33,7 @@ object Dependencies {
         const val kotlinxDatetime = "0.4.0"
 
         object Android {
+            const val composeCompilerExtension = "1.4.7"
             const val compose = "1.4.3"
             const val activityCompose = "1.7.2"
             const val navigationCompose = "2.5.3"
