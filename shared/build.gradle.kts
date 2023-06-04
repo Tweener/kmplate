@@ -60,7 +60,7 @@ kotlin {
 }
 
 android {
-    namespace = Dependencies.Versions.MyProject.packageName
+    namespace = Dependencies.Versions.MyProject.Android.namespace
     compileSdk = Dependencies.Versions.MyProject.Android.compileSDK
 
     defaultConfig {

@@ -12,6 +12,8 @@ object Dependencies {
             const val versionName = "1.0"
 
             object Android {
+                const val applicationId = MyProject.packageName
+                const val namespace = MyProject.packageName + ".android"
                 const val compileSDK = 33
                 const val targetSDK = compileSDK
                 const val minSDK = 24

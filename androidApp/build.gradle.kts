@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.tweener.kmmtemplate.android"
+    namespace = Dependencies.Versions.MyProject.Android.namespace
     compileSdk = Dependencies.Versions.MyProject.Android.compileSDK
 
     defaultConfig {
-        applicationId = Dependencies.Versions.MyProject.packageName + ".android"
+        applicationId = Dependencies.Versions.MyProject.Android.applicationId
         minSdk = Dependencies.Versions.MyProject.Android.minSDK
         targetSdk = Dependencies.Versions.MyProject.Android.targetSDK
         versionCode = Dependencies.Versions.MyProject.Android.versionCode
