@@ -7,8 +7,9 @@ object Dependencies {
 
     object Versions {
 
+        // TODO Rename MyProject to your project name
         object MyProject {
-            const val packageName = "com.tweener.changehere"
+            const val packageName = "com.tweener.changehere" // TODO Change this
             const val versionName = "1.0"
 
             object Android {

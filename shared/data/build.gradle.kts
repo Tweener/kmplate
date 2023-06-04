@@ -22,7 +22,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-//                implementation(project(":shared:domain"))
+                implementation(project(":shared:domain"))
 
                 // Kotlin
                 implementation(Dependencies.Libraries.Coroutines.core)

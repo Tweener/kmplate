@@ -19,3 +19,4 @@ rootProject.name = "My project name"
 include(":androidApp")
 include(":shared")
 include(":shared:data")
+include(":shared:domain")

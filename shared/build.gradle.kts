@@ -41,6 +41,7 @@ kotlin {
 
             // Add here any extra framework dependencies
             export(project(":shared:data"))
+            export(project(":shared:domain"))
         }
     }
 
@@ -50,6 +51,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 api(project(":shared:data"))
+                api(project(":shared:domain"))
             }
         }
         val commonTest by getting {
