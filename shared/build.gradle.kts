@@ -11,6 +11,11 @@ android {
     defaultConfig {
         minSdk = Dependencies.Versions.MyProject.Android.minSDK
     }
+
+    compileOptions {
+        sourceCompatibility = Dependencies.Versions.Compiler.javaCompatibility
+        targetCompatibility = Dependencies.Versions.Compiler.javaCompatibility
+    }
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)

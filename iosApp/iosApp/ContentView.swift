@@ -2,10 +2,10 @@ import SwiftUI
 import shared
 
 struct ContentView: View {
-	let greet = Greeting().greet()
+    private var greeting = Dependency.shared.resolver.resolve(Greeting.self)!
 
 	var body: some View {
-		Text(greet)
+        Text(greeting.greet())
 	}
 }
 
