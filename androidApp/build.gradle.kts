@@ -37,19 +37,21 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = Dependencies.Versions.Compiler.javaCompatibility
+        targetCompatibility = Dependencies.Versions.Compiler.javaCompatibility
 
         isCoreLibraryDesugaringEnabled = true
     }
 
     kotlinOptions {
-        jvmTarget = Dependencies.Versions.jvmTarget
+        jvmTarget = Dependencies.Versions.Compiler.jvmTarget
     }
 }
 
 dependencies {
     implementation(project(":shared"))
+    implementation(project(":shared:domain"))
+    implementation(project(":shared:data"))
 
     coreLibraryDesugaring(Dependencies.Libraries.Android.desugarJdkLibs)
 

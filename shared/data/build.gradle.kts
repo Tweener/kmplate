@@ -4,11 +4,16 @@ plugins {
 }
 
 android {
-    namespace = Dependencies.Versions.MyProject.Android.namespace
+    namespace = Dependencies.Versions.MyProject.packageName + ".data"
     compileSdk = Dependencies.Versions.MyProject.Android.compileSDK
 
     defaultConfig {
         minSdk = Dependencies.Versions.MyProject.Android.minSDK
+    }
+
+    compileOptions {
+        sourceCompatibility = Dependencies.Versions.Compiler.javaCompatibility
+        targetCompatibility = Dependencies.Versions.Compiler.javaCompatibility
     }
 }
 
@@ -65,14 +70,24 @@ kotlin {
         val iosArm64Main by getting
         val iosSimulatorArm64Main by getting
         val iosMain by creating {
+            dependsOn(commonMain)
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
 
             dependencies {
                 // Ktor
-//                implementation(Dependencies.Libraries.Ktor.Client.iOS.client)
+                implementation(Dependencies.Libraries.Ktor.Client.iOS.client)
             }
+        }
+        val iosX64Test by getting
+        val iosArm64Test by getting
+        val iosSimulatorArm64Test by getting
+        val iosTest by creating {
+            dependsOn(commonTest)
+            iosX64Test.dependsOn(this)
+            iosArm64Test.dependsOn(this)
+            iosSimulatorArm64Test.dependsOn(this)
         }
     }
 }

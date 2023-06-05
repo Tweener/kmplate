@@ -1,3 +1,5 @@
+import org.gradle.api.JavaVersion
+
 /**
  * @author Vivien Mahe
  * @since 23/07/2022
@@ -26,7 +28,12 @@ object Dependencies {
             }
         }
 
-        const val jvmTarget = "1.8"
+        object Compiler {
+            const val jvmTarget = "17"
+            val javaCompatibility = JavaVersion.VERSION_17
+        }
+
+        const val jvmTarget = "17"
         const val kotlin = "1.8.21"
         const val gradle = "8.0.2"
         const val coroutines = "1.6.3-native-mt"

@@ -15,7 +15,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My project name"
+rootProject.name = "MyProjectName"
 include(":androidApp")
 include(":shared")
 include(":shared:data")

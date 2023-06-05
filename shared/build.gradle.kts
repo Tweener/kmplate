@@ -4,21 +4,18 @@ plugins {
     id("com.android.library")
 }
 
+android {
+    namespace = Dependencies.Versions.MyProject.packageName
+    compileSdk = Dependencies.Versions.MyProject.Android.compileSDK
+
+    defaultConfig {
+        minSdk = Dependencies.Versions.MyProject.Android.minSDK
+    }
+}
+
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
     targetHierarchy.default()
-
-    // region Android configuration
-
-    android {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = Dependencies.Versions.jvmTarget
-            }
-        }
-    }
-
-    // endregion Android configuration
 
     // region iOS configuration
 
@@ -59,14 +56,5 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
-    }
-}
-
-android {
-    namespace = Dependencies.Versions.MyProject.Android.namespace
-    compileSdk = Dependencies.Versions.MyProject.Android.compileSDK
-
-    defaultConfig {
-        minSdk = Dependencies.Versions.MyProject.Android.minSDK
     }
 }
