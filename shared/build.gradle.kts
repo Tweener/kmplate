@@ -17,6 +17,8 @@ android {
 kotlin {
     targetHierarchy.default()
 
+    android()
+
     // region iOS configuration
 
     iosX64()

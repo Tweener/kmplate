@@ -50,8 +50,6 @@ android {
 
 dependencies {
     implementation(project(":shared"))
-    implementation(project(":shared:domain"))
-    implementation(project(":shared:data"))
 
     coreLibraryDesugaring(Dependencies.Libraries.Android.desugarJdkLibs)
 
