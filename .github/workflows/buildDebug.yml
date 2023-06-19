@@ -1,0 +1,54 @@
+name: Tropse (Android 🤖) build on Android
+
+on:
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+  build:
+    name: Build the app in debug mode
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Run "assembleDebug" Gradle task
+        run: ./gradlew assembleDebug
+
+      - name: Stop gradle daemon (for safe caching)
+        run: ./gradlew --stop
+
+      - name: Send notification on Slack
+        uses: rtCamp/action-slack-notify@v2.2.0
+        if: ${{ success() }}
+        env:
+          SLACK_CHANNEL: ${{ secrets.SLACK_GITHUB_ACTIONS_CHANNEL_NAME }}
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_ICON: ${{ secrets.SLACK_GITHUB_ACTIONS_ICON_URL }}
+          SLACK_MESSAGE: ':white_check_mark: Build for Android :android: successful! :rocket:'
+          SLACK_TITLE: Tropse build status
+          SLACK_USERNAME: Github Actions CI
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Send notification on Slack
+        uses: rtCamp/action-slack-notify@v2.2.0
+        if: ${{ failure() }}
+        env:
+          SLACK_CHANNEL: ${{ secrets.SLACK_GITHUB_ACTIONS_CHANNEL_NAME }}
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_ICON: ${{ secrets.SLACK_GITHUB_ACTIONS_ICON_URL }}
+          SLACK_MESSAGE: ':x: Build for Android :android: failed! :pensive:'
+          SLACK_TITLE: Tropse build status
+          SLACK_USERNAME: Github Actions CI
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
