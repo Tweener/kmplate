@@ -41,6 +41,7 @@ object Dependencies {
         const val ktor = "2.0.3"
         const val napier = "2.6.1"
         const val kotlinxDatetime = "0.4.0"
+        const val gradleVersionsPlugin = "0.47.0"
 
         object Android {
             const val composeCompilerExtension = "1.4.7"
