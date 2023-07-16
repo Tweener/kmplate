@@ -13,4 +13,23 @@ To configure these 2 Slack bots, we need to create 3 [Github Actions variables](
 3. `SLACK_GITHUB_ACTIONS_ICON_URL`: the icon URL to be used as a profile picture for the "Github Actions CI" Slack bot.
 
 ### 3. Rename package name to your own
-TODO
+1. Open `buildSrc/src/main/kotlin/Dependencies.kt` and rename the following things:
+    1. _Line 13_: Change `MyProject` object name to your own project name,
+    2. _Line 14_: Change `com.tweener.changehere` package name to your own package name.
+2. Open `settings.gradle.kts` and change `MyProjectName` on line 18 by your own project name.
+3. Rename packages name (`import` and `package`) in all existing files:
+    1. Click on `Edit` > `Find` > `Replace in files`,
+    2. In the first input field, type `com.tweener.changehere`,
+    3. In the second input field, type your own package name,
+    4. Click on `Replace all` button.
+4. Replace `com/tweener/changehere` by your own directory path in the following directories:
+    1. `androidApp/src/main/java/com/tweener/changehere`
+    2. `shared/src/commonMain/kotlin/com/tweener/changehere`
+    3. `shared/data/src/androidMain/kotlin/com/tweener/changehere`
+    4. `shared/data/src/androidUnitTest/kotlin/com/tweener/changehere`
+    5. `shared/data/src/commonMain/kotlin/com/tweener/changehere`
+    6. `shared/data/src/iosMain/kotlin/com/tweener/changehere`
+    7. `shared/data/src/iosTest/kotlin/com/tweener/changehere`
+    8. `shared/domain/src/commonMain/kotlin/com/tweener/changehere`
+    9. `shared/domain/src/commonTest/kotlin/com/tweener/changehere`
+5. iOS TODO
