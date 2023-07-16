@@ -40,9 +40,9 @@ jobs:
         uses: rtCamp/action-slack-notify@v2.2.0
         if: ${{ success() }}
         env:
-          SLACK_CHANNEL: ${{ secrets.SLACK_GITHUB_ACTIONS_CHANNEL_NAME }}
+          SLACK_CHANNEL: ${{ vars.SLACK_GITHUB_ACTIONS_CHANNEL_NAME }}
           SLACK_COLOR: ${{ job.status }}
-          SLACK_ICON: ${{ secrets.SLACK_GITHUB_ACTIONS_DEPENDENCY_UPDATES_ICON_URL }}
+          SLACK_ICON: ${{ vars.SLACK_GITHUB_ACTIONS_DEPENDENCY_UPDATES_ICON_URL }}
           SLACK_MESSAGE: ${{ steps.get-dependencies-list.outputs.DEPENDENCIES_LIST_FILE }}
           SLACK_TITLE: Dependencies with outdated versions
           SLACK_USERNAME: Dependency Updates
