@@ -13,7 +13,6 @@ tasks.register("clean", Delete::class) {
     delete(rootProject.buildDir)
 }
 
-
 // region Configure dependencyUpdates task
 
 tasks.withType<DependencyUpdatesTask> {
