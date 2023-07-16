@@ -1,6 +1,8 @@
 name: KMMTemplate (Android 🤖) build on Android
 
 on:
+  workflow_dispatch:
+
   push:
     branches: [ "main" ]
   pull_request:
