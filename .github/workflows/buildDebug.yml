@@ -2,9 +2,9 @@ name: KMMTemplate (Android 🤖) build on Android
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "main" ]
 
 jobs:
   build:
