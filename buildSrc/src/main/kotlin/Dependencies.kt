@@ -34,7 +34,7 @@ object Dependencies {
         }
 
         const val jvmTarget = "17"
-        const val kotlin = "1.8.21"
+        const val kotlin = "1.8.22"
         const val gradle = "8.0.2"
         const val coroutines = "1.6.3-native-mt"
         const val kodein = "7.20.2"
