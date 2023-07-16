@@ -17,12 +17,13 @@ To configure these 2 Slack bots, we need to create 3 [Github Actions variables](
     1. _Line 13_: Change `MyProject` object name to your own project name,
     2. _Line 14_: Change `com.tweener.changehere` package name to your own package name.
 2. Open `settings.gradle.kts` and change `MyProjectName` on line 18 by your own project name.
-3. Rename packages name (`import` and `package`) in all existing files:
+3. Open `shared/build.gradle.kts` and change `MyProjectCocoaPod` on line 35 with your own Cocoa Pod name.
+4. Rename packages name (`import` and `package`) in all existing files:
     1. Click on `Edit` > `Find` > `Replace in files`,
     2. In the first input field, type `com.tweener.changehere`,
     3. In the second input field, type your own package name,
     4. Click on `Replace all` button.
-4. Replace `com/tweener/changehere` by your own directory path in the following directories:
+5. Replace `com/tweener/changehere` by your own directory path in the following directories:
     1. `androidApp/src/main/java/com/tweener/changehere`
     2. `shared/src/commonMain/kotlin/com/tweener/changehere`
     3. `shared/data/src/androidMain/kotlin/com/tweener/changehere`
@@ -32,4 +33,14 @@ To configure these 2 Slack bots, we need to create 3 [Github Actions variables](
     7. `shared/data/src/iosTest/kotlin/com/tweener/changehere`
     8. `shared/domain/src/commonMain/kotlin/com/tweener/changehere`
     9. `shared/domain/src/commonTest/kotlin/com/tweener/changehere`
-5. iOS TODO
+6. Update iOS configuration:
+    1. Rename `iosApp/iosApp.xcodeproj` to your own project name. ie: `iosApp/myProjectName.xcodeproject`,
+    2. Rename `iosApp/iosApp.xcworkspace` to your own project name. ie: `iosApp/myProjectName.xcworkspace`,
+    3. Delete `MyProjectCocoaPod.podspec` file,
+    4. Open `iosApp/Podfile` and replace `iosapp_shared` on lines 10 abd 20 by your own project name. ie: `myproject_shared`,
+    5. In that same file, replace `iosapp_shared` on line 18 by your own project name. ie: `myproject`,
+    6. Open `iosApp/myProjectName.xcworkspace` in Xcode and build the project.
+    7. In Xcode, in `Targets`, double click on `iosApp` and replace the target's name with your own name,
+    8. Click on that target, go to tab `Build Settings` and look for th property `Product Bundle Identifier` and replace with your own bundle identifier,
+    9. Run the app.
+
