@@ -33,14 +33,15 @@ To configure these 2 Slack bots, we need to create 3 [Github Actions variables](
     7. `shared/data/src/iosTest/kotlin/com/tweener/changehere`
     8. `shared/domain/src/commonMain/kotlin/com/tweener/changehere`
     9. `shared/domain/src/commonTest/kotlin/com/tweener/changehere`
-6. Update iOS configuration:
-    1. Rename `iosApp/iosApp.xcodeproj` to your own project name. ie: `iosApp/myProjectName.xcodeproject`,
-    2. Rename `iosApp/iosApp.xcworkspace` to your own project name. ie: `iosApp/myProjectName.xcworkspace`,
-    3. Delete `MyProjectCocoaPod.podspec` file,
-    4. Open `iosApp/Podfile` and replace `iosapp_shared` on lines 10 abd 20 by your own project name. ie: `myproject_shared`,
-    5. In that same file, replace `iosapp_shared` on line 18 by your own project name. ie: `myproject`,
-    6. Open `iosApp/myProjectName.xcworkspace` in Xcode and build the project.
-    7. In Xcode, in `Targets`, double click on `iosApp` and replace the target's name with your own name,
-    8. Click on that target, go to tab `Build Settings` and look for th property `Product Bundle Identifier` and replace with your own bundle identifier,
-    9. Run the app.
+
+### 4. Update iOS configuration
+1. Rename `iosApp/iosApp.xcodeproj` to your own project name. ie: `iosApp/myProjectName.xcodeproject`,
+2. Rename `iosApp/iosApp.xcworkspace` to your own project name. ie: `iosApp/myProjectName.xcworkspace`,
+3. Delete `MyProjectCocoaPod.podspec` file,
+4. Open `iosApp/Podfile` and replace `iosapp_shared` on lines 10 abd 20 by your own project name. ie: `myproject_shared`,
+5. In that same file, replace `iosapp_shared` on line 18 by your own project name. ie: `myproject`,
+6. Open `iosApp/myProjectName.xcworkspace` in Xcode and build the project.
+7. In Xcode, in `Targets`, double click on `iosApp` and replace the target's name with your own name,
+8. Click on that target, go to tab `Build Settings` and look for th property `Product Bundle Identifier` and replace with your own bundle identifier,
+9. Run the app.
 
