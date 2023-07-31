@@ -15,7 +15,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MyProjectName"
+rootProject.name = "KMM_CA_Template" // TODO Change this to your project name
 include(":androidApp")
 include(":shared")
 include(":shared:data")
