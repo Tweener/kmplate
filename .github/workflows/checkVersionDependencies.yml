@@ -45,7 +45,7 @@ jobs:
           SLACK_CHANNEL: ${{ vars.SLACK_GITHUB_ACTIONS_CHANNEL_NAME }}
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: ${{ vars.SLACK_GITHUB_ACTIONS_DEPENDENCY_UPDATES_ICON_URL }}
-          SLACK_MESSAGE: "Report URL:  ${{ github.server_url }}/${{ github.repository }}/actions/run/${{ github.run_id }}/build/dependencyUpdates/report.html"
+          SLACK_MESSAGE: "Report URL:  ${{ github.server_url }}/${{ github.repository }}/${{ github.workspace }}/build/dependencyUpdates/report.html"
           SLACK_TITLE: Dependencies with outdated versions
           SLACK_USERNAME: Dependency Updates
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
