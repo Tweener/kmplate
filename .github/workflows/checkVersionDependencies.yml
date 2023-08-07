@@ -24,7 +24,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Check for new versions of dependencies
-        run: ./gradlew dependencyUpdates -DoutputFormatter=html -DoutputDir=build/dependencyUpdates -DreportfileName=report
+        run: ./gradlew dependencyUpdates -DoutputFormatter=html -DoutputDir=reports/dependencyUpdates -DreportfileName=report
 
       #      - name: Adds the content of the list of dependencies to the environment variable
       #        id: get-dependencies-list
@@ -45,7 +45,7 @@ jobs:
           SLACK_CHANNEL: ${{ vars.SLACK_GITHUB_ACTIONS_CHANNEL_NAME }}
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: ${{ vars.SLACK_GITHUB_ACTIONS_DEPENDENCY_UPDATES_ICON_URL }}
-          SLACK_MESSAGE: "Report URL:  ${{ github.server_url }}/${{ github.repository }}/${{ github.workspace }}/build/dependencyUpdates/report.html"
+          SLACK_MESSAGE: "Report URL:  ${{ github.server_url }}/${{ github.repository }}/blob/main/reports/dependencyUpdates/report.html"
           SLACK_TITLE: Dependencies with outdated versions
           SLACK_USERNAME: Dependency Updates
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
