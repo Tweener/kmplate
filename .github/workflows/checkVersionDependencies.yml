@@ -26,17 +26,17 @@ jobs:
       - name: Check for new versions of dependencies
         run: ./gradlew dependencyUpdates -DoutputFormatter=html -DoutputDir=build/dependencyUpdates -DreportfileName=report
 
-#      - name: Adds the content of the list of dependencies to the environment variable
-#        id: get-dependencies-list
-#        run: |
-#          file_output=$(<build/dependencyUpdates/report.html)
-#          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-#          echo "DEPENDENCIES_LIST_FILE<<$EOF" >> $GITHUB_OUTPUT
-#          echo "$file_output" >> $GITHUB_OUTPUT
-#          echo "$EOF" >> $GITHUB_OUTPUT
-#
-#      - name: Print the content of the environment variable
-#        run: echo "${{ steps.get-dependencies-list.outputs.DEPENDENCIES_LIST_FILE }}"
+      #      - name: Adds the content of the list of dependencies to the environment variable
+      #        id: get-dependencies-list
+      #        run: |
+      #          file_output=$(<build/dependencyUpdates/report.html)
+      #          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+      #          echo "DEPENDENCIES_LIST_FILE<<$EOF" >> $GITHUB_OUTPUT
+      #          echo "$file_output" >> $GITHUB_OUTPUT
+      #          echo "$EOF" >> $GITHUB_OUTPUT
+      #
+      #      - name: Print the content of the environment variable
+      #        run: echo "${{ steps.get-dependencies-list.outputs.DEPENDENCIES_LIST_FILE }}"
 
       - name: Send notification on Slack
         uses: rtCamp/action-slack-notify@v2.2.0
@@ -45,7 +45,7 @@ jobs:
           SLACK_CHANNEL: ${{ vars.SLACK_GITHUB_ACTIONS_CHANNEL_NAME }}
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: ${{ vars.SLACK_GITHUB_ACTIONS_DEPENDENCY_UPDATES_ICON_URL }}
-          SLACK_MESSAGE: "Report URL:  ${{ github.server_url }}/${{ github.repository }}/build/dependencyUpdates/report.html"
+          SLACK_MESSAGE: "Report URL:  ${{ github.server_url }}/${{ github.repository }}/actions/run/${{ github.run_id }}/build/dependencyUpdates/report.html"
           SLACK_TITLE: Dependencies with outdated versions
           SLACK_USERNAME: Dependency Updates
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
