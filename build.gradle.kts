@@ -1,5 +1,6 @@
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 import java.io.StringWriter
+import java.nio.file.Files
 
 plugins {
     //trick: for the same plugin versions in all sub-modules
@@ -22,6 +23,7 @@ tasks.withType<DependencyUpdatesTask> {
     }
 
     outputFormatter {
+        Files.createDirectories(java.nio.file.Paths.get(rootProject.buildDir.path + "/dependencyUpdates"))
         val reportFile = File(rootProject.buildDir.path + "/dependencyUpdates/report.txt").apply { writeText("") }
 
         // Outdated dependencies

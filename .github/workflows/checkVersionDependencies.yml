@@ -24,10 +24,9 @@ jobs:
         run: chmod +x gradlew
 
       - name: Create report file
-        uses: finnp/create-file-action@1.0.0
-        env:
-          FILE_NAME: "build/dependencyUpdates/report.txt"
-          FILE_DATA: ""
+        run: |
+          mkdir -p build/dependencyUpdates
+          touch build/dependencyUpdates/report.txt
 
       - name: Check for new versions of dependencies
         run: ./gradlew dependencyUpdates
