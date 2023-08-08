@@ -22,7 +22,7 @@ tasks.withType<DependencyUpdatesTask> {
     }
 
     outputFormatter {
-        val reportFile = file("build/dependencyUpdates/report.txt").apply { writeText("") }
+        val reportFile = File(rootProject.buildDir.path + "/dependencyUpdates/report.txt").apply { writeText("") }
 
         // Outdated dependencies
         val outdated = this.outdated.dependencies
