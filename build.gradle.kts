@@ -22,35 +22,48 @@ tasks.withType<DependencyUpdatesTask> {
     }
 
     outputFormatter {
-        val writer = StringWriter()
+        val reportFile = file(rootProject.buildDir.path + "/dependencyUpdates/report.txt").apply { writeText("") }
 
         // Outdated dependencies
         val outdated = this.outdated.dependencies
         if (outdated.isNotEmpty()) {
+            val writer = StringWriter()
             writer.appendLine("The following dependencies have later milestone versions:")
             outdated.forEach { dependency ->
                 writer.appendLine(" - ${dependency.group}:${dependency.name} [${dependency.version} -> ${dependency.available.milestone}]")
                 writer.appendLine("     ${dependency.projectUrl}")
             }
             println(writer.toString())
+
+            reportFile.appendText(writer.toString() + "\n\n")
         }
 
         // Unresolved dependencies (failed to determine the latest version)
         val unresolved = this.unresolved.dependencies
         if (unresolved.isNotEmpty()) {
+            val writer = StringWriter()
             writer.appendLine("Failed to determine the latest version for the following dependencies:")
             unresolved.forEach { dependency ->
                 writer.appendLine(" - ${dependency.group}:${dependency.name} -> ${dependency.version}")
             }
             println(writer.toString())
+
+            reportFile.appendText(writer.toString() + "\n\n")
         }
 
         // Gradle
         val gradle = this.gradle
+        val writer = StringWriter()
         writer.appendLine("Gradle release-candidate updates:")
         writer.appendLine(" - Gradle: [${gradle.running.version} -> ${gradle.current.version} -> ${gradle.releaseCandidate.version}]")
         println(writer.toString())
+
+        reportFile.appendText(writer.toString())
     }
+//
+//    doLast {
+//        file(rootProject.buildDir.path + "dependencyUpdates/report.txt").appendText()
+//    }
 }
 
 fun String.isNonStable(): Boolean {
