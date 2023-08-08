@@ -1,4 +1,5 @@
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
+import java.io.StringWriter
 
 plugins {
     //trick: for the same plugin versions in all sub-modules
@@ -18,6 +19,37 @@ tasks.register("clean", Delete::class) {
 tasks.withType<DependencyUpdatesTask> {
     rejectVersionIf {
         candidate.version.isNonStable()
+    }
+
+    outputFormatter {
+        val writer = StringWriter()
+
+        // Outdated dependencies
+        val outdated = this.outdated.dependencies
+        if (outdated.isNotEmpty()) {
+            writer.appendLine("The following dependencies have later milestone versions:")
+            outdated.forEach { dependency ->
+                writer.appendLine(" - ${dependency.group}:${dependency.name} [${dependency.version} -> ${dependency.available.milestone}]")
+                writer.appendLine("     ${dependency.projectUrl}")
+            }
+            println(writer.toString())
+        }
+
+        // Unresolved dependencies (failed to determine the latest version)
+        val unresolved = this.unresolved.dependencies
+        if (unresolved.isNotEmpty()) {
+            writer.appendLine("Failed to determine the latest version for the following dependencies:")
+            unresolved.forEach { dependency ->
+                writer.appendLine(" - ${dependency.group}:${dependency.name} -> ${dependency.version}")
+            }
+            println(writer.toString())
+        }
+
+        // Gradle
+        val gradle = this.gradle
+        writer.appendLine("Gradle release-candidate updates:")
+        writer.appendLine(" - Gradle: [${gradle.running.version} -> ${gradle.current.version} -> ${gradle.releaseCandidate.version}]")
+        println(writer.toString())
     }
 }
 
