@@ -17,7 +17,7 @@ object Dependencies {
             object Android {
                 const val applicationId = MyProject.packageName
                 const val namespace = MyProject.packageName + ".android"
-                const val compileSDK = 33
+                const val compileSDK = 34
                 const val targetSDK = compileSDK
                 const val minSDK = 24
                 const val versionCode = 1
@@ -33,7 +33,6 @@ object Dependencies {
             val javaCompatibility = JavaVersion.VERSION_17
         }
 
-        const val jvmTarget = "17"
         const val kotlin = "1.9.10"
         const val gradle = "8.1.1"
         const val coroutines = "1.7.3"
