@@ -64,10 +64,6 @@ tasks.withType<DependencyUpdatesTask> {
 
         reportFile.appendText(writer.toString())
     }
-//
-//    doLast {
-//        file(rootProject.buildDir.path + "dependencyUpdates/report.txt").appendText()
-//    }
 }
 
 fun String.isNonStable(): Boolean {

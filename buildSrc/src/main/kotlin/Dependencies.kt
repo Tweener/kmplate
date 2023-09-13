@@ -34,31 +34,31 @@ object Dependencies {
         }
 
         const val jvmTarget = "17"
-        const val kotlin = "1.8.22"
-        const val gradle = "8.0.2"
-        const val coroutines = "1.6.3-native-mt"
+        const val kotlin = "1.9.10"
+        const val gradle = "8.1.1"
+        const val coroutines = "1.7.3"
         const val kodein = "7.20.2"
-        const val ktor = "2.3.2"
+        const val ktor = "2.3.4"
         const val napier = "2.6.1"
-        const val kotlinxDatetime = "0.4.0"
-        const val gradleVersionsPlugin = "0.47.0"
+        const val kotlinxDatetime = "0.4.1"
+        const val gradleVersionsPlugin = "0.48.0"
 
         object Android {
-            const val composeCompilerExtension = "1.4.8"
-            const val compose = "1.4.3"
+            const val composeCompilerExtension = "1.5.3"
+            const val compose = "1.5.1"
             const val activityCompose = "1.7.2"
-            const val navigationCompose = "2.6.0"
-            const val material3 = "1.1.0"
+            const val navigationCompose = "2.7.2"
+            const val material3 = "1.1.1"
             const val loggingInterceptor = "3.1.0"
-            const val glide = "2.2.2"
+            const val glide = "2.2.8"
             const val desugarJdkLibs = "2.0.3"
             const val accompanist = "0.30.1"
 
             object AndroidX {
                 const val appcompat = "1.4.2"
                 const val constraintlayout = "2.1.4"
-                const val lifecycle = "2.6.1"
-                const val splashscreen = "1.0.0-rc01"
+                const val lifecycle = "2.6.2"
+                const val splashscreen = "1.0.1"
             }
         }
     }
