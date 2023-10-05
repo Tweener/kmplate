@@ -64,6 +64,10 @@ dependencies {
 
     coreLibraryDesugaring(Dependencies.Libraries.Android.desugarJdkLibs)
 
+    // Android
+    implementation(Dependencies.Libraries.Android.tweenerCommon)
+    implementation(Dependencies.Libraries.Android.cezanne)
+
     // Compose
     implementation(Dependencies.Libraries.Android.AndroidX.Compose.ui)
     implementation(Dependencies.Libraries.Android.AndroidX.Compose.uiTooling)
