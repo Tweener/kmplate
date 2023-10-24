@@ -37,7 +37,7 @@ object Dependencies {
         const val gradle = "8.1.2"
         const val coroutines = "1.7.3"
         const val kodein = "7.20.2"
-        const val ktor = "2.3.5"
+        const val ktor = "2.3.4"
         const val napier = "2.6.1"
         const val kotlinxDatetime = "0.4.1"
         const val gradleVersionsPlugin = "0.49.0"
