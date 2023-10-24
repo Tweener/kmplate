@@ -37,18 +37,24 @@ object Dependencies {
         const val gradle = "8.1.2"
         const val coroutines = "1.7.3"
         const val kodein = "7.20.2"
-        const val ktor = "2.3.4"
+        const val ktor = "2.3.5"
         const val napier = "2.6.1"
         const val kotlinxDatetime = "0.4.1"
-        const val gradleVersionsPlugin = "0.48.0"
+        const val gradleVersionsPlugin = "0.49.0"
+
+        object Tweener {
+            object Android {
+                const val common = "2.0.3"
+                const val cezanne = "1.0.4"
+                const val placeholder = "1.0.0"
+            }
+        }
 
         object Android {
-            const val tweenerCommon = "2.0.0"
-            const val cezanne = "1.0.0"
             const val composeCompilerExtension = "1.5.3"
-            const val compose = "1.5.1"
-            const val activityCompose = "1.7.2"
-            const val navigationCompose = "2.7.2"
+            const val compose = "1.5.4"
+            const val activityCompose = "1.8.0"
+            const val navigationCompose = "2.7.4"
             const val material3 = "1.1.1"
             const val loggingInterceptor = "3.1.0"
             const val glide = "2.2.8"
@@ -100,8 +106,8 @@ object Dependencies {
         }
 
         object Android {
-            const val tweenerCommon = "com.github.Tweener:common-android:${Versions.Android.tweenerCommon}"
-            const val cezanne = "com.github.Tweener:cezanne-android:${Versions.Android.cezanne}"
+            const val tweenerCommon = "com.github.Tweener:common-android:${Versions.Tweener.Android.common}"
+            const val cezanne = "com.github.Tweener:cezanne-android:${Versions.Tweener.Android.cezanne}"
             const val material3 = "androidx.compose.material3:material3:${Versions.Android.material3}"
             const val loggingInterceptor = "com.github.ihsanbal:LoggingInterceptor:${Versions.Android.loggingInterceptor}"
             const val glide = "com.github.skydoves:landscapist-glide:${Versions.Android.glide}"
