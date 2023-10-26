@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "658419107972",
+    "project_id": "changehere",
+    "storage_bucket": "changehere.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658419107972:android:92f79e8dc28f6d3e7b1ad1",
+        "android_client_info": {
+          "package_name": "com.tweener.changehere"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": ""
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658419107972:android:ecc48945c3df83a97b1ad1",
+        "android_client_info": {
+          "package_name": "com.tweener.changehere.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": ""
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658419107972:android:764024c4cdb565fd7b1ad1",
+        "android_client_info": {
+          "package_name": "com.tweener.changehere.paid"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": ""
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658419107972:android:62de9ab34302ed747b1ad1",
+        "android_client_info": {
+          "package_name": "com.tweener.changehere.paid.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": ""
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
