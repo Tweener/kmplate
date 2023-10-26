@@ -159,7 +159,6 @@ object Dependencies {
 
             object Accompanist {
                 const val systemUIController = "com.google.accompanist:accompanist-systemuicontroller:${Versions.Android.accompanist}"
-                const val placeholder = "com.google.accompanist:accompanist-placeholder-material3:${Versions.Android.accompanist}"
                 const val navigationAnimation = "com.google.accompanist:accompanist-navigation-animation:${Versions.Android.accompanist}"
                 const val permissions = "com.google.accompanist:accompanist-permissions:${Versions.Android.accompanist}"
             }
