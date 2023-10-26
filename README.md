@@ -45,3 +45,5 @@ To configure these 2 Slack bots, we need to create 3 [Github Actions variables](
 8. Click on that target, go to tab `Build Settings` and look for th property `Product Bundle Identifier` and replace with your own bundle identifier,
 9. Run the app.
 
+### 4. Rename Github Actions names
+1. Open `.github/workflows/buildDebug.xml` and replace `KMMTemplate` on lines 1, 42 and 54 by your own name.
