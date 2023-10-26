@@ -1,7 +1,7 @@
 package com.tweener.changehere.android.screen._di
 
 import com.tweener.changehere.android.screen.MainViewModel
-import com.tweener.changehere.data.PlatformRepositoryImpl
+import com.tweener.changehere.data.repository.PlatformRepositoryImpl
 import com.tweener.changehere.domain.Greeting
 import org.kodein.di.DI
 import org.kodein.di.bindSingleton

@@ -12,7 +12,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.tweener.changehere.android.MyApplicationTheme
 import com.tweener.changehere.android.screen._di.mainModule
-import com.tweener.changehere.data.PlatformRepositoryImpl
 import com.tweener.changehere.domain.Greeting
 import org.kodein.di.Copy
 import org.kodein.di.DIAware

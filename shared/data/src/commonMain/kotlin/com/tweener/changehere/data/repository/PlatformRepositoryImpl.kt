@@ -1,7 +1,7 @@
-package com.tweener.changehere.data
+package com.tweener.changehere.data.repository
 
 import com.tweener.changehere.domain.Platform
-import com.tweener.changehere.domain.PlatformRepository
+import com.tweener.changehere.domain.repository.PlatformRepository
 
 /**
  * @author Vivien Mahe

@@ -1,4 +1,6 @@
-package com.tweener.changehere.domain
+package com.tweener.changehere.domain.repository
+
+import com.tweener.changehere.domain.Platform
 
 /**
  * @author Vivien Mahe

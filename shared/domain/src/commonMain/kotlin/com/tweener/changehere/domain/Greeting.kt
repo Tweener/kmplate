@@ -1,5 +1,7 @@
 package com.tweener.changehere.domain
 
+import com.tweener.changehere.domain.repository.PlatformRepository
+
 class Greeting(
     platformRepository: PlatformRepository
 ) {

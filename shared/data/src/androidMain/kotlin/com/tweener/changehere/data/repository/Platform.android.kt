@@ -1,4 +1,4 @@
-package com.tweener.changehere.data
+package com.tweener.changehere.data.repository
 
 import com.tweener.changehere.domain.Platform
 
