@@ -41,6 +41,10 @@ object Dependencies {
         const val napier = "2.6.1"
         const val kotlinxDatetime = "0.4.1"
         const val gradleVersionsPlugin = "0.49.0"
+        const val googleServicesPlugin = "4.3.15"
+        const val crashlyticsPlugin = "2.9.9"
+        const val performancePlugin = "1.4.2"
+        const val firebase = "32.2.3"
 
         object Tweener {
             object Android {
@@ -52,16 +56,18 @@ object Dependencies {
 
         object Android {
             const val composeCompilerExtension = "1.5.3"
-            const val compose = "1.5.4"
+            const val compose = "1.6.0-alpha08"
             const val activityCompose = "1.8.0"
             const val navigationCompose = "2.7.4"
             const val material3 = "1.1.1"
             const val loggingInterceptor = "3.1.0"
             const val glide = "2.2.8"
             const val desugarJdkLibs = "2.0.3"
-            const val accompanist = "0.30.1"
+            const val accompanist = "0.32.0"
+            const val adMob = "22.4.0"
 
             object AndroidX {
+                const val activity = "1.8.0-alpha07"
                 const val appcompat = "1.4.2"
                 const val constraintlayout = "2.1.4"
                 const val lifecycle = "2.6.2"
@@ -74,6 +80,14 @@ object Dependencies {
 
         const val napier = "io.github.aakira:napier:${Versions.napier}"
         const val kotlinXDatetime = "org.jetbrains.kotlinx:kotlinx-datetime:${Versions.kotlinxDatetime}"
+
+        object Tweener {
+            object Android {
+                const val common = "com.github.Tweener:common-android:${Versions.Tweener.Android.common}"
+                const val cezanne = "com.github.Tweener:cezanne-android:${Versions.Tweener.Android.cezanne}"
+                const val placeholder = "com.github.Tweener:placeholder-material3:${Versions.Tweener.Android.placeholder}"
+            }
+        }
 
         object Kodein {
             const val core = "org.kodein.di:kodein-di:${Versions.kodein}"
@@ -105,16 +119,24 @@ object Dependencies {
             const val serializationJson = "io.ktor:ktor-serialization-kotlinx-json:${Versions.ktor}"
         }
 
+        object Firebase {
+            const val bom = "com.google.firebase:firebase-bom:${Versions.firebase}"
+            const val analytics = "com.google.firebase:firebase-analytics-ktx"
+            const val crashlytics = "com.google.firebase:firebase-crashlytics-ktx"
+            const val performance = "com.google.firebase:firebase-perf-ktx"
+        }
+
         object Android {
-            const val tweenerCommon = "com.github.Tweener:common-android:${Versions.Tweener.Android.common}"
-            const val cezanne = "com.github.Tweener:cezanne-android:${Versions.Tweener.Android.cezanne}"
             const val material3 = "androidx.compose.material3:material3:${Versions.Android.material3}"
             const val loggingInterceptor = "com.github.ihsanbal:LoggingInterceptor:${Versions.Android.loggingInterceptor}"
             const val glide = "com.github.skydoves:landscapist-glide:${Versions.Android.glide}"
             const val glidePlaceholder = "com.github.skydoves:landscapist-placeholder:${Versions.Android.glide}"
             const val desugarJdkLibs = "com.android.tools:desugar_jdk_libs:${Versions.Android.desugarJdkLibs}"
+            const val adMob = "com.google.android.gms:play-services-ads:${Versions.Android.adMob}"
 
             object AndroidX {
+                const val material3 = "androidx.compose.material3:material3:${Versions.Android.material3}"
+                const val activity = "androidx.activity:activity-ktx:${Versions.Android.AndroidX.activity}"
                 const val appcompat = "androidx.appcompat:appcompat:${Versions.Android.AndroidX.appcompat}"
                 const val constraintlayout = "androidx.constraintlayout:constraintlayout:${Versions.Android.AndroidX.constraintlayout}"
                 const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.Android.AndroidX.lifecycle}"
@@ -137,8 +159,9 @@ object Dependencies {
 
             object Accompanist {
                 const val systemUIController = "com.google.accompanist:accompanist-systemuicontroller:${Versions.Android.accompanist}"
-                const val placeholder = "com.google.accompanist:accompanist-placeholder:${Versions.Android.accompanist}"
+                const val placeholder = "com.google.accompanist:accompanist-placeholder-material3:${Versions.Android.accompanist}"
                 const val navigationAnimation = "com.google.accompanist:accompanist-navigation-animation:${Versions.Android.accompanist}"
+                const val permissions = "com.google.accompanist:accompanist-permissions:${Versions.Android.accompanist}"
             }
         }
     }

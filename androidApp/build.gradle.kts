@@ -1,6 +1,9 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
+    id("com.google.firebase.firebase-perf")
 }
 
 android {
@@ -65,8 +68,17 @@ dependencies {
     coreLibraryDesugaring(Dependencies.Libraries.Android.desugarJdkLibs)
 
     // Android
-    implementation(Dependencies.Libraries.Android.tweenerCommon)
-    implementation(Dependencies.Libraries.Android.cezanne)
+    implementation(Dependencies.Libraries.Tweener.Android.common)
+    implementation(Dependencies.Libraries.Tweener.Android.cezanne)
+    implementation(Dependencies.Libraries.Tweener.Android.placeholder)
+
+    // Android
+    implementation(Dependencies.Libraries.Android.AndroidX.material3)
+    implementation(Dependencies.Libraries.Android.AndroidX.splashscreen)
+    implementation(Dependencies.Libraries.Android.AndroidX.activity)
+    implementation(Dependencies.Libraries.Android.Accompanist.systemUIController)
+    implementation(Dependencies.Libraries.Android.Accompanist.permissions)
+    implementation(Dependencies.Libraries.Android.adMob)
 
     // Compose
     implementation(Dependencies.Libraries.Android.AndroidX.Compose.ui)
@@ -79,6 +91,12 @@ dependencies {
     implementation(Dependencies.Libraries.Android.AndroidX.Compose.activity)
     implementation(Dependencies.Libraries.Android.AndroidX.Compose.navigation)
     implementation(Dependencies.Libraries.Android.AndroidX.Compose.lifecycleRuntime)
+
+    // Firebase
+    implementation(platform(Dependencies.Libraries.Firebase.bom))
+    implementation(Dependencies.Libraries.Firebase.analytics)
+    implementation(Dependencies.Libraries.Firebase.crashlytics)
+    implementation(Dependencies.Libraries.Firebase.performance)
 
     // Coroutines
     implementation(Dependencies.Libraries.Coroutines.core)
