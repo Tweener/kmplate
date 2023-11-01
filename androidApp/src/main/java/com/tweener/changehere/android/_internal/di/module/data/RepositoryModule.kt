@@ -1,4 +1,4 @@
-package com.tweener.changehere.android._internal.di.module
+package com.tweener.changehere.android._internal.di.module.data
 
 import com.tweener.changehere.data.repository.PlatformRepositoryImpl
 import com.tweener.changehere.domain.repository.PlatformRepository

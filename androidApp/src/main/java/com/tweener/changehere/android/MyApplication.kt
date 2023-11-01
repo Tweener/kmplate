@@ -14,7 +14,7 @@ import org.kodein.di.DIAware
 class MyApplication : Application(), DIAware {
 
     override val di by DI.lazy {
-        import(rootModule)
+        import(rootModule(context = this@MyApplication))
     }
 
     override fun onCreate() {
