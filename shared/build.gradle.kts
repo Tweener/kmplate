@@ -18,7 +18,6 @@ android {
     }
 }
 
-@OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
     applyDefaultHierarchyTemplate()
 

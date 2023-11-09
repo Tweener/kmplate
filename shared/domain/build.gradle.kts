@@ -18,6 +18,8 @@ android {
 }
 
 kotlin {
+    applyDefaultHierarchyTemplate()
+
     androidTarget()
 
     iosX64()
@@ -41,17 +43,9 @@ kotlin {
             implementation(kotlin("test"))
         }
 
-        iosMain {
-            dependsOn(commonMain.get())
-
-            dependencies {
-                // Ktor
-                implementation(Dependencies.Libraries.Ktor.Client.iOS.client)
-            }
-        }
-
-        iosTest {
-            dependsOn(commonTest.get())
+        iosMain.dependencies {
+            // Ktor
+            implementation(Dependencies.Libraries.Ktor.Client.iOS.client)
         }
     }
 }
