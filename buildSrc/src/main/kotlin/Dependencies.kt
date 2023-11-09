@@ -55,7 +55,7 @@ object Dependencies {
         }
 
         object Android {
-            const val composeCompilerExtension = "1.5.3"
+            const val composeCompilerExtension = "1.5.3" // See mapping with Kotlin version here: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
             const val compose = "1.6.0-alpha08"
             const val activityCompose = "1.8.0"
             const val navigationCompose = "2.7.4"
