@@ -20,9 +20,9 @@ android {
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
-    targetHierarchy.default()
+    applyDefaultHierarchyTemplate()
 
-    android()
+    androidTarget()
 
     // region iOS configuration
 
@@ -52,16 +52,13 @@ kotlin {
     // endregion iOS configuration
 
     sourceSets {
-        val commonMain by getting {
-            dependencies {
-                api(project(":shared:data"))
-                api(project(":shared:domain"))
-            }
+        commonMain.dependencies {
+            api(project(":shared:data"))
+            api(project(":shared:domain"))
         }
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test"))
-            }
+
+        commonTest.dependencies {
+            implementation(kotlin("test"))
         }
     }
 }
