@@ -8,7 +8,7 @@ def swinject
 end
 
 def iosapp_shared
-  # KMM shared library
+  # KMP shared library
   pod 'shared', :path => '../shared'
 end
 

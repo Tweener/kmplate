@@ -1,4 +1,4 @@
-name: KMMTemplate (Android 🤖) build on Android
+name: Kmplate (Android 🤖) build on Android
 
 on:
   workflow_dispatch:
@@ -39,7 +39,7 @@ jobs:
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: ${{ vars.SLACK_GITHUB_ACTIONS_ICON_URL }}
           SLACK_MESSAGE: ':white_check_mark: Build for Android :android: successful! :rocket:'
-          SLACK_TITLE: KMMTemplate build status
+          SLACK_TITLE: Kmplate build status
           SLACK_USERNAME: Github Actions CI
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
 
@@ -51,6 +51,6 @@ jobs:
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: ${{ vars.SLACK_GITHUB_ACTIONS_ICON_URL }}
           SLACK_MESSAGE: ':x: Build for Android :android: failed! :pensive:'
-          SLACK_TITLE: KMMTemplate build status
+          SLACK_TITLE: Kmplate build status
           SLACK_USERNAME: Github Actions CI
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
