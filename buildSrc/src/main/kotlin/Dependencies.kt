@@ -33,7 +33,7 @@ object Dependencies {
             val javaCompatibility = JavaVersion.VERSION_17
         }
 
-        const val kotlin = "1.9.10"
+        const val kotlin = "1.9.20"
         const val gradle = "8.1.2"
         const val coroutines = "1.7.3"
         const val kodein = "7.20.2"
@@ -55,7 +55,7 @@ object Dependencies {
         }
 
         object Android {
-            const val composeCompilerExtension = "1.5.3" // See mapping with Kotlin version here: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
+            const val composeCompilerExtension = "1.5.4" // See mapping with Kotlin version here: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
             const val compose = "1.6.0-alpha08"
             const val activityCompose = "1.8.0"
             const val navigationCompose = "2.7.4"
