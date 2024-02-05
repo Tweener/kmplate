@@ -35,6 +35,7 @@ object Dependencies {
 
         const val kotlin = "1.9.22"
         const val gradle = "8.2.2"
+        const val composeMultiplatform = "1.5.12"
         const val coroutines = "1.7.3"
         const val kodein = "7.21.2"
         const val ktor = "2.3.8"
@@ -45,6 +46,7 @@ object Dependencies {
         const val crashlyticsPlugin = "2.9.9"
         const val performancePlugin = "1.4.2"
         const val firebase = "32.7.1"
+        const val coil = "3.0.0-alpha01"
 
         object Tweener {
             const val czan = "2.0.1"
@@ -89,6 +91,15 @@ object Dependencies {
             object Android {
                 const val placeholder = "com.github.Tweener:placeholder-material3:${Versions.Tweener.Android.placeholder}"
             }
+        }
+
+        object ComposeMultiplatform {
+            const val material3 = "org.jetbrains.compose.material3:material3:${Versions.composeMultiplatform}"
+        }
+
+        object Coil {
+            const val compose = "io.coil-kt.coil3:coil-compose:${Versions.coil}"
+            const val network = "io.coil-kt.coil3:coil-network:${Versions.coil}"
         }
 
         object Kodein {
