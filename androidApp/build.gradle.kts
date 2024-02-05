@@ -68,8 +68,8 @@ dependencies {
     coreLibraryDesugaring(Dependencies.Libraries.Android.desugarJdkLibs)
 
     // Android
-    implementation(Dependencies.Libraries.Tweener.Android.common)
-    implementation(Dependencies.Libraries.Tweener.Android.cezanne)
+    implementation(Dependencies.Libraries.Tweener.common)
+    implementation(Dependencies.Libraries.Tweener.czan)
     implementation(Dependencies.Libraries.Tweener.Android.placeholder)
 
     // Android

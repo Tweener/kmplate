@@ -15,8 +15,8 @@ object Dependencies {
             const val versionName = "1.0"
 
             object Android {
-                const val applicationId = MyProject.packageName
-                const val namespace = MyProject.packageName + ".android"
+                const val applicationId = packageName
+                const val namespace = "$packageName.android"
                 const val compileSDK = 34
                 const val targetSDK = compileSDK
                 const val minSDK = 24
@@ -33,44 +33,45 @@ object Dependencies {
             val javaCompatibility = JavaVersion.VERSION_17
         }
 
-        const val kotlin = "1.9.20"
-        const val gradle = "8.1.2"
+        const val kotlin = "1.9.22"
+        const val gradle = "8.2.2"
         const val coroutines = "1.7.3"
-        const val kodein = "7.20.2"
-        const val ktor = "2.3.4"
-        const val napier = "2.6.1"
+        const val kodein = "7.21.2"
+        const val ktor = "2.3.8"
+        const val napier = "2.7.1"
         const val kotlinxDatetime = "0.4.1"
-        const val gradleVersionsPlugin = "0.49.0"
-        const val googleServicesPlugin = "4.3.15"
+        const val gradleVersionsPlugin = "0.51.0"
+        const val googleServicesPlugin = "4.4.0"
         const val crashlyticsPlugin = "2.9.9"
         const val performancePlugin = "1.4.2"
-        const val firebase = "32.2.3"
+        const val firebase = "32.7.1"
 
         object Tweener {
+            const val czan = "2.0.1"
+            const val common = "1.0.0"
+
             object Android {
-                const val common = "2.0.3"
-                const val cezanne = "1.0.4"
                 const val placeholder = "1.0.0"
             }
         }
 
         object Android {
-            const val composeCompilerExtension = "1.5.4" // See mapping with Kotlin version here: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
-            const val compose = "1.6.0-alpha08"
-            const val activityCompose = "1.8.0"
-            const val navigationCompose = "2.7.4"
-            const val material3 = "1.1.1"
+            const val composeCompilerExtension = "1.5.8" // See mapping with Kotlin version here: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
+            const val compose = "1.6.0"
+            const val activityCompose = "1.8.2"
+            const val navigationCompose = "2.7.6"
+            const val material3 = "1.1.2"
             const val loggingInterceptor = "3.1.0"
             const val glide = "2.2.8"
-            const val desugarJdkLibs = "2.0.3"
-            const val accompanist = "0.32.0"
-            const val adMob = "22.4.0"
+            const val desugarJdkLibs = "2.0.4"
+            const val accompanist = "0.34.0"
+            const val adMob = "22.6.0"
 
             object AndroidX {
-                const val activity = "1.8.0-alpha07"
+                const val activity = "1.8.2"
                 const val appcompat = "1.4.2"
                 const val constraintlayout = "2.1.4"
-                const val lifecycle = "2.6.2"
+                const val lifecycle = "2.7.0"
                 const val splashscreen = "1.0.1"
             }
         }
@@ -82,9 +83,10 @@ object Dependencies {
         const val kotlinXDatetime = "org.jetbrains.kotlinx:kotlinx-datetime:${Versions.kotlinxDatetime}"
 
         object Tweener {
+            const val czan = "io.github.tweener:czan:${Versions.Tweener.czan}"
+            const val common = "io.github.tweener:kmp-common:${Versions.Tweener.common}"
+
             object Android {
-                const val common = "com.github.Tweener:common-android:${Versions.Tweener.Android.common}"
-                const val cezanne = "com.github.Tweener:cezanne-android:${Versions.Tweener.Android.cezanne}"
                 const val placeholder = "com.github.Tweener:placeholder-material3:${Versions.Tweener.Android.placeholder}"
             }
         }
