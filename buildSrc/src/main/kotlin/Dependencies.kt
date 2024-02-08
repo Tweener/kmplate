@@ -40,12 +40,13 @@ object Dependencies {
         const val kodein = "7.21.2"
         const val ktor = "2.3.8"
         const val napier = "2.7.1"
+        const val realm = "1.13.0"
         const val kotlinxDatetime = "0.4.1"
         const val gradleVersionsPlugin = "0.51.0"
         const val googleServicesPlugin = "4.4.0"
         const val crashlyticsPlugin = "2.9.9"
         const val performancePlugin = "1.4.2"
-        const val firebase = "32.7.1"
+        const val firebase = "1.11.1" // Firebase for KMP https://firebaseopensource.com/projects/gitliveapp/firebase-kotlin-sdk/
         const val coil = "3.0.0-alpha01"
 
         object Tweener {
@@ -58,6 +59,7 @@ object Dependencies {
         }
 
         object Android {
+            const val firebase = "32.7.1"
             const val composeCompilerExtension = "1.5.8" // See mapping with Kotlin version here: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
             const val compose = "1.6.0"
             const val activityCompose = "1.8.2"
@@ -83,6 +85,7 @@ object Dependencies {
 
         const val napier = "io.github.aakira:napier:${Versions.napier}"
         const val kotlinXDatetime = "org.jetbrains.kotlinx:kotlinx-datetime:${Versions.kotlinxDatetime}"
+        const val realm = "io.realm.kotlin:library-base:${Versions.realm}"
 
         object Tweener {
             const val czan = "io.github.tweener:czan:${Versions.Tweener.czan}"
@@ -133,10 +136,10 @@ object Dependencies {
         }
 
         object Firebase {
-            const val bom = "com.google.firebase:firebase-bom:${Versions.firebase}"
-            const val analytics = "com.google.firebase:firebase-analytics-ktx"
-            const val crashlytics = "com.google.firebase:firebase-crashlytics-ktx"
-            const val performance = "com.google.firebase:firebase-perf-ktx"
+            const val firestore = "dev.gitlive:firebase-firestore:${Versions.firebase}"
+            const val config = "dev.gitlive:firebase-config:${Versions.firebase}"
+            const val auth = "dev.gitlive:firebase-auth:${Versions.firebase}"
+            const val functions = "dev.gitlive:firebase-functions:${Versions.firebase}"
         }
 
         object Android {
@@ -146,6 +149,13 @@ object Dependencies {
             const val glidePlaceholder = "com.github.skydoves:landscapist-placeholder:${Versions.Android.glide}"
             const val desugarJdkLibs = "com.android.tools:desugar_jdk_libs:${Versions.Android.desugarJdkLibs}"
             const val adMob = "com.google.android.gms:play-services-ads:${Versions.Android.adMob}"
+
+            object Firebase {
+                const val bom = "com.google.firebase:firebase-bom:${Versions.firebase}"
+                const val analytics = "com.google.firebase:firebase-analytics-ktx"
+                const val crashlytics = "com.google.firebase:firebase-crashlytics-ktx"
+                const val performance = "com.google.firebase:firebase-perf-ktx"
+            }
 
             object AndroidX {
                 const val material3 = "androidx.compose.material3:material3:${Versions.Android.material3}"

@@ -45,6 +45,7 @@ kotlin {
             // Add here any extra framework dependencies
             export(project(":shared:data"))
             export(project(":shared:domain"))
+            export(project(":shared:presentation"))
         }
     }
 
@@ -54,6 +55,7 @@ kotlin {
         commonMain.dependencies {
             api(project(":shared:data"))
             api(project(":shared:domain"))
+            api(project(":shared:presentation"))
         }
 
         commonTest.dependencies {

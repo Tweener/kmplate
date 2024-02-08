@@ -10,10 +10,12 @@ plugins {
     id("org.jetbrains.compose").version(Dependencies.Versions.composeMultiplatform).apply(false)
     kotlin("android").version(Dependencies.Versions.kotlin).apply(false)
     kotlin("multiplatform").version(Dependencies.Versions.kotlin).apply(false)
+    kotlin("plugin.serialization").version(Dependencies.Versions.kotlin).apply(false)
     id("com.github.ben-manes.versions").version(Dependencies.Versions.gradleVersionsPlugin) // ./gradlew dependencyUpdates
     id("com.google.gms.google-services").version(Dependencies.Versions.googleServicesPlugin).apply(false)
     id("com.google.firebase.crashlytics").version(Dependencies.Versions.crashlyticsPlugin).apply(false)
     id("com.google.firebase.firebase-perf").version(Dependencies.Versions.performancePlugin).apply(false)
+    id("io.realm.kotlin").version(Dependencies.Versions.realm).apply(false)
 }
 
 tasks.register("clean", Delete::class) {

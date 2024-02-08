@@ -1,6 +1,8 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("io.realm.kotlin")
+    kotlin("plugin.serialization")
 }
 
 android {
@@ -46,6 +48,15 @@ kotlin {
 
             // Napier
             implementation(Dependencies.Libraries.napier)
+
+            // Realm
+            implementation(Dependencies.Libraries.realm)
+
+            // Firestore
+            implementation(Dependencies.Libraries.Firebase.firestore)
+            implementation(Dependencies.Libraries.Firebase.config)
+            implementation(Dependencies.Libraries.Firebase.auth)
+            implementation(Dependencies.Libraries.Firebase.functions)
         }
 
         commonTest.dependencies {

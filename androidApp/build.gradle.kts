@@ -93,10 +93,10 @@ dependencies {
     implementation(Dependencies.Libraries.Android.AndroidX.Compose.lifecycleRuntime)
 
     // Firebase
-    implementation(platform(Dependencies.Libraries.Firebase.bom))
-    implementation(Dependencies.Libraries.Firebase.analytics)
-    implementation(Dependencies.Libraries.Firebase.crashlytics)
-    implementation(Dependencies.Libraries.Firebase.performance)
+    implementation(platform(Dependencies.Libraries.Android.Firebase.bom))
+    implementation(Dependencies.Libraries.Android.Firebase.analytics)
+    implementation(Dependencies.Libraries.Android.Firebase.crashlytics)
+    implementation(Dependencies.Libraries.Android.Firebase.performance)
 
     // Coroutines
     implementation(Dependencies.Libraries.Coroutines.core)

@@ -54,7 +54,7 @@ To configure these 2 Slack bots, we need to create 3 [Github Actions variables](
 
 ### 5. Rename Github Actions names
 
-1. Open `.github/workflows/buildDebug.xml` and replace `Kplate` on lines 1, 42 and 54 by your own name.
+1. Open `.github/workflows/buildDebug.xml` and replace `Kmplate` on lines 1, 42 and 54 by your own name.
 
 ### 6. Use correct `google-services.json`
 
