@@ -4,10 +4,12 @@ import com.tweener.changehere.data.repository.AppConfigurationRepositoryImpl
 import com.tweener.changehere.data.repository.FeatureFlagRepositoryImpl
 import com.tweener.changehere.data.repository.PlatformRepositoryImpl
 import com.tweener.changehere.data.repository.SettingsRepositoryImpl
+import com.tweener.changehere.data.repository.UserRepositoryImpl
 import com.tweener.changehere.domain.repository.AppConfigurationRepository
 import com.tweener.changehere.domain.repository.FeatureFlagRepository
 import com.tweener.changehere.domain.repository.PlatformRepository
 import com.tweener.changehere.domain.repository.SettingsRepository
+import com.tweener.changehere.domain.repository.UserRepository
 import org.kodein.di.DI
 import org.kodein.di.bindProvider
 import org.kodein.di.instance
@@ -23,5 +25,6 @@ val repositoryModule by DI.Module(name = "Repositories") {
     bindProvider<SettingsRepository> { SettingsRepositoryImpl(localStorageDataSource = instance()) }
     bindProvider<AppConfigurationRepository> { AppConfigurationRepositoryImpl(localAppConfigurationDataSource = instance(), remoteConfigDataSource = instance()) }
     bindProvider<FeatureFlagRepository> { FeatureFlagRepositoryImpl(remoteConfigFeatureFlagModelMapper = instance(), remoteConfigDataSource = instance()) }
+    bindProvider<UserRepository> { UserRepositoryImpl(localStorageDataSource = instance(), firebaseAuthDataSource = instance(), firestoreUsersDataSource = instance()) }
 
 }

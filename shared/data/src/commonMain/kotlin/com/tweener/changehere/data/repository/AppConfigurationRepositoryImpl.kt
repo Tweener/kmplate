@@ -1,5 +1,7 @@
 package com.tweener.changehere.data.repository
 
+import com.tweener.changehere.data.source.firebase.remoteconfig.model.RemoteConfigKey
+import com.tweener.changehere.data.source.firebase.remoteconfig.model.RemoteConfigModel
 import com.tweener.changehere.data.source.local.datasource.LocalAppConfigurationDataSource
 import com.tweener.changehere.domain.entity.AppConfiguration
 import com.tweener.changehere.domain.repository.AppConfigurationRepository
@@ -16,11 +18,11 @@ class AppConfigurationRepositoryImpl(
 
     override suspend fun getAppConfiguration(): AppConfigurationRepository.OutputParams.GetAppConfiguration {
         if (localAppConfigurationDataSource.appConfiguration == null) {
-            // val someRemoteConfigProperty = remoteConfigDataSource.getLong(key = RemoteConfigModel(key = RemoteConfigKey.SOME_REMOTE_CONFIG_PROPERTY).key.value, defaultValue = 3)
+            val appRatingAskPeriodMonths = remoteConfigDataSource.getLong(key = RemoteConfigModel(key = RemoteConfigKey.APP_RATING_ASK_PERIOD_MONTHS).key.value, defaultValue = 3)
 
             localAppConfigurationDataSource.appConfiguration = AppConfiguration(
-                id = "" // TODO Add proper mapping for app configuration properties
-                // someRemoteConfigProperty = someRemoteConfigProperty.toInt(),
+                appRatingAskPeriodMonths = appRatingAskPeriodMonths.toInt(),
+                // TODO Add proper mapping for app configuration properties
             )
         }
 

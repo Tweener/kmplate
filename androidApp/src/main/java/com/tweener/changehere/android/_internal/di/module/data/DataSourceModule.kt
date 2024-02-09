@@ -1,5 +1,6 @@
 package com.tweener.changehere.android._internal.di.module.data
 
+import com.tweener.changehere.data.source.firebase.firestore.datasource.FirestoreUsersDataSource
 import com.tweener.changehere.data.source.local.datasource.LocalAppConfigurationDataSource
 import com.tweener.changehere.data.source.local.datasource.LocalStorageDataSource
 import com.tweener.firebase.auth.FirebaseAuthService
@@ -36,6 +37,7 @@ val dataSourceModule by DI.Module(name = "DataSources") {
 
     // Firestore
     bindSingleton { FirestoreService() }
+    bindSingleton { FirestoreUsersDataSource(firestoreService = instance()) }
 
     // Remote Config
     bindSingleton { RemoteConfigService(isDebug = true /* BuildConfig.DEBUG */) }

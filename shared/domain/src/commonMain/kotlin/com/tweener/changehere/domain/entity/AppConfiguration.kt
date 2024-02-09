@@ -5,6 +5,6 @@ package com.tweener.changehere.domain.entity
  * @since 29/12/2023
  */
 data class AppConfiguration(
-    val id: String,
+    val appRatingAskPeriodMonths: Int,
     // TODO Add here specific app configuration parameters
 )
