@@ -51,7 +51,7 @@ object Dependencies {
 
         object Tweener {
             const val czan = "2.0.1"
-            const val common = "1.0.0"
+            const val common = "1.0.1"
             const val realm = "1.0.1"
             const val firebase = "1.0.0"
 

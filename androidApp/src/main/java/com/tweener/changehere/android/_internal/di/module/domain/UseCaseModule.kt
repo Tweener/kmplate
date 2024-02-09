@@ -1,6 +1,9 @@
 package com.tweener.changehere.android._internal.di.module.domain
 
+import com.tweener.changehere.domain.usecase.featureflag.GetFeatureFlagUseCase
 import org.kodein.di.DI
+import org.kodein.di.bindProvider
+import org.kodein.di.instance
 
 /**
  * @author Vivien Mahe
@@ -8,5 +11,9 @@ import org.kodein.di.DI
  */
 
 val useCaseModule by DI.Module(name = "UseCase Module") {
+
+    // Feature Flags
+    bindProvider { GetFeatureFlagUseCase(featureFlagRepository = instance()) }
+
 
 }
