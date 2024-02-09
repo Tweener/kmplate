@@ -1,5 +1,6 @@
 package com.tweener.changehere.android._internal.di.module.data
 
+import com.tweener.changehere.data.source.local.datasource.LocalAppConfigurationDataSource
 import com.tweener.changehere.data.source.local.datasource.LocalStorageDataSource
 import com.tweener.realm.RealmDatabase
 import org.kodein.di.DI
@@ -25,5 +26,6 @@ val dataSourceModule by DI.Module(name = "DataSources") {
 
     // Local
     bindProvider { LocalStorageDataSource(context = instance()) }
+    bindSingleton { LocalAppConfigurationDataSource() }
 
 }
