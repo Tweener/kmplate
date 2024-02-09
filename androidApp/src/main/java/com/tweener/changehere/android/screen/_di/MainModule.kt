@@ -5,6 +5,7 @@ import com.tweener.changehere.data.repository.PlatformRepositoryImpl
 import com.tweener.changehere.domain.Greeting
 import org.kodein.di.DI
 import org.kodein.di.bindSingleton
+import org.kodein.di.instance
 
 /**
  * @author Vivien Mahe
@@ -13,6 +14,11 @@ import org.kodein.di.bindSingleton
 val mainModule = DI.Module(name = "Main screen") {
 
     bindSingleton { Greeting(platformRepository = PlatformRepositoryImpl()) }
-    bindSingleton { MainViewModel() }
+
+    bindSingleton {
+        MainViewModel(
+            loadAppConfigUseCase = instance(),
+        )
+    }
 
 }
