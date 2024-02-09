@@ -67,10 +67,11 @@ dependencies {
 
     coreLibraryDesugaring(Dependencies.Libraries.Android.desugarJdkLibs)
 
-    // Android
+    // Tweener
     implementation(Dependencies.Libraries.Tweener.common)
     implementation(Dependencies.Libraries.Tweener.czan)
     implementation(Dependencies.Libraries.Tweener.Android.placeholder)
+    implementation(Dependencies.Libraries.Tweener.realm)
 
     // Android
     implementation(Dependencies.Libraries.Android.AndroidX.material3)

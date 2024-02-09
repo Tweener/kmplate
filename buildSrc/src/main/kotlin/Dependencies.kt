@@ -52,6 +52,7 @@ object Dependencies {
         object Tweener {
             const val czan = "2.0.1"
             const val common = "1.0.0"
+            const val realm = "1.0.1"
 
             object Android {
                 const val placeholder = "1.0.0"
@@ -85,11 +86,11 @@ object Dependencies {
 
         const val napier = "io.github.aakira:napier:${Versions.napier}"
         const val kotlinXDatetime = "org.jetbrains.kotlinx:kotlinx-datetime:${Versions.kotlinxDatetime}"
-        const val realm = "io.realm.kotlin:library-base:${Versions.realm}"
 
         object Tweener {
             const val czan = "io.github.tweener:czan:${Versions.Tweener.czan}"
             const val common = "io.github.tweener:kmp-common:${Versions.Tweener.common}"
+            const val realm = "io.github.tweener:kmp-realm:${Versions.Tweener.realm}"
 
             object Android {
                 const val placeholder = "com.github.Tweener:placeholder-material3:${Versions.Tweener.Android.placeholder}"

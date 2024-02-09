@@ -32,6 +32,9 @@ kotlin {
         commonMain.dependencies {
             implementation(project(":shared:domain"))
 
+            // Tweener
+            implementation(Dependencies.Libraries.Tweener.realm)
+
             // Kotlin
             implementation(Dependencies.Libraries.Coroutines.core)
             implementation(Dependencies.Libraries.kotlinXDatetime)
@@ -48,9 +51,6 @@ kotlin {
 
             // Napier
             implementation(Dependencies.Libraries.napier)
-
-            // Realm
-            implementation(Dependencies.Libraries.realm)
 
             // Firestore
             implementation(Dependencies.Libraries.Firebase.firestore)
