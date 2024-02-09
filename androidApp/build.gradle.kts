@@ -70,8 +70,9 @@ dependencies {
     // Tweener
     implementation(Dependencies.Libraries.Tweener.common)
     implementation(Dependencies.Libraries.Tweener.czan)
-    implementation(Dependencies.Libraries.Tweener.Android.placeholder)
     implementation(Dependencies.Libraries.Tweener.realm)
+    implementation(Dependencies.Libraries.Tweener.firebase)
+    implementation(Dependencies.Libraries.Tweener.Android.placeholder)
 
     // Android
     implementation(Dependencies.Libraries.Android.AndroidX.material3)

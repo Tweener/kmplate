@@ -16,6 +16,6 @@ val repositoryModule by DI.Module(name = "Repositories") {
 
     bindProvider<PlatformRepository> { PlatformRepositoryImpl() }
 
-    bindProvider<AppConfigurationRepository> { AppConfigurationRepositoryImpl(localAppConfigurationDataSource = instance()) }
+    bindProvider<AppConfigurationRepository> { AppConfigurationRepositoryImpl(localAppConfigurationDataSource = instance(), remoteConfigDataSource = instance()) }
 
 }

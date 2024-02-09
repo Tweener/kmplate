@@ -53,6 +53,7 @@ object Dependencies {
             const val czan = "2.0.1"
             const val common = "1.0.0"
             const val realm = "1.0.1"
+            const val firebase = "1.0.0"
 
             object Android {
                 const val placeholder = "1.0.0"
@@ -91,6 +92,7 @@ object Dependencies {
             const val czan = "io.github.tweener:czan:${Versions.Tweener.czan}"
             const val common = "io.github.tweener:kmp-common:${Versions.Tweener.common}"
             const val realm = "io.github.tweener:kmp-realm:${Versions.Tweener.realm}"
+            const val firebase = "io.github.tweener:kmp-firebase:${Versions.Tweener.firebase}"
 
             object Android {
                 const val placeholder = "com.github.Tweener:placeholder-material3:${Versions.Tweener.Android.placeholder}"
@@ -136,13 +138,6 @@ object Dependencies {
             const val serializationJson = "io.ktor:ktor-serialization-kotlinx-json:${Versions.ktor}"
         }
 
-        object Firebase {
-            const val firestore = "dev.gitlive:firebase-firestore:${Versions.firebase}"
-            const val config = "dev.gitlive:firebase-config:${Versions.firebase}"
-            const val auth = "dev.gitlive:firebase-auth:${Versions.firebase}"
-            const val functions = "dev.gitlive:firebase-functions:${Versions.firebase}"
-        }
-
         object Android {
             const val material3 = "androidx.compose.material3:material3:${Versions.Android.material3}"
             const val loggingInterceptor = "com.github.ihsanbal:LoggingInterceptor:${Versions.Android.loggingInterceptor}"
@@ -152,7 +147,7 @@ object Dependencies {
             const val adMob = "com.google.android.gms:play-services-ads:${Versions.Android.adMob}"
 
             object Firebase {
-                const val bom = "com.google.firebase:firebase-bom:${Versions.firebase}"
+                const val bom = "com.google.firebase:firebase-bom:${Versions.Android.firebase}"
                 const val analytics = "com.google.firebase:firebase-analytics-ktx"
                 const val crashlytics = "com.google.firebase:firebase-crashlytics-ktx"
                 const val performance = "com.google.firebase:firebase-perf-ktx"

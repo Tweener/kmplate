@@ -34,6 +34,7 @@ kotlin {
 
             // Tweener
             implementation(Dependencies.Libraries.Tweener.realm)
+            implementation(Dependencies.Libraries.Tweener.firebase)
 
             // Kotlin
             implementation(Dependencies.Libraries.Coroutines.core)
@@ -51,12 +52,6 @@ kotlin {
 
             // Napier
             implementation(Dependencies.Libraries.napier)
-
-            // Firestore
-            implementation(Dependencies.Libraries.Firebase.firestore)
-            implementation(Dependencies.Libraries.Firebase.config)
-            implementation(Dependencies.Libraries.Firebase.auth)
-            implementation(Dependencies.Libraries.Firebase.functions)
         }
 
         commonTest.dependencies {
