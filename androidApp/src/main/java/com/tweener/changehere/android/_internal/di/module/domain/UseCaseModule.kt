@@ -1,5 +1,6 @@
 package com.tweener.changehere.android._internal.di.module.domain
 
+import com.tweener.changehere.domain.usecase.config.LoadAppConfigUseCase
 import com.tweener.changehere.domain.usecase.featureflag.GetFeatureFlagUseCase
 import org.kodein.di.DI
 import org.kodein.di.bindProvider
@@ -11,6 +12,13 @@ import org.kodein.di.instance
  */
 
 val useCaseModule by DI.Module(name = "UseCase Module") {
+
+    // Config
+    bindProvider {
+        LoadAppConfigUseCase(
+            appConfigurationRepository = instance(),
+        )
+    }
 
     // Feature Flags
     bindProvider { GetFeatureFlagUseCase(featureFlagRepository = instance()) }
