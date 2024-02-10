@@ -1,5 +1,3 @@
-import org.jetbrains.compose.ExperimentalComposeLibrary
-
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
@@ -34,10 +32,9 @@ android {
         kotlinCompilerExtensionVersion = Dependencies.Versions.Android.composeCompilerExtension
     }
 
-    sourceSets["main"].resources.srcDirs("src/commonMain/resources")
-
     dependencies {
         debugApi(compose.uiTooling)
+        debugApi(compose.components.uiToolingPreview)
         debugApi(Dependencies.Libraries.Android.AndroidX.Compose.uiTooling)
     }
 
@@ -72,7 +69,6 @@ kotlin {
             implementation(compose.material)
             implementation(compose.materialIconsExtended)
             implementation(compose.ui)
-            @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
             implementation(Dependencies.Libraries.ComposeMultiplatform.material3)
 
@@ -97,6 +93,7 @@ kotlin {
 
         androidMain.dependencies {
             // Compose
+            implementation(compose.components.uiToolingPreview)
             implementation(Dependencies.Libraries.Android.AndroidX.Compose.uiToolingPreview)
             implementation(Dependencies.Libraries.Android.AndroidX.Compose.activity)
         }

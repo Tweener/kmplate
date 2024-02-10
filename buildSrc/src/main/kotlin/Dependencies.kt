@@ -35,7 +35,7 @@ object Dependencies {
 
         const val kotlin = "1.9.22"
         const val gradle = "8.2.2"
-        const val composeMultiplatform = "1.5.12"
+        const val composeMultiplatform = "1.6.0-beta02"
         const val coroutines = "1.7.3"
         const val kodein = "7.21.2"
         const val ktor = "2.3.8"
@@ -178,7 +178,6 @@ object Dependencies {
 
             object Accompanist {
                 const val systemUIController = "com.google.accompanist:accompanist-systemuicontroller:${Versions.Android.accompanist}"
-                const val navigationAnimation = "com.google.accompanist:accompanist-navigation-animation:${Versions.Android.accompanist}"
                 const val permissions = "com.google.accompanist:accompanist-permissions:${Versions.Android.accompanist}"
             }
         }
