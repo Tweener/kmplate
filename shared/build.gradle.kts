@@ -1,5 +1,6 @@
 plugins {
     kotlin("multiplatform")
+//    kotlin("native.cocoapods")
     id("com.android.library")
 }
 
@@ -32,6 +33,11 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "shared"
             isStatic = true
+
+            // Add here any extra framework dependencies
+            export(project(":shared:data"))
+            export(project(":shared:domain"))
+            export(project(":shared:presentation"))
         }
     }
 
@@ -51,6 +57,7 @@ kotlin {
 //        podfile = project.file("../iosApp/Podfile")
 //        framework {
 //            baseName = "shared"
+//            isStatic = true
 //
 //            // Add here any extra framework dependencies
 //            export(project(":shared:data"))
@@ -76,9 +83,6 @@ kotlin {
 
         commonTest.dependencies {
             implementation(kotlin("test"))
-        }
-
-        iosMain.dependencies {
         }
     }
 }

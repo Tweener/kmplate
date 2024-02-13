@@ -24,6 +24,7 @@ android {
     }
 
     // region Compose
+
     buildFeatures {
         compose = true
     }
