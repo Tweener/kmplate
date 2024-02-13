@@ -109,7 +109,7 @@ dependencies {
     implementation(Dependencies.Libraries.Kodein.compose)
 
     // Napier
-    implementation(Dependencies.Libraries.napier)
+//    implementation(Dependencies.Libraries.napier)
 
     // Image fetcher
     implementation(Dependencies.Libraries.Android.glide)

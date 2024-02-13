@@ -1,4 +1,4 @@
-package com.tweener.changehere.android._internal.di.module.domain
+package com.tweener.changehere.domain._internal.di
 
 import org.kodein.di.DI
 

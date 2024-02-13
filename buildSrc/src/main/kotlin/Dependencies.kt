@@ -42,7 +42,7 @@ object Dependencies {
         const val napier = "2.7.1"
         const val realm = "1.13.0"
         const val kotlinxDatetime = "0.4.1"
-        const val gradleVersionsPlugin = "0.51.0"
+        const val dependencyVersionsPlugin = "0.51.0"
         const val googleServicesPlugin = "4.4.0"
         const val crashlyticsPlugin = "2.9.9"
         const val performancePlugin = "1.4.2"
@@ -51,7 +51,7 @@ object Dependencies {
 
         object Tweener {
             const val czan = "2.0.1"
-            const val common = "1.0.1"
+            const val common = "1.0.2"
             const val realm = "1.0.1"
             const val firebase = "1.0.0"
 

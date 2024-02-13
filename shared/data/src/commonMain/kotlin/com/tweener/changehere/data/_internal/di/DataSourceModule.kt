@@ -1,4 +1,4 @@
-package com.tweener.changehere.android._internal.di.module.data
+package com.tweener.changehere.data._internal.di
 
 import com.tweener.changehere.data.source.firebase.firestore.datasource.FirestoreUsersDataSource
 import com.tweener.changehere.data.source.local.datasource.LocalAppConfigurationDataSource

@@ -1,4 +1,4 @@
-package com.tweener.changehere.android._internal.di.module.data
+package com.tweener.changehere.data._internal.di
 
 import com.tweener.common._internal.LocaleProvider
 import com.tweener.common._internal.createLocaleProvider
@@ -7,7 +7,7 @@ import org.kodein.di.bindSingleton
 
 /**
  * @author Vivien Mahe
- * @since 05/06/2023
+ * @since 10/02/2024
  */
 val dataModule by DI.Module(name = "Data Layer Module") {
 

@@ -3,6 +3,7 @@ package com.tweener.changehere.data.source.local.datasource
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
+import com.tweener.common._internal.KMPContext
 
 /**
  * @author Vivien Mahe
@@ -11,8 +12,8 @@ import android.content.SharedPreferences
 
 const val LOCAL_STORAGE_SHARED_PREF_NAME = "localStorage"
 
-actual class LocalStorageDataSource(
-    val context: Context
+actual class LocalStorageDataSource actual constructor(
+    val context: KMPContext
 ) {
     actual fun getString(key: String, defaultValue: String?): String? {
         val prefs: SharedPreferences = context.getSharedPreferences(LOCAL_STORAGE_SHARED_PREF_NAME, MODE_PRIVATE)
@@ -48,5 +49,12 @@ actual class LocalStorageDataSource(
         val editor = prefs.edit()
         editor.putInt(key, value)
         editor.apply()
+    }
+}
+
+class AndroidTest(private val context: Context) : Test {
+    override fun getString(key: String, defaultValue: String?): String? {
+        val prefs: SharedPreferences = context.getSharedPreferences(LOCAL_STORAGE_SHARED_PREF_NAME, MODE_PRIVATE)
+        return prefs.getString(key, defaultValue)
     }
 }

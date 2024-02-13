@@ -1,5 +1,6 @@
 package com.tweener.changehere.data.source.local.datasource
 
+import com.tweener.common._internal.KMPContext
 import platform.Foundation.NSUserDefaults
 
 /**
@@ -7,7 +8,9 @@ import platform.Foundation.NSUserDefaults
  * @since 05/10/2023
  */
 
-actual class LocalStorageDataSource {
+actual class LocalStorageDataSource actual constructor(
+    context: KMPContext
+) {
 
     actual fun getString(key: String, defaultValue: String?): String? =
         NSUserDefaults.standardUserDefaults.stringForKey(key) ?: defaultValue

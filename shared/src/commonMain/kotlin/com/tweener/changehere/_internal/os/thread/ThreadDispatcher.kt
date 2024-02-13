@@ -1,4 +1,4 @@
-package com.tweener.changehere.android._internal.os.thread
+package com.tweener.changehere._internal.os.thread
 
 /**
  * @author Vivien Mahe

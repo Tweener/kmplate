@@ -1,6 +1,6 @@
 package com.tweener.changehere.android._internal.di.module.presentation
 
-import com.tweener.changehere.android._internal.os.thread.CoroutinesThreadDispatcher
+import com.tweener.changehere._internal.os.thread.CoroutinesThreadDispatcher
 import org.kodein.di.DI
 import org.kodein.di.bindSingleton
 

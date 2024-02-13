@@ -1,7 +1,8 @@
-package com.tweener.changehere.android._internal.os.thread
+package com.tweener.changehere._internal.os.thread
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.IO
 
 /**
  * @author Vivien Mahe
