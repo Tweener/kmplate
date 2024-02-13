@@ -1,5 +1,3 @@
-package com.tweener.changehere
-
 import androidx.compose.ui.window.ComposeUIViewController
 import com.tweener.changehere.presentation.screen.MainScreen
 
