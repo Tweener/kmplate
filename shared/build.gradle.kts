@@ -41,31 +41,6 @@ kotlin {
         }
     }
 
-//    iosX64()
-//    iosArm64()
-//    iosSimulatorArm64()
-//
-//    cocoapods {
-//        // Configure the Pod name here instead of changing the Gradle project name
-//        name = "MyProjectCocoaPod"
-//
-//        summary = "Some description for the Shared Module"
-//        homepage = "Link to the Shared Module homepage"
-//        version = "1.0"
-//
-//        ios.deploymentTarget = Dependencies.Versions.MyProject.IOS.deploymentTarget
-//        podfile = project.file("../iosApp/Podfile")
-//        framework {
-//            baseName = "shared"
-//            isStatic = true
-//
-//            // Add here any extra framework dependencies
-//            export(project(":shared:data"))
-//            export(project(":shared:domain"))
-//            export(project(":shared:presentation"))
-//        }
-//    }
-
     // endregion iOS configuration
 
     sourceSets {
