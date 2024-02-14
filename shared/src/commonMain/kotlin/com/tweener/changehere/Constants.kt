@@ -1,4 +1,4 @@
-package com.tweener.changehere.domain
+package com.tweener.changehere
 
 /**
  * @author Vivien Mahe

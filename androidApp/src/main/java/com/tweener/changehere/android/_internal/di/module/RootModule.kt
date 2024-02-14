@@ -11,7 +11,7 @@ import org.kodein.di.bindSingleton
  * @author Vivien Mahe
  * @since 05/06/2023
  */
-fun rootModule(context: Context) = DI.Module {
+fun rootModule(context: Context) = DI.Module(name = "Application entry point Module") {
 
     bindSingleton { context }
     bindSingleton { Locale.getDefault() }

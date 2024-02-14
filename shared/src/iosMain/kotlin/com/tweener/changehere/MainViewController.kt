@@ -1,5 +1,5 @@
 import androidx.compose.ui.window.ComposeUIViewController
-import com.tweener.changehere.presentation.screen.MainScreen
+import com.tweener.changehere.presentation.MainScreen
 
 /**
  * @author Vivien Mahe

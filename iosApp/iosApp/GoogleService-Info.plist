@@ -2,24 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CLIENT_ID</key>
-	<string></string>
-	<key>REVERSED_CLIENT_ID</key>
-	<string></string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string></string>
 	<key>API_KEY</key>
-	<string></string>
+	<string>AIzaSyDhCtfO_3bOc6i1NY54haCtb_6wqSwC3os</string>
 	<key>GCM_SENDER_ID</key>
-	<string></string>
+	<string>339383698002</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.tweener.changehere</string>
 	<key>PROJECT_ID</key>
-	<string>Kmplate</string>
+	<string>kmplate-77ced</string>
 	<key>STORAGE_BUCKET</key>
-	<string>kmplate.appspot.com</string>
+	<string>kmplate-77ced.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string></string>
-	<key>DATABASE_URL</key>
-	<string></string>
+	<string>1:339383698002:ios:2021ca730346dba9add58b</string>
 </dict>
 </plist>

@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "",
-    "project_id": "changehere",
-    "storage_bucket": "changehere.appspot.com"
+    "project_number": "339383698002",
+    "project_id": "kmplate-77ced",
+    "storage_bucket": "kmplate-77ced.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "",
+        "mobilesdk_app_id": "1:339383698002:android:8914052968058ac7add58b",
         "android_client_info": {
           "package_name": "com.tweener.changehere"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": ""
+          "current_key": "AIzaSyDfBvj9PBLn2Ob4wbL0gDtWP-RpnuT4WKk"
         }
       ],
       "services": {
@@ -26,15 +26,15 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "",
+        "mobilesdk_app_id": "1:339383698002:android:ddfd51ddda3b7ac8add58b",
         "android_client_info": {
-          "package_name": "com.tweener.changehere.debug"
+          "package_name": "com.tweener.kmplate"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": ""
+          "current_key": "AIzaSyDfBvj9PBLn2Ob4wbL0gDtWP-RpnuT4WKk"
         }
       ],
       "services": {

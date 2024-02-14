@@ -49,6 +49,9 @@ kotlin {
             api(project(":shared:domain"))
             api(project(":shared:presentation"))
 
+            // Tweener
+            api(Dependencies.Libraries.Tweener.czan)
+
             // DI
             implementation(Dependencies.Libraries.Kodein.core)
 

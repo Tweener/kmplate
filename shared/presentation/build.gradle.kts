@@ -55,37 +55,33 @@ kotlin {
         commonMain.dependencies {
             implementation(project(":shared:domain"))
 
-            implementation(Dependencies.Libraries.kotlinXDatetime)
-
             // Tweener
-            implementation(Dependencies.Libraries.Tweener.czan)
+            api(Dependencies.Libraries.Tweener.czan)
 
             // Kotlin
-            implementation(Dependencies.Libraries.Coroutines.core)
-            implementation(Dependencies.Libraries.kotlinXDatetime)
+            api(Dependencies.Libraries.Coroutines.core)
+            api(Dependencies.Libraries.kotlinXDatetime)
 
             // Compose
-            implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(compose.material)
-            implementation(compose.materialIconsExtended)
-            implementation(compose.ui)
-            implementation(compose.components.resources)
-            implementation(Dependencies.Libraries.ComposeMultiplatform.material3)
+            api(compose.runtime)
+            api(compose.foundation)
+            api(compose.material)
+            api(compose.materialIconsExtended)
+            api(compose.ui)
+            api(compose.components.resources)
+            api(compose.components.uiToolingPreview)
+            api(Dependencies.Libraries.ComposeMultiplatform.material3)
 
             // DI
-            implementation(Dependencies.Libraries.Kodein.core)
-            implementation(Dependencies.Libraries.Kodein.compose)
+            api(Dependencies.Libraries.Kodein.core)
+            api(Dependencies.Libraries.Kodein.compose)
 
             // Napier
-            implementation(Dependencies.Libraries.napier)
+            api(Dependencies.Libraries.napier)
 
             // Image fetcher
             api(Dependencies.Libraries.Coil.compose)
             api(Dependencies.Libraries.Coil.network)
-
-            // Kmpalette
-            implementation(Dependencies.Libraries.Ktor.Client.core)
         }
 
         commonTest.dependencies {
@@ -94,9 +90,8 @@ kotlin {
 
         androidMain.dependencies {
             // Compose
-            implementation(compose.components.uiToolingPreview)
-            implementation(Dependencies.Libraries.Android.AndroidX.Compose.uiToolingPreview)
-            implementation(Dependencies.Libraries.Android.AndroidX.Compose.activity)
+            api(Dependencies.Libraries.Android.AndroidX.Compose.uiToolingPreview)
+            api(Dependencies.Libraries.Android.AndroidX.Compose.activity)
         }
     }
 }
