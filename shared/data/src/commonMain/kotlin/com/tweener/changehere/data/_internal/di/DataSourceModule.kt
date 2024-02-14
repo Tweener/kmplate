@@ -20,7 +20,7 @@ import org.kodein.di.instance
  * @since 01/11/2023
  */
 
-val dataSourceModule by DI.Module(name = "DataSources") {
+val dataSourceModule by DI.Module(name = "DataSources Module") {
 
     // Realm
     bindSingleton {

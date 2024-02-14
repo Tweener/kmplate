@@ -18,7 +18,7 @@ import org.kodein.di.instance
  * @author Vivien Mahe
  * @since 05/06/2023
  */
-val repositoryModule by DI.Module(name = "Repositories") {
+val repositoryModule by DI.Module(name = "Repositories Module") {
 
     bindProvider<PlatformRepository> { PlatformRepositoryImpl() }
 

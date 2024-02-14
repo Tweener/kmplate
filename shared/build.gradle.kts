@@ -51,6 +51,7 @@ kotlin {
 
             // Tweener
             api(Dependencies.Libraries.Tweener.czan)
+            api(Dependencies.Libraries.Tweener.common)
 
             // DI
             implementation(Dependencies.Libraries.Kodein.core)

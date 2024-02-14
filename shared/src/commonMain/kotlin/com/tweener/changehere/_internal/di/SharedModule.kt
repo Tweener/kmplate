@@ -1,5 +1,6 @@
 package com.tweener.changehere._internal.di
 
+import com.tweener.changehere.Test
 import com.tweener.changehere._internal.libs.coil.CoilConfiguration
 import com.tweener.changehere._internal.os.thread.CoroutinesThreadDispatcher
 import com.tweener.changehere.data._internal.di.dataModule
@@ -13,7 +14,13 @@ import org.kodein.di.bindSingleton
  * @since 10/02/2024
  */
 
-val sharedModule by DI.Module("Presentation layer module") {
+fun sharedDI() = DI {
+    import(sharedModule())
+}
+
+fun sharedModule() = DI.Module("Shared module") {
+
+    bindSingleton { Test(name = "OUI OUI") }
 
     bindSingleton { CoroutinesThreadDispatcher() }
     bindSingleton { CoilConfiguration() }

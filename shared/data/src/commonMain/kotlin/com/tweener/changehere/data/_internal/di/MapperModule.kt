@@ -9,7 +9,7 @@ import org.kodein.di.bindProvider
  * @since 01/11/2023
  */
 
-val mapperModule = DI.Module(name = "Mappers") {
+val mapperModule = DI.Module(name = "Mappers Module") {
 
     // Remote Config
     bindProvider { RemoteConfigFeatureFlagModelMapper() }

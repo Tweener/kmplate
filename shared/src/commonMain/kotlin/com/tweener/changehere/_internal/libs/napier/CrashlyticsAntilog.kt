@@ -1,6 +1,5 @@
-package com.tweener.changehere.android._internal.libs.napier
+package com.tweener.changehere._internal.libs.napier
 
-import com.google.firebase.crashlytics.FirebaseCrashlytics
 import io.github.aakira.napier.Antilog
 import io.github.aakira.napier.LogLevel
 
@@ -14,6 +13,6 @@ class CrashlyticsAntilog : Antilog() {
         // send only warning and error logs
         if (priority < LogLevel.WARNING) return
 
-        throwable?.let { FirebaseCrashlytics.getInstance().recordException(it) }
+//        throwable?.let { FirebaseCrashlytics.getInstance().recordException(it) }
     }
 }
