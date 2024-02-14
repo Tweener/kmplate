@@ -46,5 +46,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<!-- Sample AdMob App ID -->
+    <key>GADApplicationIdentifier</key>
+    <string>ca-app-pub-7000898829037084~6481263773</string>
 </dict>
 </plist>
