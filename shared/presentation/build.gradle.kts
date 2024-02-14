@@ -53,35 +53,6 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            implementation(project(":shared:domain"))
-
-            // Tweener
-            api(Dependencies.Libraries.Tweener.czan)
-
-            // Kotlin
-            api(Dependencies.Libraries.Coroutines.core)
-            api(Dependencies.Libraries.kotlinXDatetime)
-
-            // Compose
-            api(compose.runtime)
-            api(compose.foundation)
-            api(compose.material)
-            api(compose.materialIconsExtended)
-            api(compose.ui)
-            api(compose.components.resources)
-            api(compose.components.uiToolingPreview)
-            api(Dependencies.Libraries.ComposeMultiplatform.material3)
-
-            // DI
-            api(Dependencies.Libraries.Kodein.core)
-            api(Dependencies.Libraries.Kodein.compose)
-
-            // Napier
-            api(Dependencies.Libraries.napier)
-
-            // Image fetcher
-            api(Dependencies.Libraries.Coil.compose)
-            api(Dependencies.Libraries.Coil.network)
         }
 
         commonTest.dependencies {
@@ -91,7 +62,6 @@ kotlin {
         androidMain.dependencies {
             // Compose
             api(Dependencies.Libraries.Android.AndroidX.Compose.uiToolingPreview)
-            api(Dependencies.Libraries.Android.AndroidX.Compose.activity)
         }
     }
 }

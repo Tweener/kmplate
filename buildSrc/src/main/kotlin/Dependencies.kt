@@ -66,18 +66,14 @@ object Dependencies {
             const val compose = "1.6.0"
             const val activityCompose = "1.8.2"
             const val navigationCompose = "2.7.6"
-            const val material3 = "1.1.2"
             const val loggingInterceptor = "3.1.0"
-            const val glide = "2.2.8"
             const val desugarJdkLibs = "2.0.4"
             const val accompanist = "0.34.0"
             const val adMob = "22.6.0"
+            const val lifecycle = "2.7.0"
 
             object AndroidX {
                 const val activity = "1.8.2"
-                const val appcompat = "1.4.2"
-                const val constraintlayout = "2.1.4"
-                const val lifecycle = "2.7.0"
                 const val splashscreen = "1.0.1"
             }
         }
@@ -110,7 +106,6 @@ object Dependencies {
 
         object Kodein {
             const val core = "org.kodein.di:kodein-di:${Versions.kodein}"
-            const val viewModel = "org.kodein.di:kodein-di-framework-android-x-viewmodel:${Versions.kodein}"
             const val compose = "org.kodein.di:kodein-di-framework-compose:${Versions.kodein}"
         }
 
@@ -139,10 +134,7 @@ object Dependencies {
         }
 
         object Android {
-            const val material3 = "androidx.compose.material3:material3:${Versions.Android.material3}"
             const val loggingInterceptor = "com.github.ihsanbal:LoggingInterceptor:${Versions.Android.loggingInterceptor}"
-            const val glide = "com.github.skydoves:landscapist-glide:${Versions.Android.glide}"
-            const val glidePlaceholder = "com.github.skydoves:landscapist-placeholder:${Versions.Android.glide}"
             const val desugarJdkLibs = "com.android.tools:desugar_jdk_libs:${Versions.Android.desugarJdkLibs}"
             const val adMob = "com.google.android.gms:play-services-ads:${Versions.Android.adMob}"
 
@@ -154,30 +146,17 @@ object Dependencies {
             }
 
             object AndroidX {
-                const val material3 = "androidx.compose.material3:material3:${Versions.Android.material3}"
                 const val activity = "androidx.activity:activity-ktx:${Versions.Android.AndroidX.activity}"
-                const val appcompat = "androidx.appcompat:appcompat:${Versions.Android.AndroidX.appcompat}"
-                const val constraintlayout = "androidx.constraintlayout:constraintlayout:${Versions.Android.AndroidX.constraintlayout}"
-                const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.Android.AndroidX.lifecycle}"
-                const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.Android.AndroidX.lifecycle}"
                 const val splashscreen = "androidx.core:core-splashscreen:${Versions.Android.AndroidX.splashscreen}"
 
                 object Compose {
-                    const val ui = "androidx.compose.ui:ui:${Versions.Android.compose}"
                     const val uiTooling = "androidx.compose.ui:ui-tooling:${Versions.Android.compose}"
                     const val uiToolingPreview = "androidx.compose.ui:ui-tooling-preview:${Versions.Android.compose}"
-                    const val foundation = "androidx.compose.foundation:foundation:${Versions.Android.compose}"
-                    const val material = "androidx.compose.material:material:${Versions.Android.compose}"
-                    const val materialIconsCore = "androidx.compose.material:material-icons-core:${Versions.Android.compose}"
-                    const val materialIconsExtended = "androidx.compose.material:material-icons-extended:${Versions.Android.compose}"
                     const val activity = "androidx.activity:activity-compose:${Versions.Android.activityCompose}"
-                    const val navigation = "androidx.navigation:navigation-compose:${Versions.Android.navigationCompose}"
-                    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-compose:${Versions.Android.AndroidX.lifecycle}"
                 }
             }
 
             object Accompanist {
-                const val systemUIController = "com.google.accompanist:accompanist-systemuicontroller:${Versions.Android.accompanist}"
                 const val permissions = "com.google.accompanist:accompanist-permissions:${Versions.Android.accompanist}"
             }
         }

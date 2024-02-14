@@ -1,24 +1,20 @@
 package com.tweener.changehere.presentation
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.WindowInsetsSides
+import androidx.compose.foundation.layout.consumeWindowInsets
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.only
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawing
+import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.tweener.changehere._internal.libs.coil.CoilConfiguration
-import io.github.aakira.napier.Napier
-import kmplate.shared.generated.resources.Res
-import org.jetbrains.compose.resources.ExperimentalResourceApi
-import org.jetbrains.compose.resources.painterResource
+import com.tweener.changehere.presentation.screen.home.ui.template.HomeTemplate
+import com.tweener.changehere.presentation.theme.MyProjectTheme
 import org.kodein.di.compose.rememberInstance
 
 /**
@@ -26,7 +22,6 @@ import org.kodein.di.compose.rememberInstance
  * @since 10/02/2024
  */
 
-@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun MainScreen() {
     val viewModel: MainViewModel by rememberInstance()
@@ -34,19 +29,27 @@ fun MainScreen() {
 
     coilConfiguration.init()
 
-    Napier.d { "MainScreen init" }
-
-    MaterialTheme {
-        var showContent by remember { mutableStateOf(false) }
-        Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-            Button(onClick = { showContent = !showContent }) {
-                Text(text = "Click me!")
+    MyProjectTheme {
+        Scaffold(
+            contentWindowInsets = WindowInsets(0, 0, 0, 0),
+            bottomBar = {
+//                if (appState.shouldShowBottomBar) {
+//                    QuotellBottomBar(appState = appState)
+//                }
             }
-            AnimatedVisibility(showContent) {
-                Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-                    Image(painter = painterResource(resource = Res.drawable.compose_multiplatform), contentDescription = null)
-                    Text(text = "Compose: Hellow")
-                }
+        ) { innerPadding ->
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(innerPadding)
+                    .consumeWindowInsets(innerPadding)
+                    .windowInsetsPadding(
+                        WindowInsets.safeDrawing.only(
+                            WindowInsetsSides.Horizontal,
+                        ),
+                    ),
+            ) {
+                HomeTemplate()
             }
         }
     }

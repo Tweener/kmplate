@@ -53,15 +53,34 @@ kotlin {
             // Since Compose Multiplatform 1.6.0 is not yet compatible with multi-modules projects, we can't use Presentation module yet
 
             // Tweener
-            api(Dependencies.Libraries.Tweener.czan)
-            api(Dependencies.Libraries.Tweener.common)
+            implementation(Dependencies.Libraries.Tweener.czan)
+            implementation(Dependencies.Libraries.Tweener.common)
             implementation(Dependencies.Libraries.Tweener.firebase)
+
+            // Kotlin
+            implementation(Dependencies.Libraries.Coroutines.core)
+            implementation(Dependencies.Libraries.kotlinXDatetime)
+
+            // Compose
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material)
+            implementation(compose.materialIconsExtended)
+            implementation(compose.ui)
+            implementation(compose.components.resources)
+            implementation(compose.components.uiToolingPreview)
+            implementation(Dependencies.Libraries.ComposeMultiplatform.material3)
 
             // DI
             implementation(Dependencies.Libraries.Kodein.core)
+            implementation(Dependencies.Libraries.Kodein.compose)
 
             // Napier
-            api(Dependencies.Libraries.napier)
+            implementation(Dependencies.Libraries.napier)
+
+            // Image fetcher
+            api(Dependencies.Libraries.Coil.compose)
+            api(Dependencies.Libraries.Coil.network)
         }
 
         commonTest.dependencies {

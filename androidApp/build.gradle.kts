@@ -68,31 +68,14 @@ dependencies {
     coreLibraryDesugaring(Dependencies.Libraries.Android.desugarJdkLibs)
 
     // Tweener
-    implementation(Dependencies.Libraries.Tweener.common)
     implementation(Dependencies.Libraries.Tweener.czan)
-    implementation(Dependencies.Libraries.Tweener.realm)
-    implementation(Dependencies.Libraries.Tweener.firebase)
-    implementation(Dependencies.Libraries.Tweener.Android.placeholder)
 
     // Android
-    implementation(Dependencies.Libraries.Android.AndroidX.material3)
     implementation(Dependencies.Libraries.Android.AndroidX.splashscreen)
     implementation(Dependencies.Libraries.Android.AndroidX.activity)
-    implementation(Dependencies.Libraries.Android.Accompanist.systemUIController)
     implementation(Dependencies.Libraries.Android.Accompanist.permissions)
-    implementation(Dependencies.Libraries.Android.adMob)
-
-    // Compose
-    implementation(Dependencies.Libraries.Android.AndroidX.Compose.ui)
-    implementation(Dependencies.Libraries.Android.AndroidX.Compose.uiTooling)
-    implementation(Dependencies.Libraries.Android.AndroidX.Compose.uiToolingPreview)
-    implementation(Dependencies.Libraries.Android.AndroidX.Compose.foundation)
-    implementation(Dependencies.Libraries.Android.AndroidX.Compose.material)
-    implementation(Dependencies.Libraries.Android.AndroidX.Compose.materialIconsCore)
-    implementation(Dependencies.Libraries.Android.AndroidX.Compose.materialIconsExtended)
     implementation(Dependencies.Libraries.Android.AndroidX.Compose.activity)
-    implementation(Dependencies.Libraries.Android.AndroidX.Compose.navigation)
-    implementation(Dependencies.Libraries.Android.AndroidX.Compose.lifecycleRuntime)
+    implementation(Dependencies.Libraries.Android.adMob)
 
     // Firebase
     implementation(platform(Dependencies.Libraries.Android.Firebase.bom))
@@ -100,18 +83,6 @@ dependencies {
     implementation(Dependencies.Libraries.Android.Firebase.crashlytics)
     implementation(Dependencies.Libraries.Android.Firebase.performance)
 
-    // Coroutines
-    implementation(Dependencies.Libraries.Coroutines.core)
-    implementation(Dependencies.Libraries.Coroutines.android)
-
     // DI
-    implementation(Dependencies.Libraries.Kodein.viewModel)
-    implementation(Dependencies.Libraries.Kodein.compose)
-
-    // Napier
-//    implementation(Dependencies.Libraries.napier)
-
-    // Image fetcher
-    implementation(Dependencies.Libraries.Android.glide)
-    implementation(Dependencies.Libraries.Android.glidePlaceholder)
+    implementation(Dependencies.Libraries.Kodein.core)
 }
