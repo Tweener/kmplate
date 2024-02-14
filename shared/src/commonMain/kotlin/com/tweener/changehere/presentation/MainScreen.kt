@@ -15,6 +15,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.tweener.changehere._internal.libs.coil.CoilConfiguration
+import io.github.aakira.napier.Napier
 import kmplate.shared.generated.resources.Res
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
@@ -32,6 +33,8 @@ fun MainScreen() {
     val coilConfiguration: CoilConfiguration by rememberInstance()
 
     coilConfiguration.init()
+
+    Napier.d { "MainScreen init" }
 
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }

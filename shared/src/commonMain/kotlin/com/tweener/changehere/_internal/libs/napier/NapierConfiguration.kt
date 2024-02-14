@@ -7,7 +7,9 @@ import io.github.aakira.napier.Napier
  * @author Vivien Mahe
  * @since 21/09/2023
  */
-class NapierConfiguration {
+class NapierConfiguration(
+    private val crashlyticsAntilog: CrashlyticsAntilog,
+) {
 
     fun init() {
         Napier.base(DebugAntilog())

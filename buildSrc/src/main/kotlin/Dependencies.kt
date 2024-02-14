@@ -53,7 +53,7 @@ object Dependencies {
             const val czan = "2.0.1"
             const val common = "1.0.2"
             const val realm = "1.0.1"
-            const val firebase = "1.0.0"
+            const val firebase = "1.0.1"
 
             object Android {
                 const val placeholder = "1.0.0"

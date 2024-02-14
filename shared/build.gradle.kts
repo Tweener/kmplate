@@ -49,9 +49,13 @@ kotlin {
             api(project(":shared:domain"))
             api(project(":shared:presentation"))
 
+            // Everything below this part is for the Presentation layer
+            // Since Compose Multiplatform 1.6.0 is not yet compatible with multi-modules projects, we can't use Presentation module yet
+
             // Tweener
             api(Dependencies.Libraries.Tweener.czan)
             api(Dependencies.Libraries.Tweener.common)
+            implementation(Dependencies.Libraries.Tweener.firebase)
 
             // DI
             implementation(Dependencies.Libraries.Kodein.core)

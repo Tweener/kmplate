@@ -1,7 +1,6 @@
 package com.tweener.changehere._internal.di
 
 import android.content.Context
-import com.tweener.changehere._internal.libs.napier.NapierConfiguration
 import com.tweener.common.os.notification.channel.NotificationChannelRegister
 import com.tweener.common.os.notification.notification.NotificationNotifier
 import com.tweener.common.os.permission.PermissionChecker
@@ -24,8 +23,6 @@ fun sharedAndroidDI(context: Context) = DI {
 fun sharedAndroidModule(context: Context) = DI.Module("sharedAndroidModule") {
     bindSingleton { context }
     bindSingleton { Locale.getDefault() }
-
-    bindSingleton { NapierConfiguration() }
     bindSingleton { PermissionChecker(context = instance()) }
 
     // Notifications
