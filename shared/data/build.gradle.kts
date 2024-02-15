@@ -62,11 +62,6 @@ kotlin {
         androidMain.dependencies {
             // Ktor
             implementation(Dependencies.Libraries.Ktor.Client.Android.okhttp)
-
-            // LoggingInterceptor: An OkHttp interceptor for logging network requests and responses
-            implementation(Dependencies.Libraries.Android.loggingInterceptor) {
-                exclude(group = "org.json", module = "json")
-            }
         }
 
         iosMain.dependencies {

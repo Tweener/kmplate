@@ -22,10 +22,6 @@ object Dependencies {
                 const val minSDK = 24
                 const val versionCode = 1
             }
-
-            object IOS {
-                const val deploymentTarget = "14.1"
-            }
         }
 
         object Compiler {
@@ -35,7 +31,7 @@ object Dependencies {
 
         const val kotlin = "1.9.22"
         const val gradle = "8.2.2"
-        const val composeMultiplatform = "1.6.0-beta02"
+        const val composeMultiplatform = "1.6.0-rc01"
         const val coroutines = "1.7.3"
         const val kodein = "7.21.2"
         const val ktor = "2.3.8"
@@ -54,23 +50,15 @@ object Dependencies {
             const val common = "1.0.2"
             const val realm = "1.0.1"
             const val firebase = "1.0.1"
-
-            object Android {
-                const val placeholder = "1.0.0"
-            }
         }
 
         object Android {
             const val firebase = "32.7.1"
-            const val composeCompilerExtension = "1.5.8" // See mapping with Kotlin version here: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
-            const val compose = "1.6.0"
+            const val composeCompilerExtension = "1.5.9" // See mapping with Kotlin version here: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
             const val activityCompose = "1.8.2"
-            const val navigationCompose = "2.7.6"
-            const val loggingInterceptor = "3.1.0"
             const val desugarJdkLibs = "2.0.4"
             const val accompanist = "0.34.0"
             const val adMob = "22.6.0"
-            const val lifecycle = "2.7.0"
 
             object AndroidX {
                 const val activity = "1.8.2"
@@ -89,10 +77,6 @@ object Dependencies {
             const val common = "io.github.tweener:kmp-common:${Versions.Tweener.common}"
             const val realm = "io.github.tweener:kmp-realm:${Versions.Tweener.realm}"
             const val firebase = "io.github.tweener:kmp-firebase:${Versions.Tweener.firebase}"
-
-            object Android {
-                const val placeholder = "com.github.Tweener:placeholder-material3:${Versions.Tweener.Android.placeholder}"
-            }
         }
 
         object ComposeMultiplatform {
@@ -115,6 +99,8 @@ object Dependencies {
         }
 
         object Ktor {
+            const val serializationJson = "io.ktor:ktor-serialization-kotlinx-json:${Versions.ktor}"
+
             object Client {
                 const val core = "io.ktor:ktor-client-core:${Versions.ktor}"
                 const val auth = "io.ktor:ktor-client-auth:${Versions.ktor}"
@@ -129,19 +115,15 @@ object Dependencies {
                     const val client = "io.ktor:ktor-client-ios:${Versions.ktor}"
                 }
             }
-
-            const val serializationJson = "io.ktor:ktor-serialization-kotlinx-json:${Versions.ktor}"
         }
 
         object Android {
-            const val loggingInterceptor = "com.github.ihsanbal:LoggingInterceptor:${Versions.Android.loggingInterceptor}"
             const val desugarJdkLibs = "com.android.tools:desugar_jdk_libs:${Versions.Android.desugarJdkLibs}"
             const val adMob = "com.google.android.gms:play-services-ads:${Versions.Android.adMob}"
 
             object Firebase {
                 const val bom = "com.google.firebase:firebase-bom:${Versions.Android.firebase}"
                 const val analytics = "com.google.firebase:firebase-analytics-ktx"
-                const val crashlytics = "com.google.firebase:firebase-crashlytics-ktx"
                 const val performance = "com.google.firebase:firebase-perf-ktx"
             }
 
@@ -150,8 +132,6 @@ object Dependencies {
                 const val splashscreen = "androidx.core:core-splashscreen:${Versions.Android.AndroidX.splashscreen}"
 
                 object Compose {
-                    const val uiTooling = "androidx.compose.ui:ui-tooling:${Versions.Android.compose}"
-                    const val uiToolingPreview = "androidx.compose.ui:ui-tooling-preview:${Versions.Android.compose}"
                     const val activity = "androidx.activity:activity-compose:${Versions.Android.activityCompose}"
                 }
             }
