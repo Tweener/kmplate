@@ -1,15 +1,17 @@
 import SwiftUI
 import shared
+import os
 
 @main
 class iOSApp: App {
     
     let dependencies: Dependencies
-    let test: Test
     
     required init() {
         dependencies = DependenciesFactory.shared.create()
-        test = dependencies.provideTest()
+        let test = dependencies.provideTest()
+        
+        Logger().debug("Test OUI: \(test.name)")
     }
 
 	var body: some Scene {

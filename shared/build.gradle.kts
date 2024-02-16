@@ -79,8 +79,8 @@ kotlin {
             implementation(Dependencies.Libraries.napier)
 
             // Image fetcher
-            api(Dependencies.Libraries.Coil.compose)
-            api(Dependencies.Libraries.Coil.network)
+            implementation(Dependencies.Libraries.Coil.compose)
+            implementation(Dependencies.Libraries.Coil.network)
         }
 
         commonTest.dependencies {
