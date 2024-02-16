@@ -10,20 +10,17 @@ import com.tweener.firebase.functions.FirebaseFunctionsService
 import com.tweener.firebase.remoteconfig.RemoteConfigService
 import com.tweener.firebase.remoteconfig.datasource.RemoteConfigDataSource
 import com.tweener.realm.RealmDatabase
-import org.kodein.di.DI
-import org.kodein.di.bindProvider
-import org.kodein.di.bindSingleton
-import org.kodein.di.instance
+import org.koin.dsl.module
 
 /**
  * @author Vivien Mahe
  * @since 01/11/2023
  */
 
-val dataSourceModule by DI.Module(name = "DataSources Module") {
+val dataSourceModule = module {
 
     // Realm
-    bindSingleton {
+    single {
         RealmDatabase(
             schema = setOf(
                 // TODO Add here all RealmObjects models, ie: RealmUserModel::class,
@@ -32,21 +29,21 @@ val dataSourceModule by DI.Module(name = "DataSources Module") {
     }
 
     // Local
-    bindProvider { LocalStorageDataSource(context = instance()) }
-    bindSingleton { LocalAppConfigurationDataSource() }
+    factory { LocalStorageDataSource(context = get()) }
+    single { LocalAppConfigurationDataSource() }
 
     // Firestore
-    bindSingleton { FirestoreService() }
-    bindSingleton { FirestoreUsersDataSource(firestoreService = instance()) }
+    single { FirestoreService() }
+    single { FirestoreUsersDataSource(firestoreService = get()) }
 
     // Remote Config
-    bindSingleton { RemoteConfigService(isDebug = true /* BuildConfig.DEBUG */) }
-    bindSingleton { RemoteConfigDataSource(firebaseRemoteConfigService = instance()) }
+    single { RemoteConfigService(isDebug = true /* BuildConfig.DEBUG */) }
+    single { RemoteConfigDataSource(firebaseRemoteConfigService = get()) }
 
     // Firebase Auth
-    bindSingleton { FirebaseAuthService() }
-    bindSingleton { FirebaseAuthDataSource(firebaseAuthService = instance()) }
+    single { FirebaseAuthService() }
+    single { FirebaseAuthDataSource(firebaseAuthService = get()) }
 
     // Firebase Functions
-    bindSingleton { FirebaseFunctionsService() }
+    single { FirebaseFunctionsService() }
 }

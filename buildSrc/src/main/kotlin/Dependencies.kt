@@ -33,7 +33,8 @@ object Dependencies {
         const val gradle = "8.2.2"
         const val composeMultiplatform = "1.6.0-rc01"
         const val coroutines = "1.7.3"
-        const val kodein = "7.21.2"
+        const val koin = "3.6.0-alpha1"
+        const val koinCompose = "1.1.2"
         const val ktor = "2.3.8"
         const val napier = "2.7.1"
         const val realm = "1.13.0"
@@ -88,9 +89,10 @@ object Dependencies {
             const val network = "io.coil-kt.coil3:coil-network:${Versions.coil}"
         }
 
-        object Kodein {
-            const val core = "org.kodein.di:kodein-di:${Versions.kodein}"
-            const val compose = "org.kodein.di:kodein-di-framework-compose:${Versions.kodein}"
+        object Koin {
+            const val core = "io.insert-koin:koin-core:${Versions.koin}"
+            const val compose = "io.insert-koin:koin-compose:${Versions.koinCompose}"
+            const val android = "io.insert-koin:koin-android:${Versions.koin}"
         }
 
         object Coroutines {

@@ -72,8 +72,8 @@ kotlin {
             implementation(Dependencies.Libraries.ComposeMultiplatform.material3)
 
             // DI
-            implementation(Dependencies.Libraries.Kodein.core)
-            implementation(Dependencies.Libraries.Kodein.compose)
+            implementation(Dependencies.Libraries.Koin.core)
+            implementation(Dependencies.Libraries.Koin.compose)
 
             // Napier
             implementation(Dependencies.Libraries.napier)
@@ -85,6 +85,11 @@ kotlin {
 
         commonTest.dependencies {
             implementation(kotlin("test"))
+        }
+
+        androidMain.dependencies {
+            // DI
+            implementation(Dependencies.Libraries.Koin.android)
         }
     }
 }

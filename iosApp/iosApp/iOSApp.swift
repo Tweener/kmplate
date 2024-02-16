@@ -1,17 +1,11 @@
 import SwiftUI
 import shared
-import os
 
 @main
 class iOSApp: App {
     
-    let dependencies: Dependencies
-    
     required init() {
-        dependencies = DependenciesFactory.shared.create()
-        let test = dependencies.provideTest()
-        
-        Logger().debug("Test OUI: \(test.name)")
+        KoinIosDIKt.doInitKoin()
     }
 
 	var body: some Scene {

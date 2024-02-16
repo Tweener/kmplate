@@ -13,40 +13,38 @@ import com.tweener.changehere.domain.usecase.user.ShouldAskForAppReviewUseCase
 import com.tweener.changehere.domain.usecase.user.SignOutUserUseCase
 import com.tweener.changehere.domain.usecase.user.UpdateLastAskForAppReviewDateUseCase
 import com.tweener.changehere.domain.usecase.user.UpdateUserUseCase
-import org.kodein.di.DI
-import org.kodein.di.bindProvider
-import org.kodein.di.instance
+import org.koin.dsl.module
 
 /**
  * @author Vivien Mahe
  * @since 01/11/2023
  */
 
-val useCaseModule by DI.Module(name = "UseCase Module") {
+val useCaseModule = module {
 
     // Config
-    bindProvider {
+    factory {
         LoadAppConfigUseCase(
-            appConfigurationRepository = instance(),
+            appConfigurationRepository = get(),
         )
     }
-    bindProvider { GetAppRatingAskPeriodMonthsUseCase(appConfigurationRepository = instance()) }
+    factory { GetAppRatingAskPeriodMonthsUseCase(appConfigurationRepository = get()) }
 
     // User
-    bindProvider { GetUserUseCase(userRepository = instance()) }
-    bindProvider { IsUserAuthenticatedInUseCase(userRepository = instance()) }
-    bindProvider { ShouldAskForAppReviewUseCase(userRepository = instance(), getAppRatingAskPeriodMonthsUseCase = instance()) }
-    bindProvider { UpdateLastAskForAppReviewDateUseCase(userRepository = instance()) }
-    bindProvider { AuthenticateUserUseCase(userRepository = instance()) }
-    bindProvider { UpdateUserUseCase(userRepository = instance()) }
-    bindProvider { SignOutUserUseCase(userRepository = instance()) }
-    bindProvider { DeleteUserUseCase(userRepository = instance()) }
+    factory { GetUserUseCase(userRepository = get()) }
+    factory { IsUserAuthenticatedInUseCase(userRepository = get()) }
+    factory { ShouldAskForAppReviewUseCase(userRepository = get(), getAppRatingAskPeriodMonthsUseCase = get()) }
+    factory { UpdateLastAskForAppReviewDateUseCase(userRepository = get()) }
+    factory { AuthenticateUserUseCase(userRepository = get()) }
+    factory { UpdateUserUseCase(userRepository = get()) }
+    factory { SignOutUserUseCase(userRepository = get()) }
+    factory { DeleteUserUseCase(userRepository = get()) }
 
     // Feature Flags
-    bindProvider { GetFeatureFlagUseCase(featureFlagRepository = instance()) }
+    factory { GetFeatureFlagUseCase(featureFlagRepository = get()) }
 
     // Settings & permissions
-    bindProvider { SetDarkModeUseCase(settingsRepository = instance()) }
-    bindProvider { GetDarkModeUseCase(settingsRepository = instance()) }
+    factory { SetDarkModeUseCase(settingsRepository = get()) }
+    factory { GetDarkModeUseCase(settingsRepository = get()) }
 
 }

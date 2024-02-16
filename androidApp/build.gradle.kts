@@ -67,6 +67,9 @@ dependencies {
 
     coreLibraryDesugaring(Dependencies.Libraries.Android.desugarJdkLibs)
 
+    // Tweener
+    implementation(Dependencies.Libraries.Tweener.czan)
+
     // Android
     implementation(Dependencies.Libraries.Android.AndroidX.splashscreen)
     implementation(Dependencies.Libraries.Android.AndroidX.activity)
@@ -80,5 +83,6 @@ dependencies {
     implementation(Dependencies.Libraries.Android.Firebase.performance)
 
     // DI
-    implementation(Dependencies.Libraries.Kodein.core)
+    implementation(Dependencies.Libraries.Koin.core)
+    implementation(Dependencies.Libraries.Koin.android)
 }

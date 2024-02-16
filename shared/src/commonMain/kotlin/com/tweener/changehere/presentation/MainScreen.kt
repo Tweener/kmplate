@@ -15,7 +15,8 @@ import androidx.compose.ui.Modifier
 import com.tweener.changehere._internal.libs.coil.CoilConfiguration
 import com.tweener.changehere.presentation.screen.home.ui.template.HomeTemplate
 import com.tweener.changehere.presentation.theme.MyProjectTheme
-import org.kodein.di.compose.rememberInstance
+import org.koin.compose.KoinContext
+import org.koin.compose.koinInject
 
 /**
  * @author Vivien Mahe
@@ -24,32 +25,34 @@ import org.kodein.di.compose.rememberInstance
 
 @Composable
 fun MainScreen() {
-    val viewModel: MainViewModel by rememberInstance()
-    val coilConfiguration: CoilConfiguration by rememberInstance()
+    KoinContext {
+        val viewModel: MainViewModel = koinInject<MainViewModel>()
+        val coilConfiguration: CoilConfiguration = koinInject<CoilConfiguration>()
 
-    coilConfiguration.init()
+        coilConfiguration.init()
 
-    MyProjectTheme {
-        Scaffold(
-            contentWindowInsets = WindowInsets(0, 0, 0, 0),
-            bottomBar = {
+        MyProjectTheme {
+            Scaffold(
+                contentWindowInsets = WindowInsets(0, 0, 0, 0),
+                bottomBar = {
 //                if (appState.shouldShowBottomBar) {
 //                    QuotellBottomBar(appState = appState)
 //                }
-            }
-        ) { innerPadding ->
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(innerPadding)
-                    .consumeWindowInsets(innerPadding)
-                    .windowInsetsPadding(
-                        WindowInsets.safeDrawing.only(
-                            WindowInsetsSides.Horizontal,
+                }
+            ) { innerPadding ->
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(innerPadding)
+                        .consumeWindowInsets(innerPadding)
+                        .windowInsetsPadding(
+                            WindowInsets.safeDrawing.only(
+                                WindowInsetsSides.Horizontal,
+                            ),
                         ),
-                    ),
-            ) {
-                HomeTemplate()
+                ) {
+                    HomeTemplate()
+                }
             }
         }
     }

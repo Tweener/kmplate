@@ -10,21 +10,19 @@ import com.tweener.changehere.domain.repository.FeatureFlagRepository
 import com.tweener.changehere.domain.repository.PlatformRepository
 import com.tweener.changehere.domain.repository.SettingsRepository
 import com.tweener.changehere.domain.repository.UserRepository
-import org.kodein.di.DI
-import org.kodein.di.bindProvider
-import org.kodein.di.instance
+import org.koin.dsl.module
 
 /**
  * @author Vivien Mahe
  * @since 05/06/2023
  */
-val repositoryModule by DI.Module(name = "Repositories Module") {
+val repositoryModule = module {
 
-    bindProvider<PlatformRepository> { PlatformRepositoryImpl() }
+    factory<PlatformRepository> { PlatformRepositoryImpl() }
 
-    bindProvider<SettingsRepository> { SettingsRepositoryImpl(localStorageDataSource = instance()) }
-    bindProvider<AppConfigurationRepository> { AppConfigurationRepositoryImpl(localAppConfigurationDataSource = instance(), remoteConfigDataSource = instance()) }
-    bindProvider<FeatureFlagRepository> { FeatureFlagRepositoryImpl(remoteConfigFeatureFlagModelMapper = instance(), remoteConfigDataSource = instance()) }
-    bindProvider<UserRepository> { UserRepositoryImpl(localStorageDataSource = instance(), firebaseAuthDataSource = instance(), firestoreUsersDataSource = instance()) }
+    factory<SettingsRepository> { SettingsRepositoryImpl(localStorageDataSource = get()) }
+    factory<AppConfigurationRepository> { AppConfigurationRepositoryImpl(localAppConfigurationDataSource = get(), remoteConfigDataSource = get()) }
+    factory<FeatureFlagRepository> { FeatureFlagRepositoryImpl(remoteConfigFeatureFlagModelMapper = get(), remoteConfigDataSource = get()) }
+    factory<UserRepository> { UserRepositoryImpl(localStorageDataSource = get(), firebaseAuthDataSource = get(), firestoreUsersDataSource = get()) }
 
 }

@@ -33,7 +33,7 @@ kotlin {
             implementation(Dependencies.Libraries.kotlinXDatetime)
 
             // DI
-            implementation(Dependencies.Libraries.Kodein.core)
+            implementation(Dependencies.Libraries.Koin.core)
 
             // Napier
             implementation(Dependencies.Libraries.napier)

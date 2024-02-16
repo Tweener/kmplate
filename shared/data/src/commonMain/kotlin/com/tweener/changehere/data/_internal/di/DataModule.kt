@@ -2,19 +2,18 @@ package com.tweener.changehere.data._internal.di
 
 import com.tweener.common._internal.LocaleProvider
 import com.tweener.common._internal.createLocaleProvider
-import org.kodein.di.DI
-import org.kodein.di.bindSingleton
+import org.koin.dsl.module
 
 /**
  * @author Vivien Mahe
  * @since 10/02/2024
  */
-val dataModule by DI.Module(name = "Data Layer Module") {
+val dataModule = module {
 
-    bindSingleton<LocaleProvider> { createLocaleProvider() }
+    single<LocaleProvider> { createLocaleProvider() }
 
-    importOnce(mapperModule)
-    importOnce(dataSourceModule)
-    importOnce(repositoryModule)
+    includes(mapperModule)
+    includes(dataSourceModule)
+    includes(repositoryModule)
 
 }

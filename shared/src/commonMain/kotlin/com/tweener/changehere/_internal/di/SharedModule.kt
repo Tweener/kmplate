@@ -1,6 +1,5 @@
 package com.tweener.changehere._internal.di
 
-import com.tweener.changehere.Test
 import com.tweener.changehere._internal.libs.LibrariesConfiguration
 import com.tweener.changehere._internal.libs.coil.CoilConfiguration
 import com.tweener.changehere._internal.libs.napier.CrashlyticsAntilog
@@ -10,40 +9,32 @@ import com.tweener.changehere.data._internal.di.dataModule
 import com.tweener.changehere.domain._internal.di.domainModule
 import com.tweener.changehere.presentation._internal.di.presentationModule
 import com.tweener.firebase.crashlytics.CrashlyticsService
-import org.kodein.di.DI
-import org.kodein.di.bindSingleton
-import org.kodein.di.instance
+import org.koin.dsl.module
 
 /**
  * @author Vivien Mahe
  * @since 10/02/2024
  */
 
-fun sharedDI() = DI {
-    import(sharedModule())
-}
+val sharedModule = module {
 
-fun sharedModule() = DI.Module("Shared module") {
-
-    bindSingleton { Test(name = "OUI OUI") }
-
-    bindSingleton { CoroutinesThreadDispatcher() }
+    single { CoroutinesThreadDispatcher() }
 
     // Coil
-    bindSingleton { CoilConfiguration() }
+    single { CoilConfiguration() }
 
     // Firebase Crashlytics
-    bindSingleton { CrashlyticsService() }
+    single { CrashlyticsService() }
 
     // Napier
-    bindSingleton { CrashlyticsAntilog(crashlyticsService = instance()) }
-    bindSingleton { NapierConfiguration(crashlyticsAntilog = instance()) }
+    single { CrashlyticsAntilog(crashlyticsService = get()) }
+    single { NapierConfiguration(crashlyticsAntilog = get()) }
 
     // Libraries
-    bindSingleton { LibrariesConfiguration(napierConfiguration = instance()) }
+    single { LibrariesConfiguration(napierConfiguration = get()) }
 
-    importOnce(dataModule)
-    importOnce(domainModule)
-    importOnce(presentationModule)
+    includes(dataModule)
+    includes(domainModule)
+    includes(presentationModule)
 
 }

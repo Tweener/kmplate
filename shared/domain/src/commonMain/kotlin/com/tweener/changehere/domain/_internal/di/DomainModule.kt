@@ -1,14 +1,14 @@
 package com.tweener.changehere.domain._internal.di
 
-import org.kodein.di.DI
+import org.koin.dsl.module
 
 /**
  * @author Vivien Mahe
  * @since 01/11/2023
  */
 
-val domainModule by DI.Module(name = "Domain Layer Module") {
+val domainModule = module {
 
-    importOnce(useCaseModule)
+    includes(useCaseModule)
 
 }

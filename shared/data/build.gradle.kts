@@ -42,7 +42,7 @@ kotlin {
             implementation(Dependencies.Libraries.kotlinXDatetime)
 
             // DI
-            implementation(Dependencies.Libraries.Kodein.core)
+            implementation(Dependencies.Libraries.Koin.core)
 
             // Ktor
             implementation(Dependencies.Libraries.Ktor.Client.core)
