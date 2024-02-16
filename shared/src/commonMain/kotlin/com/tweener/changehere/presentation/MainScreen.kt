@@ -26,8 +26,8 @@ import org.koin.compose.koinInject
 @Composable
 fun MainScreen() {
     KoinContext {
-        val viewModel: MainViewModel = koinInject<MainViewModel>()
-        val coilConfiguration: CoilConfiguration = koinInject<CoilConfiguration>()
+        val viewModel: MainViewModel = koinInject()
+        val coilConfiguration: CoilConfiguration = koinInject()
 
         coilConfiguration.init()
 

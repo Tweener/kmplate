@@ -33,8 +33,6 @@ object Dependencies {
         const val gradle = "8.2.2"
         const val composeMultiplatform = "1.6.0-rc01"
         const val coroutines = "1.7.3"
-        const val koin = "3.6.0-alpha1"
-        const val koinCompose = "1.1.2"
         const val ktor = "2.3.8"
         const val napier = "2.7.1"
         const val realm = "1.13.0"
@@ -51,6 +49,15 @@ object Dependencies {
             const val common = "1.0.2"
             const val realm = "1.0.1"
             const val firebase = "1.0.1"
+        }
+
+        object Koin {
+            const val core = "3.6.0-alpha1"
+            const val compose = "1.1.2"
+        }
+
+        object Moko {
+            const val compose = "0.16.1"
         }
 
         object Android {
@@ -90,9 +97,9 @@ object Dependencies {
         }
 
         object Koin {
-            const val core = "io.insert-koin:koin-core:${Versions.koin}"
-            const val compose = "io.insert-koin:koin-compose:${Versions.koinCompose}"
-            const val android = "io.insert-koin:koin-android:${Versions.koin}"
+            const val core = "io.insert-koin:koin-core:${Versions.Koin.core}"
+            const val compose = "io.insert-koin:koin-compose:${Versions.Koin.compose}"
+            const val android = "io.insert-koin:koin-android:${Versions.Koin.core}"
         }
 
         object Coroutines {
@@ -117,6 +124,10 @@ object Dependencies {
                     const val client = "io.ktor:ktor-client-ios:${Versions.ktor}"
                 }
             }
+        }
+
+        object Moko {
+            const val compose = "dev.icerock.moko:mvvm-compose:${Versions.Moko.compose}"
         }
 
         object Android {

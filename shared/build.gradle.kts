@@ -75,6 +75,9 @@ kotlin {
             implementation(Dependencies.Libraries.Koin.core)
             implementation(Dependencies.Libraries.Koin.compose)
 
+            // Moko
+            implementation(Dependencies.Libraries.Moko.compose)
+
             // Napier
             implementation(Dependencies.Libraries.napier)
 

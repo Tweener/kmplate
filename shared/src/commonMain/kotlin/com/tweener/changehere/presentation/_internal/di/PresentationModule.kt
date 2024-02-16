@@ -1,5 +1,6 @@
 package com.tweener.changehere.presentation._internal.di
 
+import com.tweener.changehere._internal.di.viewModelDefinition
 import com.tweener.changehere.presentation.MainViewModel
 import org.koin.dsl.module
 
@@ -12,7 +13,7 @@ val presentationModule = module {
 
     includes(uiMapperModule)
 
-    single {
+    viewModelDefinition {
         MainViewModel(
             loadAppConfigUseCase = get(),
         )

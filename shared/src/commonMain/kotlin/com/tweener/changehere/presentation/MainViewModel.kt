@@ -1,6 +1,7 @@
 package com.tweener.changehere.presentation
 
 import com.tweener.changehere.domain.usecase.config.LoadAppConfigUseCase
+import dev.icerock.moko.mvvm.viewmodel.ViewModel
 
 /**
  * @author Vivien Mahe
@@ -8,5 +9,5 @@ import com.tweener.changehere.domain.usecase.config.LoadAppConfigUseCase
  */
 class MainViewModel(
     private val loadAppConfigUseCase: LoadAppConfigUseCase,
-) {
+) : ViewModel() {
 }
