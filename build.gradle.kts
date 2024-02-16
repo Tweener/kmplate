@@ -4,7 +4,6 @@ import java.nio.file.Files
 import java.nio.file.Paths
 
 plugins {
-    //trick: for the same plugin versions in all sub-modules
     id("com.android.application").version(Dependencies.Versions.gradle).apply(false)
     id("com.android.library").version(Dependencies.Versions.gradle).apply(false)
     id("org.jetbrains.compose").version(Dependencies.Versions.composeMultiplatform).apply(false)

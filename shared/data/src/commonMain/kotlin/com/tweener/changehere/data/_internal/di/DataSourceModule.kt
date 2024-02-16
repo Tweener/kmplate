@@ -17,7 +17,7 @@ import org.koin.dsl.module
  * @since 01/11/2023
  */
 
-val dataSourceModule = module {
+fun dataSourceModule(isDebug: Boolean) = module {
 
     // Realm
     single {
@@ -37,7 +37,7 @@ val dataSourceModule = module {
     single { FirestoreUsersDataSource(firestoreService = get()) }
 
     // Remote Config
-    single { RemoteConfigService(isDebug = true /* BuildConfig.DEBUG */) }
+    single { RemoteConfigService(isDebug = isDebug) }
     single { RemoteConfigDataSource(firebaseRemoteConfigService = get()) }
 
     // Firebase Auth

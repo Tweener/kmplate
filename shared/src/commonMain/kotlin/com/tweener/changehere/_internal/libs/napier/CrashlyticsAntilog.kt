@@ -16,6 +16,7 @@ class CrashlyticsAntilog(
         // send only warning and error logs
         if (priority < LogLevel.WARNING) return
 
+        message?.let { crashlyticsService.getCrashlytics().log(it) }
         throwable?.let { crashlyticsService.getCrashlytics().recordException(it) }
     }
 }

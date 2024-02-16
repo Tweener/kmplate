@@ -1,7 +1,19 @@
+import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.BOOLEAN
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.codingfeline.buildkonfig:buildkonfig-gradle-plugin:${Dependencies.Versions.buildKonfig}")
+    }
+}
+
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("org.jetbrains.compose")
+    id("com.codingfeline.buildkonfig").version("+")
 }
 
 android {
@@ -94,5 +106,19 @@ kotlin {
             // DI
             implementation(Dependencies.Libraries.Koin.android)
         }
+    }
+}
+
+buildkonfig {
+    packageName = Dependencies.Versions.MyProject.packageName
+
+    // Release
+    defaultConfigs {
+        buildConfigField(BOOLEAN, "DEBUG", "false")
+    }
+
+    // Debug
+    defaultConfigs("debug") {
+        buildConfigField(BOOLEAN, "DEBUG", "true")
     }
 }

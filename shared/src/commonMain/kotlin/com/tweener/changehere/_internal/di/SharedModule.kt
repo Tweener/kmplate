@@ -1,5 +1,6 @@
 package com.tweener.changehere._internal.di
 
+import com.tweener.changehere.BuildKonfig
 import com.tweener.changehere._internal.libs.LibrariesConfiguration
 import com.tweener.changehere._internal.libs.coil.CoilConfiguration
 import com.tweener.changehere._internal.libs.napier.CrashlyticsAntilog
@@ -28,12 +29,12 @@ val sharedModule = module {
 
     // Napier
     single { CrashlyticsAntilog(crashlyticsService = get()) }
-    single { NapierConfiguration(crashlyticsAntilog = get()) }
+    single { NapierConfiguration(isDebug = BuildKonfig.DEBUG, crashlyticsAntilog = get(), crashlyticsService = get()) }
 
     // Libraries
     single { LibrariesConfiguration(napierConfiguration = get()) }
 
-    includes(dataModule)
+    includes(dataModule(isDebug = BuildKonfig.DEBUG))
     includes(domainModule)
     includes(presentationModule)
 

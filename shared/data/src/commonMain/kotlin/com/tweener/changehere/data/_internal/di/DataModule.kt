@@ -8,12 +8,12 @@ import org.koin.dsl.module
  * @author Vivien Mahe
  * @since 10/02/2024
  */
-val dataModule = module {
+fun dataModule(isDebug: Boolean) = module {
 
     single<LocaleProvider> { createLocaleProvider() }
 
     includes(mapperModule)
-    includes(dataSourceModule)
+    includes(dataSourceModule(isDebug = isDebug))
     includes(repositoryModule)
 
 }

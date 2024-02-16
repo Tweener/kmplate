@@ -12,9 +12,11 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.tweener.changehere.BuildKonfig
 import com.tweener.changehere._internal.libs.coil.CoilConfiguration
 import com.tweener.changehere.presentation.screen.home.ui.template.HomeTemplate
 import com.tweener.changehere.presentation.theme.MyProjectTheme
+import io.github.aakira.napier.Napier
 import org.koin.compose.KoinContext
 import org.koin.compose.koinInject
 
@@ -30,6 +32,8 @@ fun MainScreen() {
         val coilConfiguration: CoilConfiguration = koinInject()
 
         coilConfiguration.init()
+
+        Napier.w { "3 BuildKonfig isDebug? ${BuildKonfig.DEBUG}" }
 
         MyProjectTheme {
             Scaffold(

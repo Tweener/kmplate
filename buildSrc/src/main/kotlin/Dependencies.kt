@@ -43,6 +43,7 @@ object Dependencies {
         const val performancePlugin = "1.4.2"
         const val firebase = "1.11.1" // Firebase for KMP https://firebaseopensource.com/projects/gitliveapp/firebase-kotlin-sdk/
         const val coil = "3.0.0-alpha01"
+        const val buildKonfig = "0.15.1"
 
         object Tweener {
             const val czan = "2.0.1"
