@@ -8,6 +8,12 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import kmplate.shared.generated.resources.Res
+import kmplate.shared.generated.resources.lato_black
+import kmplate.shared.generated.resources.lato_black_italic
+import kmplate.shared.generated.resources.lato_bold
+import kmplate.shared.generated.resources.lato_bold_italic
+import kmplate.shared.generated.resources.lato_italic
+import kmplate.shared.generated.resources.lato_regular
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.Font
 

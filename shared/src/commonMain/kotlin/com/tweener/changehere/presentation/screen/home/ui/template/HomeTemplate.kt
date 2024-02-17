@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import com.tweener.czan.designsystem.atom.button.Button
 import com.tweener.czan.designsystem.atom.text.Text
 import kmplate.shared.generated.resources.Res
+import kmplate.shared.generated.resources.compose_multiplatform
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 
