@@ -4,9 +4,11 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.runtime.Composable
@@ -18,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.tweener.czan.designsystem.atom.button.Button
 import com.tweener.czan.designsystem.atom.text.Text
+import com.tweener.czan.theme.Size
 import kmplate.shared.generated.resources.Res
 import kmplate.shared.generated.resources.compose_multiplatform
 import org.jetbrains.compose.resources.ExperimentalResourceApi
@@ -57,6 +60,8 @@ fun HomeTemplate(
                     Text(text = "Compose: Hellow")
                 }
             }
+
+            Spacer(modifier = Modifier.padding(vertical = Size.Padding.Default))
 
             Button(
                 text = "Open new screen",

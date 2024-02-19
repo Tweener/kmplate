@@ -1,16 +1,21 @@
 package com.tweener.changehere.presentation.screen.detail.ui.template
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.tweener.czan.designsystem.atom.button.Button
 import com.tweener.czan.designsystem.atom.text.Text
+import com.tweener.czan.theme.Size
 
 /**
  * @author Vivien Mahe
@@ -22,7 +27,11 @@ fun DetailTemplate(
     modifier: Modifier = Modifier,
     onClick: (() -> Unit)? = null,
 ) {
-    Box(modifier = modifier.fillMaxSize()) {
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background)
+    ) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -30,6 +39,8 @@ fun DetailTemplate(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(text = "Detail screen")
+
+            Spacer(modifier = Modifier.padding(vertical = Size.Padding.Default))
 
             Button(
                 text = "Show toast",

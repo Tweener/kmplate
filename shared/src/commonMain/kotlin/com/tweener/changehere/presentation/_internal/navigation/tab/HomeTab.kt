@@ -1,16 +1,12 @@
 package com.tweener.changehere.presentation._internal.navigation.tab
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
-import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
+import com.tweener.changehere.presentation._internal.navigation.MainScreenTab
 import com.tweener.changehere.presentation.screen.home.ui.screen.HomeScreen
-import kmplate.shared.generated.resources.Res
-import kmplate.shared.generated.resources.navigation_tab_home
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.stringResource
 
@@ -21,16 +17,18 @@ import org.jetbrains.compose.resources.stringResource
 
 object HomeTab : Tab {
 
+    private val mainScreenTab = MainScreenTab.HOME
+
     @OptIn(ExperimentalResourceApi::class)
     override val options: TabOptions
         @Composable
         get() {
-            val title = stringResource(resource = Res.string.navigation_tab_home)
-            val icon = rememberVectorPainter(Icons.Default.Home)
+            val title = stringResource(resource = mainScreenTab.title)
+            val icon = rememberVectorPainter(mainScreenTab.icon)
 
             return remember {
                 TabOptions(
-                    index = 0u,
+                    index = mainScreenTab.index,
                     title = title,
                     icon = icon,
                 )
@@ -39,6 +37,6 @@ object HomeTab : Tab {
 
     @Composable
     override fun Content() {
-        Navigator(screen = HomeScreen())
+        HomeScreen()
     }
 }

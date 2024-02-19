@@ -12,13 +12,14 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.tab.CurrentTab
+import cafe.adriel.voyager.navigator.tab.TabDisposable
 import cafe.adriel.voyager.navigator.tab.TabNavigator
-import com.tweener.changehere._internal.libs.coil.CoilConfiguration
 import com.tweener.changehere.presentation._internal.navigation.MyProjectNavigationBar
+import com.tweener.changehere.presentation._internal.navigation.tab.FavoritesTab
 import com.tweener.changehere.presentation._internal.navigation.tab.HomeTab
-import com.tweener.changehere.presentation.theme.MyProjectTheme
-import org.koin.compose.KoinContext
+import com.tweener.changehere.presentation._internal.navigation.tab.ProfileTab
 import org.koin.compose.koinInject
 
 /**
@@ -26,29 +27,34 @@ import org.koin.compose.koinInject
  * @since 10/02/2024
  */
 
-@Composable
-fun MainScreen() {
-    KoinContext {
+class MainScreen : Screen {
+
+    @Composable
+    override fun Content() {
         val viewModel: MainViewModel = koinInject()
-        val coilConfiguration: CoilConfiguration = koinInject()
 
-        coilConfiguration.init()
-
-        MyProjectTheme {
-            TabNavigator(HomeTab) {
-                Scaffold(
-                    contentWindowInsets = WindowInsets(0, 0, 0, 0),
-                    bottomBar = { MyProjectNavigationBar() }
-                ) { innerPadding ->
-                    Box(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(innerPadding)
-                            .consumeWindowInsets(innerPadding)
-                            .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Horizontal)),
-                    ) {
-                        CurrentTab()
-                    }
+        TabNavigator(
+            tab = HomeTab,
+            key = "tabNavigator",
+            tabDisposable = {
+                TabDisposable(
+                    navigator = it,
+                    tabs = listOf(HomeTab, FavoritesTab, ProfileTab)
+                )
+            }
+        ) {
+            Scaffold(
+                contentWindowInsets = WindowInsets(0, 0, 0, 0),
+                bottomBar = { MyProjectNavigationBar() }
+            ) { innerPadding ->
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(innerPadding)
+                        .consumeWindowInsets(innerPadding)
+                        .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Horizontal)),
+                ) {
+                    CurrentTab()
                 }
             }
         }
