@@ -2,5 +2,7 @@
 <resources>
 
     <string name="navigation_tab_home">Home</string>
+    <string name="navigation_tab_favorites">Favorites</string>
+    <string name="navigation_tab_profile">Profile</string>
 
 </resources>

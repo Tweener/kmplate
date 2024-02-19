@@ -14,12 +14,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.navigator.tab.CurrentTab
 import cafe.adriel.voyager.navigator.tab.TabNavigator
-import com.tweener.changehere.BuildKonfig
 import com.tweener.changehere._internal.libs.coil.CoilConfiguration
-import com.tweener.changehere.presentation._internal.navigation.MyProjectBottomNavigation
-import com.tweener.changehere.presentation.screen.home.navigation.HomeTab
+import com.tweener.changehere.presentation._internal.navigation.MyProjectNavigationBar
+import com.tweener.changehere.presentation._internal.navigation.tab.HomeTab
 import com.tweener.changehere.presentation.theme.MyProjectTheme
-import io.github.aakira.napier.Napier
 import org.koin.compose.KoinContext
 import org.koin.compose.koinInject
 
@@ -36,13 +34,11 @@ fun MainScreen() {
 
         coilConfiguration.init()
 
-        Napier.w { "3 BuildKonfig isDebug? ${BuildKonfig.DEBUG}" }
-
         MyProjectTheme {
             TabNavigator(HomeTab) {
                 Scaffold(
                     contentWindowInsets = WindowInsets(0, 0, 0, 0),
-                    bottomBar = { MyProjectBottomNavigation() }
+                    bottomBar = { MyProjectNavigationBar() }
                 ) { innerPadding ->
                     Box(
                         modifier = Modifier

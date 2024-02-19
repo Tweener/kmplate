@@ -99,6 +99,9 @@ kotlin {
 
             // Voyager
             implementation(Dependencies.Libraries.Voyager.tagNavigator)
+
+            // Toast Compose
+            implementation(Dependencies.Libraries.toastCompose)
         }
 
         commonTest.dependencies {

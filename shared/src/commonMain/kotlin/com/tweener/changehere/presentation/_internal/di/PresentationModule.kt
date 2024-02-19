@@ -2,6 +2,10 @@ package com.tweener.changehere.presentation._internal.di
 
 import com.tweener.changehere._internal.di.viewModelDefinition
 import com.tweener.changehere.presentation.MainViewModel
+import com.tweener.changehere.presentation.screen.detail.di.detailModule
+import com.tweener.changehere.presentation.screen.favorites.di.favoritesModule
+import com.tweener.changehere.presentation.screen.home.di.homeModule
+import com.tweener.changehere.presentation.screen.profile.di.profileModule
 import org.koin.dsl.module
 
 /**
@@ -19,4 +23,9 @@ val presentationModule = module {
         )
     }
 
+    // Screens
+    includes(homeModule)
+    includes(favoritesModule)
+    includes(profileModule)
+    includes(detailModule)
 }

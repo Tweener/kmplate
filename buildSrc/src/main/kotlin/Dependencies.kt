@@ -45,6 +45,7 @@ object Dependencies {
         const val coil = "3.0.0-alpha01"
         const val buildKonfig = "0.15.1"
         const val voyager = "1.0.0"
+        const val toastCompose = "0.3.4"
 
         object Tweener {
             const val czan = "2.0.2"
@@ -81,6 +82,7 @@ object Dependencies {
 
         const val napier = "io.github.aakira:napier:${Versions.napier}"
         const val kotlinXDatetime = "org.jetbrains.kotlinx:kotlinx-datetime:${Versions.kotlinxDatetime}"
+        const val toastCompose = "io.github.dokar3:sonner:${Versions.toastCompose}"
 
         object Tweener {
             const val czan = "io.github.tweener:czan:${Versions.Tweener.czan}"

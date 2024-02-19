@@ -1,4 +1,4 @@
-package com.tweener.changehere.presentation.screen.home
+package com.tweener.changehere.presentation.screen.detail
 
 import dev.icerock.moko.mvvm.viewmodel.ViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -8,23 +8,26 @@ import kotlinx.coroutines.launch
 
 /**
  * @author Vivien Mahe
- * @since 14/02/2024
+ * @since 19/02/2024
  */
-class HomeViewModel : ViewModel() {
+class DetailViewModel : ViewModel() {
 
     // region Observable properties
 
     private val _toastMessage = MutableSharedFlow<String>()
     val toastMessage: SharedFlow<String> = _toastMessage.asSharedFlow()
 
-    private val _openDetailScreen = MutableSharedFlow<String>() // id
-    val openDetailScreen: SharedFlow<String> = _openDetailScreen.asSharedFlow()
-
     // endregion Observable properties
 
-    fun onDetailButtonClicked() {
+    private lateinit var id: String
+
+    fun initViewModel(id: String) {
+        this.id = id
+    }
+
+    fun onShowToastButtonClicked() {
         viewModelScope.launch {
-            _openDetailScreen.emit("1")
+            _toastMessage.emit("Load data for detail ID: $id")
         }
     }
 }

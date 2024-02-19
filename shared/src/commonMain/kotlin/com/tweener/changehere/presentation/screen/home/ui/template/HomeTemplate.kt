@@ -31,7 +31,8 @@ import org.jetbrains.compose.resources.painterResource
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 fun HomeTemplate(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onClick: (() -> Unit)? = null,
 ) {
     var showContent by remember { mutableStateOf(false) }
 
@@ -56,6 +57,11 @@ fun HomeTemplate(
                     Text(text = "Compose: Hellow")
                 }
             }
+
+            Button(
+                text = "Open new screen",
+                onClick = { onClick?.invoke() }
+            )
         }
     }
 }
