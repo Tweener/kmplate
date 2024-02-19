@@ -2,9 +2,13 @@ package com.tweener.changehere.presentation.screen.home.ui.template
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -31,23 +35,26 @@ fun HomeTemplate(
 ) {
     var showContent by remember { mutableStateOf(false) }
 
-    Column(
-        modifier = modifier
-            .fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Button(
-            text = "Click me!",
-            onClick = { showContent = !showContent }
-        )
+    Box(modifier = modifier.fillMaxSize()) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .windowInsetsPadding(WindowInsets.statusBars),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Button(
+                text = "Click me!",
+                onClick = { showContent = !showContent }
+            )
 
-        AnimatedVisibility(showContent) {
-            Column(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Image(painter = painterResource(resource = Res.drawable.compose_multiplatform), contentDescription = null)
-                Text(text = "Compose: Hellow")
+            AnimatedVisibility(showContent) {
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Image(painter = painterResource(resource = Res.drawable.compose_multiplatform), contentDescription = null)
+                    Text(text = "Compose: Hellow")
+                }
             }
         }
     }

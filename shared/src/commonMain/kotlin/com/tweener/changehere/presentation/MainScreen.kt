@@ -12,9 +12,12 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import cafe.adriel.voyager.navigator.tab.CurrentTab
+import cafe.adriel.voyager.navigator.tab.TabNavigator
 import com.tweener.changehere.BuildKonfig
 import com.tweener.changehere._internal.libs.coil.CoilConfiguration
-import com.tweener.changehere.presentation.screen.home.ui.template.HomeTemplate
+import com.tweener.changehere.presentation._internal.navigation.MyProjectBottomNavigation
+import com.tweener.changehere.presentation.screen.home.navigation.HomeTab
 import com.tweener.changehere.presentation.theme.MyProjectTheme
 import io.github.aakira.napier.Napier
 import org.koin.compose.KoinContext
@@ -36,26 +39,20 @@ fun MainScreen() {
         Napier.w { "3 BuildKonfig isDebug? ${BuildKonfig.DEBUG}" }
 
         MyProjectTheme {
-            Scaffold(
-                contentWindowInsets = WindowInsets(0, 0, 0, 0),
-                bottomBar = {
-//                if (appState.shouldShowBottomBar) {
-//                    QuotellBottomBar(appState = appState)
-//                }
-                }
-            ) { innerPadding ->
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(innerPadding)
-                        .consumeWindowInsets(innerPadding)
-                        .windowInsetsPadding(
-                            WindowInsets.safeDrawing.only(
-                                WindowInsetsSides.Horizontal,
-                            ),
-                        ),
-                ) {
-                    HomeTemplate()
+            TabNavigator(HomeTab) {
+                Scaffold(
+                    contentWindowInsets = WindowInsets(0, 0, 0, 0),
+                    bottomBar = { MyProjectBottomNavigation() }
+                ) { innerPadding ->
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(innerPadding)
+                            .consumeWindowInsets(innerPadding)
+                            .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Horizontal)),
+                    ) {
+                        CurrentTab()
+                    }
                 }
             }
         }

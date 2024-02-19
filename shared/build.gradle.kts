@@ -96,6 +96,9 @@ kotlin {
             // Image fetcher
             implementation(Dependencies.Libraries.Coil.compose)
             implementation(Dependencies.Libraries.Coil.network)
+
+            // Voyager
+            implementation(Dependencies.Libraries.Voyager.tagNavigator)
         }
 
         commonTest.dependencies {

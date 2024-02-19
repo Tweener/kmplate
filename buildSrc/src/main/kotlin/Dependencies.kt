@@ -44,9 +44,10 @@ object Dependencies {
         const val firebase = "1.11.1" // Firebase for KMP https://firebaseopensource.com/projects/gitliveapp/firebase-kotlin-sdk/
         const val coil = "3.0.0-alpha01"
         const val buildKonfig = "0.15.1"
+        const val voyager = "1.0.0"
 
         object Tweener {
-            const val czan = "2.0.1"
+            const val czan = "2.0.2"
             const val common = "1.0.2"
             const val realm = "1.0.1"
             const val firebase = "1.0.1"
@@ -90,6 +91,10 @@ object Dependencies {
 
         object ComposeMultiplatform {
             const val material3 = "org.jetbrains.compose.material3:material3:${Versions.composeMultiplatform}"
+        }
+
+        object Voyager {
+            const val tagNavigator = "cafe.adriel.voyager:voyager-tab-navigator:${Versions.voyager}"
         }
 
         object Coil {
