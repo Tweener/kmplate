@@ -6,7 +6,7 @@ import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.dokar.sonner.Toaster
 import com.dokar.sonner.rememberToasterState
-import com.tweener.changehere.presentation._internal.navigation.findRootNavigator
+import com.tweener.changehere.presentation._internal.kotlinextensions.findRootNavigator
 import com.tweener.changehere.presentation.screen.detail.ui.screen.DetailScreen
 import com.tweener.changehere.presentation.screen.home.HomeViewModel
 import com.tweener.changehere.presentation.screen.home.ui.template.HomeTemplate

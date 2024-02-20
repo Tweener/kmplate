@@ -5,4 +5,6 @@
     <string name="navigation_tab_favorites">Favorites</string>
     <string name="navigation_tab_profile">Profile</string>
 
+    <string name="detail_screen_title">Detail screen</string>
+
 </resources>

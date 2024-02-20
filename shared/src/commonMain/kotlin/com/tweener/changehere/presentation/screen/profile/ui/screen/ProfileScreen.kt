@@ -3,7 +3,7 @@ package com.tweener.changehere.presentation.screen.profile.ui.screen
 import androidx.compose.runtime.Composable
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import com.tweener.changehere.presentation._internal.navigation.findRootNavigator
+import com.tweener.changehere.presentation._internal.kotlinextensions.findRootNavigator
 import com.tweener.changehere.presentation.screen.favorites.FavoritesViewModel
 import com.tweener.changehere.presentation.screen.profile.ui.template.ProfileTemplate
 import org.koin.compose.koinInject

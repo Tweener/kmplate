@@ -1,4 +1,4 @@
-package com.tweener.changehere.presentation._internal.navigation
+package com.tweener.changehere.presentation._internal.navigation.bar
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material3.NavigationBar

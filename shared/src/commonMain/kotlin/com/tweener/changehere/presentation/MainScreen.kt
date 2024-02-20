@@ -16,7 +16,7 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.tab.CurrentTab
 import cafe.adriel.voyager.navigator.tab.TabDisposable
 import cafe.adriel.voyager.navigator.tab.TabNavigator
-import com.tweener.changehere.presentation._internal.navigation.MyProjectNavigationBar
+import com.tweener.changehere.presentation._internal.navigation.bar.MyProjectNavigationBar
 import com.tweener.changehere.presentation._internal.navigation.tab.FavoritesTab
 import com.tweener.changehere.presentation._internal.navigation.tab.HomeTab
 import com.tweener.changehere.presentation._internal.navigation.tab.ProfileTab

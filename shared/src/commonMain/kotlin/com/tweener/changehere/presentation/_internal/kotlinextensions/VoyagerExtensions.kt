@@ -1,4 +1,4 @@
-package com.tweener.changehere.presentation._internal.navigation
+package com.tweener.changehere.presentation._internal.kotlinextensions
 
 import cafe.adriel.voyager.navigator.Navigator
 

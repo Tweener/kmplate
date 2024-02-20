@@ -1,6 +1,7 @@
 package com.tweener.changehere.presentation.screen.detail
 
 import dev.icerock.moko.mvvm.viewmodel.ViewModel
+import io.github.aakira.napier.Napier
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
@@ -17,12 +18,26 @@ class DetailViewModel : ViewModel() {
     private val _toastMessage = MutableSharedFlow<String>()
     val toastMessage: SharedFlow<String> = _toastMessage.asSharedFlow()
 
+    private val _closeScreen = MutableSharedFlow<Unit>()
+    val closeScreen: SharedFlow<Unit> = _closeScreen
+
     // endregion Observable properties
 
     private lateinit var id: String
 
     fun initViewModel(id: String) {
         this.id = id
+    }
+
+    /**
+     * Called when the user taps the back button in the top bar.
+     */
+    fun onBackClicked() {
+        Napier.d { "The user tapped on the back button in the top bar." }
+
+        viewModelScope.launch {
+            _closeScreen.emit(Unit)
+        }
     }
 
     fun onShowToastButtonClicked() {
