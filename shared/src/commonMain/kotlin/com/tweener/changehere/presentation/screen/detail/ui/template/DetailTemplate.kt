@@ -15,7 +15,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.tweener.changehere.presentation.screen.detail.ui.atom.DetailTopBar
 import com.tweener.czan.designsystem.atom.button.Button
-import com.tweener.czan.designsystem.atom.text.Text
 import com.tweener.czan.theme.Size
 
 /**
@@ -41,8 +40,6 @@ fun DetailTemplate(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             DetailTopBar(onBackClicked = { onBackClicked?.invoke() })
-
-            Text(text = "Detail screen")
 
             Spacer(modifier = Modifier.padding(vertical = Size.Padding.Default))
 

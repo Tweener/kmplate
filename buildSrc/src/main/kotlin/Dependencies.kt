@@ -48,7 +48,7 @@ object Dependencies {
         const val toastCompose = "0.3.4"
 
         object Tweener {
-            const val czan = "2.0.2"
+            const val czan = "2.1.0"
             const val common = "1.0.2"
             const val realm = "1.0.1"
             const val firebase = "1.0.1"

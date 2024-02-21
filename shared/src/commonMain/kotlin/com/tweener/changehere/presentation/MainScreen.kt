@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.windowInsetsPadding
-import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.core.screen.Screen
@@ -20,6 +19,7 @@ import com.tweener.changehere.presentation._internal.navigation.bar.MyProjectNav
 import com.tweener.changehere.presentation._internal.navigation.tab.FavoritesTab
 import com.tweener.changehere.presentation._internal.navigation.tab.HomeTab
 import com.tweener.changehere.presentation._internal.navigation.tab.ProfileTab
+import com.tweener.czan.designsystem.atom.scaffold.Scaffold
 import org.koin.compose.koinInject
 
 /**
@@ -45,7 +45,7 @@ class MainScreen : Screen {
         ) {
             Scaffold(
                 contentWindowInsets = WindowInsets(0, 0, 0, 0),
-                bottomBar = { MyProjectNavigationBar() }
+                navigationBar = { MyProjectNavigationBar() }
             ) { innerPadding ->
                 Box(
                     modifier = Modifier
