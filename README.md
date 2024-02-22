@@ -26,7 +26,7 @@ Current stack:
 - Local database: [Realm Kotlin](https://realm.io/realm-kotlin/)
 - Logging: [Napier](https://github.com/AAkira/Napier)
 - Images loading: [Coil](https://coil-kt.github.io/coil/)
-- Firebase poetage for KMP: [GitLiveApp Firebase SDK](https://firebaseopensource.com/projects/gitliveapp/firebase-kotlin-sdk/)
+- Firebase portage for KMP: [GitLiveApp Firebase SDK](https://firebaseopensource.com/projects/gitliveapp/firebase-kotlin-sdk/)
 
 # 💾 Installation
 
