@@ -1,4 +1,4 @@
-name: Kmplate build
+name: Kmplate build # Replace name with your own project name here
 
 on:
   workflow_call:
