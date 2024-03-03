@@ -33,6 +33,7 @@ kotlin {
             implementation(project(":shared:domain"))
 
             // Tweener
+            implementation(project.dependencies.platform(Dependencies.Libraries.Tweener.bom))
             implementation(Dependencies.Libraries.Tweener.common)
             implementation(Dependencies.Libraries.Tweener.realm)
             implementation(Dependencies.Libraries.Tweener.firebase)

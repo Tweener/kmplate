@@ -49,9 +49,7 @@ object Dependencies {
 
         object Tweener {
             const val czan = "2.1.0"
-            const val common = "1.0.2"
-            const val realm = "1.0.1"
-            const val firebase = "1.0.1"
+            const val bom = "1.0.0"
         }
 
         object Koin {
@@ -86,9 +84,11 @@ object Dependencies {
 
         object Tweener {
             const val czan = "io.github.tweener:czan:${Versions.Tweener.czan}"
-            const val common = "io.github.tweener:kmp-common:${Versions.Tweener.common}"
-            const val realm = "io.github.tweener:kmp-realm:${Versions.Tweener.realm}"
-            const val firebase = "io.github.tweener:kmp-firebase:${Versions.Tweener.firebase}"
+
+            const val bom = "io.github.tweener:kmp-bom:${Versions.Tweener.bom}"
+            const val common = "io.github.tweener:kmp-common"
+            const val realm = "io.github.tweener:kmp-realm"
+            const val firebase = "io.github.tweener:kmp-firebase"
         }
 
         object ComposeMultiplatform {

@@ -66,6 +66,8 @@ kotlin {
 
             // Tweener
             implementation(Dependencies.Libraries.Tweener.czan)
+
+            implementation(project.dependencies.platform(Dependencies.Libraries.Tweener.bom))
             implementation(Dependencies.Libraries.Tweener.common)
             implementation(Dependencies.Libraries.Tweener.firebase)
 
