@@ -11,10 +11,9 @@
 
 # ⭐️ Introduction
 
-Kmplate is a template to easily create a new Kotlin Multiplaform project based on Clean Architecture with modularization by layer.
+Kmplate is a template to easily create a new Kotlin Multiplatform project based on Clean Architecture with modularization by layer.
 
 Current stack:
-
 - UI framework: [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/)
     - Android look & feel: [Material Design](https://m3.material.io/)
     - iOS look & feel: Cupertino
