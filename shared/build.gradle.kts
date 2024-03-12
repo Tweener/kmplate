@@ -24,6 +24,14 @@ android {
         minSdk = Dependencies.Versions.MyProject.Android.minSDK
     }
 
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = Dependencies.Versions.composeCompilerExtension
+    }
+
     compileOptions {
         sourceCompatibility = Dependencies.Versions.Compiler.javaCompatibility
         targetCompatibility = Dependencies.Versions.Compiler.javaCompatibility
@@ -114,6 +122,10 @@ kotlin {
         androidMain.dependencies {
             // DI
             implementation(Dependencies.Libraries.Koin.android)
+
+            // Compose
+            implementation(compose.preview)
+            implementation(compose.uiTooling)
         }
     }
 }

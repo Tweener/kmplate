@@ -16,10 +16,10 @@ fun MyProjectTheme(
 ) {
     CzanTheme(
         darkTheme = darkTheme,
-        lightColorScheme = MyProjectLightColorScheme,
-        darkColorScheme = MyProjectDarkColorScheme,
-        typography = MyProjectTypography,
-        shapes = MyProjectShapes,
+        lightColorScheme = LightColorScheme,
+        darkColorScheme = DarkColorScheme,
+        typography = Typography,
+        shapes = Shapes,
         content = content
     )
 }

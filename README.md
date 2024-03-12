@@ -10,9 +10,11 @@
 ---
 
 # ⭐️ Introduction
+
 Kmplate is a template to easily create a new Kotlin Multiplaform project based on Clean Architecture with modularization by layer.
 
 Current stack:
+
 - UI framework: [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/)
     - Android look & feel: [Material Design](https://m3.material.io/)
     - iOS look & feel: Cupertino
@@ -31,9 +33,9 @@ Current stack:
 # 💾 Installation
 
 ### 1. Clone this template
+
 Create your repository by cloning this template, using the green button at the top-right corner of the homepage.
 ![Screenshot 2024-02-21 at 18 42 43](https://github.com/Tweener/kmplate/assets/596985/8e41cc46-c295-431f-904d-df7bf4dbef13)
-
 
 ### 2. Create a webhook post messages on Slack
 
@@ -71,13 +73,17 @@ To configure these 2 Slack bots, we need to create 3 [Github Actions variables](
     7. `shared/data/src/iosTest/kotlin/com/tweener/changehere`
     8. `shared/domain/src/commonMain/kotlin/com/tweener/changehere`
     9. `shared/domain/src/commonTest/kotlin/com/tweener/changehere`
+5. Open file `Theme.kt` and rename `MyProjectTheme` to your own project name. ie: `AmazingAppTheme`.
+6. Rename file `MyProjectUIDefaults.kt` to your own project name. ie: `AmazingAppUIDefaults.kt`.
+7. Open file `NavigationBar.kt` and rename `MyProjectNavigationBar` to your own project name. ie: `AmazingAppNavigationBar`.
+8. Build and run the `androidApp` target from Android Studio.
 
 ### 5. Update iOS configuration
 
-1. Rename `iosApp/iosApp.xcodeproj` to your own project name. ie: `iosApp/myProjectName.xcodeproject`,
-2. Open `iosApp/myProjectName.xcworkspace` in Xcode and build the project.
-3. In Xcode, in the left panel, click on `iosApp`, then in tab `Signing & Capabilities` and replace the `Bundle identifier` value with your own bundleID (ie. "com.mycompany.myproject") ,
-4. Run the app.
+1. Open `iosApp/myProjectName.xcworkspace` in Xcode and build the project.
+2. In Xcode, in the left panel, click on `iosApp`, then in tab `Signing & Capabilities` and replace the `Bundle identifier` value with your own bundleID (ie. "com.mycompany.myproject"),
+3. Close Xcode and go back to Android Studio.
+4. Run the `iosApp` target.
 
 ### 6. Rename Github Actions names
 

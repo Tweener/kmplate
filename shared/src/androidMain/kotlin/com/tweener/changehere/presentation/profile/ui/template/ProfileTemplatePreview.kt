@@ -1,7 +1,8 @@
-package com.tweener.changehere.android.screen.profile.ui.template
+package com.tweener.changehere.presentation.profile.ui.template
 
 import androidx.compose.runtime.Composable
 import com.tweener.changehere.presentation.screen.profile.ui.template.ProfileTemplate
+import com.tweener.changehere.presentation.theme.MyProjectTheme
 import com.tweener.czan.preview.UiModePreviews
 
 /**
@@ -13,5 +14,7 @@ import com.tweener.czan.preview.UiModePreviews
 @UiModePreviews
 @Composable
 private fun ProfileTemplatePreview() {
-    ProfileTemplate()
+    MyProjectTheme {
+        ProfileTemplate()
+    }
 }

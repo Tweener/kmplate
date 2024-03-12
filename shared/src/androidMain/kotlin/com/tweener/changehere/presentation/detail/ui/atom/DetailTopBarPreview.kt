@@ -1,7 +1,8 @@
-package com.tweener.changehere.android.screen.detail.ui.atom
+package com.tweener.changehere.presentation.detail.ui.atom
 
 import androidx.compose.runtime.Composable
 import com.tweener.changehere.presentation.screen.detail.ui.atom.DetailTopBar
+import com.tweener.changehere.presentation.theme.MyProjectTheme
 import com.tweener.czan.preview.UiModePreviews
 
 /**
@@ -13,7 +14,9 @@ import com.tweener.czan.preview.UiModePreviews
 @UiModePreviews
 @Composable
 private fun DetailTopBarPreview() {
-    DetailTopBar(
-        onBackClicked = {}
-    )
+    MyProjectTheme {
+        DetailTopBar(
+            onBackClicked = {}
+        )
+    }
 }

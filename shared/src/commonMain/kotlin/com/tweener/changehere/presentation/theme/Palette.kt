@@ -71,7 +71,7 @@ val light_onSoftGreen = Color(0xFFFFFFFF)
 val light_softGreenContainer = Color(0xFFA8F5A5)
 val light_onSoftGreenContainer = Color(0xFF002105)
 
-val MyProjectLightColorScheme = lightColorScheme(
+val LightColorScheme = lightColorScheme(
     primary = md_theme_light_primary,
     onPrimary = md_theme_light_onPrimary,
     primaryContainer = md_theme_light_primaryContainer,
@@ -140,7 +140,7 @@ val dark_onSoftGreen = Color(0xFF00390D)
 val dark_softGreenContainer = Color(0xFF005317)
 val dark_onSoftGreenContainer = Color(0xFFA8F5A5)
 
-val MyProjectDarkColorScheme = darkColorScheme(
+val DarkColorScheme = darkColorScheme(
     primary = md_theme_dark_primary,
     onPrimary = md_theme_dark_onPrimary,
     primaryContainer = md_theme_dark_primaryContainer,

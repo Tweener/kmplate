@@ -32,6 +32,7 @@ object Dependencies {
         const val kotlin = "1.9.22"
         const val gradle = "8.2.2"
         const val composeMultiplatform = "1.6.0"
+        const val composeCompilerExtension = "1.5.9"
         const val coroutines = "1.7.3"
         const val ktor = "2.3.9"
         const val napier = "2.7.1"

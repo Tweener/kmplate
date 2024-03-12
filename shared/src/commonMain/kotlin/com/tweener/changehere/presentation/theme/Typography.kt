@@ -39,7 +39,7 @@ val LatoFont: FontFamily
 
 // region Typography
 
-val MyProjectTypography: Typography
+val Typography: Typography
     @Composable get() = Typography(
         labelLarge = TextStyle(
             fontFamily = LatoFont,

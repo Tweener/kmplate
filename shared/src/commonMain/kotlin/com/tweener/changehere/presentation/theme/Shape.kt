@@ -8,7 +8,7 @@ import androidx.compose.material3.Shapes
  * @since 23/08/2023
  */
 
-val MyProjectShapes = Shapes(
+val Shapes = Shapes(
     small = RoundedCornerShape(Size.Shape.Small),
     medium = RoundedCornerShape(Size.Shape.Medium),
     large = RoundedCornerShape(Size.Shape.Large),
