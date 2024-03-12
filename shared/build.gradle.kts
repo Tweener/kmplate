@@ -70,6 +70,7 @@ kotlin {
             implementation(project.dependencies.platform(Dependencies.Libraries.Tweener.bom))
             implementation(Dependencies.Libraries.Tweener.common)
             implementation(Dependencies.Libraries.Tweener.firebase)
+            implementation(Dependencies.Libraries.Tweener.charts)
 
             // Kotlin
             implementation(Dependencies.Libraries.Coroutines.core)
