@@ -5,9 +5,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.Tab
-import com.tweener.changehere.presentation._internal.navigation.tab.FavoritesTab
-import com.tweener.changehere.presentation._internal.navigation.tab.HomeTab
-import com.tweener.changehere.presentation._internal.navigation.tab.ProfileTab
 import com.tweener.czan.designsystem.atom.bars.NavigationBar
 import com.tweener.czan.designsystem.atom.bars.NavigationBarItem
 
@@ -19,11 +16,10 @@ import com.tweener.czan.designsystem.atom.bars.NavigationBarItem
 @Composable
 fun MyProjectNavigationBar(
     modifier: Modifier = Modifier,
+    navigationItems: List<Tab>,
 ) {
     NavigationBar(modifier = modifier) {
-        TabNavigationBarItem(tab = HomeTab)
-        TabNavigationBarItem(tab = FavoritesTab)
-        TabNavigationBarItem(tab = ProfileTab)
+        navigationItems.forEach { tab -> TabNavigationBarItem(tab = tab) }
     }
 }
 

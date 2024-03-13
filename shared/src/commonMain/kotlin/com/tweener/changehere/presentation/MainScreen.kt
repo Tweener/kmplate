@@ -10,15 +10,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.tab.CurrentTab
 import cafe.adriel.voyager.navigator.tab.TabDisposable
 import cafe.adriel.voyager.navigator.tab.TabNavigator
 import com.tweener.changehere.presentation._internal.navigation.bar.MyProjectNavigationBar
-import com.tweener.changehere.presentation._internal.navigation.tab.FavoritesTab
 import com.tweener.changehere.presentation._internal.navigation.tab.HomeTab
-import com.tweener.changehere.presentation._internal.navigation.tab.ProfileTab
+import com.tweener.czan._internal.kotlinextensions.collectAsStateMultiplatform
 import com.tweener.czan.designsystem.atom.scaffold.Scaffold
 import org.koin.compose.koinInject
 
@@ -32,6 +32,7 @@ class MainScreen : Screen {
     @Composable
     override fun Content() {
         val viewModel: MainViewModel = koinInject()
+        val navigationItems by viewModel.navigationItems.collectAsStateMultiplatform()
 
         TabNavigator(
             tab = HomeTab,
@@ -39,13 +40,13 @@ class MainScreen : Screen {
             tabDisposable = {
                 TabDisposable(
                     navigator = it,
-                    tabs = listOf(HomeTab, FavoritesTab, ProfileTab)
+                    tabs = navigationItems
                 )
             }
         ) {
             Scaffold(
                 contentWindowInsets = WindowInsets(0, 0, 0, 0),
-                navigationBar = { MyProjectNavigationBar() }
+                navigationBar = { MyProjectNavigationBar(navigationItems = navigationItems) }
             ) { innerPadding ->
                 Box(
                     modifier = Modifier
