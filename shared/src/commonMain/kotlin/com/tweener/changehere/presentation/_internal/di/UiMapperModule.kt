@@ -1,5 +1,6 @@
 package com.tweener.changehere.presentation._internal.di
 
+import com.tweener.changehere.presentation.mapper.ToastMessageMapper
 import org.koin.dsl.module
 
 /**
@@ -9,6 +10,6 @@ import org.koin.dsl.module
 
 val uiMapperModule = module {
 
-//    bindProvider { ToastMessageMapper(context = instance()) }
+    factory { ToastMessageMapper() }
 
 }

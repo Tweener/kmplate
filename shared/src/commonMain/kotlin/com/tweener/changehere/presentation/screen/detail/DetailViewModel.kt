@@ -1,5 +1,6 @@
 package com.tweener.changehere.presentation.screen.detail
 
+import com.tweener.changehere.presentation.screen.detail.mapper.DetailToastMessage
 import dev.icerock.moko.mvvm.viewmodel.ViewModel
 import io.github.aakira.napier.Napier
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -15,8 +16,8 @@ class DetailViewModel : ViewModel() {
 
     // region Observable properties
 
-    private val _toastMessage = MutableSharedFlow<String>()
-    val toastMessage: SharedFlow<String> = _toastMessage.asSharedFlow()
+    private val _toastMessage = MutableSharedFlow<DetailToastMessage>()
+    val toastMessage: SharedFlow<DetailToastMessage> = _toastMessage.asSharedFlow()
 
     private val _closeScreen = MutableSharedFlow<Unit>()
     val closeScreen: SharedFlow<Unit> = _closeScreen
@@ -42,7 +43,7 @@ class DetailViewModel : ViewModel() {
 
     fun onShowToastButtonClicked() {
         viewModelScope.launch {
-            _toastMessage.emit("Load data for detail ID: $id")
+            _toastMessage.emit(DetailToastMessage.LoadData(id = id))
         }
     }
 }

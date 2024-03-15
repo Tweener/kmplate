@@ -5,6 +5,8 @@
     <string name="navigation_tab_favorites">Favorites</string>
     <string name="navigation_tab_profile">Profile</string>
 
+    <!-- Detail screen -->
     <string name="detail_screen_title">Detail screen</string>
+    <string name="detail_load_data">Load data for detail ID: %1$s</string>
 
 </resources>

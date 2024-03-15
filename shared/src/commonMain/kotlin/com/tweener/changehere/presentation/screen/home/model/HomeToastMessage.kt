@@ -8,7 +8,7 @@ import com.tweener.changehere.presentation.model.ToastMessage
  */
 sealed class HomeToastMessage : ToastMessage() {
 
-    data class OpenScreen(val id: String) : ToastMessage()
+    data class OpenScreen(val id: String) : HomeToastMessage()
 
 
 }
