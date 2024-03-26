@@ -33,11 +33,9 @@ object Dependencies {
         const val gradle = "8.2.2"
         const val composeMultiplatform = "1.6.0"
         const val composeCompilerExtension = "1.5.9"
-        const val coroutines = "1.7.3"
         const val ktor = "2.3.9"
         const val napier = "2.7.1"
         const val realm = "1.13.0"
-        const val kotlinxDatetime = "0.4.1"
         const val dependencyVersionsPlugin = "0.51.0"
         const val googleServicesPlugin = "4.4.1"
         const val crashlyticsPlugin = "2.9.9"
@@ -80,7 +78,6 @@ object Dependencies {
     object Libraries {
 
         const val napier = "io.github.aakira:napier:${Versions.napier}"
-        const val kotlinXDatetime = "org.jetbrains.kotlinx:kotlinx-datetime:${Versions.kotlinxDatetime}"
         const val toastCompose = "io.github.dokar3:sonner:${Versions.toastCompose}"
 
         object Tweener {
@@ -110,11 +107,6 @@ object Dependencies {
             const val core = "io.insert-koin:koin-core:${Versions.Koin.core}"
             const val compose = "io.insert-koin:koin-compose:${Versions.Koin.compose}"
             const val android = "io.insert-koin:koin-android:${Versions.Koin.core}"
-        }
-
-        object Coroutines {
-            const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
-            const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
         }
 
         object Ktor {

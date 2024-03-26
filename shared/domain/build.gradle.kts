@@ -28,10 +28,6 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            // Kotlin
-            implementation(Dependencies.Libraries.Coroutines.core)
-            implementation(Dependencies.Libraries.kotlinXDatetime)
-
             // DI
             implementation(Dependencies.Libraries.Koin.core)
 

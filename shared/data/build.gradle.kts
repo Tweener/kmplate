@@ -38,10 +38,6 @@ kotlin {
             implementation(Dependencies.Libraries.Tweener.realm)
             implementation(Dependencies.Libraries.Tweener.firebase)
 
-            // Kotlin
-            implementation(Dependencies.Libraries.Coroutines.core)
-            implementation(Dependencies.Libraries.kotlinXDatetime)
-
             // DI
             implementation(Dependencies.Libraries.Koin.core)
 

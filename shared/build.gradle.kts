@@ -80,10 +80,6 @@ kotlin {
             implementation(Dependencies.Libraries.Tweener.firebase)
             implementation(Dependencies.Libraries.Tweener.charts)
 
-            // Kotlin
-            implementation(Dependencies.Libraries.Coroutines.core)
-            implementation(Dependencies.Libraries.kotlinXDatetime)
-
             // Compose
             implementation(compose.runtime)
             implementation(compose.foundation)
