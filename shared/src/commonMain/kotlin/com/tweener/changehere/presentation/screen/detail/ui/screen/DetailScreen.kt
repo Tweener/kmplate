@@ -7,7 +7,6 @@ import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.dokar.sonner.Toaster
 import com.dokar.sonner.rememberToasterState
-import com.tweener.changehere._internal.libs.sonner.show
 import com.tweener.changehere.presentation._internal.kotlinextensions.findRootNavigator
 import com.tweener.changehere.presentation.mapper.ToastMessageMapper
 import com.tweener.changehere.presentation.screen.detail.DetailViewModel
@@ -28,7 +27,7 @@ class DetailScreen(val id: String) : Screen {
         val toaster = rememberToasterState()
         val toastMessageMapper: ToastMessageMapper = koinInject()
 
-        viewModel.toastMessage.subscribe { toaster.show(toastMessageMapper = toastMessageMapper, message = it) }
+        viewModel.toastMessage.subscribe { toaster.show(message = toastMessageMapper.convertToUiModel(it)) }
         viewModel.closeScreen.subscribe { navigator.pop() }
 
         DetailTemplate(
