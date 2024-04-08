@@ -48,7 +48,7 @@ object Dependencies {
 
         object Tweener {
             const val czan = "2.1.0"
-            const val bom = "1.0.2"
+            const val bom = "1.0.3"
         }
 
         object Koin {
