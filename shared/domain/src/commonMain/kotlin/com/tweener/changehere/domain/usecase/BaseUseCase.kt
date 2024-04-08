@@ -21,7 +21,7 @@ abstract class BaseUseCase<InputParams, OutputParams, T> {
      * @throws MissingUseCaseInputParamsException
      */
     @OptIn(ExperimentalContracts::class)
-    suspend inline fun assertInputParamsNotNull(params: InputParams? = null): InputParams {
+    inline fun assertInputParamsNotNull(params: InputParams? = null): InputParams {
         contract {
             returns() implies (params != null)
         }
