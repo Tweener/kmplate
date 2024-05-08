@@ -20,7 +20,7 @@ class SettingsRepositoryImpl(
     }
 
     override suspend fun getDarkMode(): SettingsRepository.OutputParams.GetDarkMode {
-        val isDarkModeEnabled = localStorageDataSource.getBoolean(LOCAL_STORAGE_KEY_DARK_MODE_ENABLED)
+        val isDarkModeEnabled = localStorageDataSource.getBoolean(LOCAL_STORAGE_KEY_DARK_MODE_ENABLED, false)
         return SettingsRepository.OutputParams.GetDarkMode(isDarkModeEnabled = isDarkModeEnabled)
     }
 }

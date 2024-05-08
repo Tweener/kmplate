@@ -29,7 +29,7 @@ fun dataSourceModule(isDebug: Boolean) = module {
     }
 
     // Local
-    factory { LocalStorageDataSource(context = get()) }
+    factory { LocalStorageDataSource(settings = get()) }
     single { LocalAppConfigurationDataSource() }
 
     // Firestore

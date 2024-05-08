@@ -1,9 +1,9 @@
 package com.tweener.changehere.domain.usecase.user
 
-import com.tweener.changehere.domain._internal.now
 import com.tweener.changehere.domain.repository.UserRepository
 import com.tweener.changehere.domain.usecase.SingleUseCase
 import com.tweener.changehere.domain.usecase.config.GetAppRatingAskPeriodMonthsUseCase
+import com.tweener.common._internal.kotlinextensions.now
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.minus
 

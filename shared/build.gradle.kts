@@ -123,6 +123,9 @@ kotlin {
             // Compose
             implementation(compose.preview)
             implementation(compose.uiTooling)
+
+            // Preferences
+            implementation(Dependencies.Libraries.Android.AndroidX.preferences)
         }
     }
 }

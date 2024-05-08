@@ -58,7 +58,7 @@ class UserRepositoryImpl(
     }
 
     override suspend fun getLastAskForAppReviewDate(): UserRepository.OutputParams.GetLastAskForAppReviewDate {
-        val lastAskForAppReviewDate = localStorageDataSource.getString(LOCAL_STORAGE_KEY_LAST_ASK_APP_REVIEW_DATE, null)
+        val lastAskForAppReviewDate = localStorageDataSource.getString(LOCAL_STORAGE_KEY_LAST_ASK_APP_REVIEW_DATE)
         return UserRepository.OutputParams.GetLastAskForAppReviewDate(date = lastAskForAppReviewDate?.let { LocalDateTime.parse(it) })
     }
 

@@ -32,10 +32,10 @@ object Dependencies {
         const val kotlin = "1.9.22"
         const val gradle = "8.2.2"
         const val composeMultiplatform = "1.6.0"
-        const val composeCompilerExtension = "1.5.9"
+        const val composeCompilerExtension = "1.5.11"
         const val ktor = "2.3.9"
         const val napier = "2.7.1"
-        const val realm = "1.13.0"
+        const val realm = "1.16.0"
         const val dependencyVersionsPlugin = "0.51.0"
         const val googleServicesPlugin = "4.4.1"
         const val crashlyticsPlugin = "2.9.9"
@@ -45,10 +45,11 @@ object Dependencies {
         const val buildKonfig = "0.15.1"
         const val voyager = "1.0.0"
         const val toastCompose = "0.3.4"
+        const val multiplatformSettings = "1.1.1"
 
         object Tweener {
-            const val czan = "2.1.0"
-            const val bom = "1.0.3"
+            const val czan = "2.2.1"
+            const val bom = "1.0.4"
         }
 
         object Koin {
@@ -67,6 +68,7 @@ object Dependencies {
             const val desugarJdkLibs = "2.0.4"
             const val accompanist = "0.34.0"
             const val adMob = "23.0.0"
+            const val preferences = "1.2.0"
 
             object AndroidX {
                 const val activity = "1.8.2"
@@ -96,6 +98,11 @@ object Dependencies {
 
         object Voyager {
             const val tagNavigator = "cafe.adriel.voyager:voyager-tab-navigator:${Versions.voyager}"
+        }
+
+        object MultiplatformSettings {
+            const val core = "com.russhwolf:multiplatform-settings:${Versions.multiplatformSettings}"
+            const val coroutines = "com.russhwolf:multiplatform-settings-coroutines:${Versions.multiplatformSettings}"
         }
 
         object Coil {
@@ -145,6 +152,7 @@ object Dependencies {
             object AndroidX {
                 const val activity = "androidx.activity:activity-ktx:${Versions.Android.AndroidX.activity}"
                 const val splashscreen = "androidx.core:core-splashscreen:${Versions.Android.AndroidX.splashscreen}"
+                const val preferences = "androidx.preference:preference-ktx:${Versions.Android.preferences}"
 
                 object Compose {
                     const val activity = "androidx.activity:activity-compose:${Versions.Android.activityCompose}"

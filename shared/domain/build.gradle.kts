@@ -28,6 +28,10 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
+            // Tweener
+            implementation(project.dependencies.platform(Dependencies.Libraries.Tweener.bom))
+            implementation(Dependencies.Libraries.Tweener.common)
+
             // DI
             implementation(Dependencies.Libraries.Koin.core)
 

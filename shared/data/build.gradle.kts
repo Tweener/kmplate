@@ -50,6 +50,10 @@ kotlin {
 
             // Napier
             implementation(Dependencies.Libraries.napier)
+
+            // Multiplatform Settings (equivalent to SharedPrefs but for all platforms)
+            api(Dependencies.Libraries.MultiplatformSettings.core)
+            api(Dependencies.Libraries.MultiplatformSettings.coroutines)
         }
 
         commonTest.dependencies {
