@@ -8,6 +8,7 @@ import com.tweener.changehere.presentation._internal.navigation.tab.ProfileTab
 import dev.icerock.moko.mvvm.viewmodel.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
 
 /**
  * @author Vivien Mahe
@@ -23,4 +24,11 @@ class MainViewModel(
     val navigationItems: StateFlow<List<Tab>> = _navigationItems
 
     // endregion Observable properties
+
+    init {
+        viewModelScope.launch {
+            // Load all required app configuration
+            loadAppConfigUseCase.execute()
+        }
+    }
 }
