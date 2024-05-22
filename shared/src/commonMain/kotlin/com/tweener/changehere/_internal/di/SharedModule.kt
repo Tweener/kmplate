@@ -3,6 +3,7 @@ package com.tweener.changehere._internal.di
 import com.tweener.changehere.BuildKonfig
 import com.tweener.changehere._internal.libs.LibrariesConfiguration
 import com.tweener.changehere._internal.libs.coil.CoilConfiguration
+import com.tweener.changehere._internal.libs.firebase.FirebaseConfiguration
 import com.tweener.changehere._internal.libs.napier.CrashlyticsAntilog
 import com.tweener.changehere._internal.libs.napier.NapierConfiguration
 import com.tweener.changehere._internal.os.thread.CoroutinesThreadDispatcher
@@ -24,7 +25,8 @@ val sharedModule = module {
     // Coil
     single { CoilConfiguration() }
 
-    // Firebase Crashlytics
+    // Firebase
+    single { FirebaseConfiguration() }
     single { CrashlyticsService() }
 
     // Napier
@@ -32,7 +34,7 @@ val sharedModule = module {
     single { NapierConfiguration(isDebug = BuildKonfig.DEBUG, crashlyticsAntilog = get(), crashlyticsService = get()) }
 
     // Libraries
-    single { LibrariesConfiguration(napierConfiguration = get()) }
+    single { LibrariesConfiguration(napierConfiguration = get(), firebaseConfiguration = get()) }
 
     includes(dataModule(isDebug = BuildKonfig.DEBUG))
     includes(domainModule)

@@ -1,5 +1,6 @@
 package com.tweener.changehere._internal.libs
 
+import com.tweener.changehere._internal.libs.firebase.FirebaseConfiguration
 import com.tweener.changehere._internal.libs.napier.NapierConfiguration
 
 /**
@@ -8,9 +9,11 @@ import com.tweener.changehere._internal.libs.napier.NapierConfiguration
  */
 class LibrariesConfiguration(
     private val napierConfiguration: NapierConfiguration,
+    private val firebaseConfiguration: FirebaseConfiguration,
 ) {
 
     fun init() {
         napierConfiguration.init()
+        firebaseConfiguration.init()
     }
 }
