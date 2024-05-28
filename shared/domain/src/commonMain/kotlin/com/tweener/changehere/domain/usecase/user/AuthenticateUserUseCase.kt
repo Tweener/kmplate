@@ -16,8 +16,8 @@ class AuthenticateUserUseCase(
         val idToken: String,
     )
 
-    override suspend fun buildUseCase(params: InputParams?) {
-        assertInputParamsNotNull(params)
+    override suspend fun buildUseCase(inputParams: InputParams?) {
+        val params = assertInputParamsNotNull(inputParams)
 
         val isUserAuthenticated = userRepository.authenticate(UserRepository.InputParams.Authenticate(idToken = params.idToken)).success
 

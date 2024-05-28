@@ -10,22 +10,26 @@ import kotlin.contracts.contract
  */
 abstract class BaseUseCase<InputParams, OutputParams, T> {
 
-    protected abstract suspend fun buildUseCase(params: InputParams?): T
+    protected abstract suspend fun buildUseCase(inputParams: InputParams?): T
 
-    suspend fun execute(params: InputParams? = null): T = buildUseCase(params)
+    suspend fun execute(inputParams: InputParams? = null): T = buildUseCase(inputParams)
 
     /**
-     * Asserts the given [params] are not null or throws a [MissingUseCaseInputParamsException].
+     * Asserts the given [inputParams] are not null or throws a [MissingUseCaseInputParamsException].
      *
-     * @param params The params given as input of this use-case.
+     * @param inputParams The params given as input of this use-case.
      * @throws MissingUseCaseInputParamsException
      */
     @OptIn(ExperimentalContracts::class)
-    inline fun assertInputParamsNotNull(params: InputParams? = null): InputParams {
+    fun assertInputParamsNotNull(inputParams: InputParams? = null): InputParams {
         contract {
-            returns() implies (params != null)
+            returns() implies (inputParams != null)
         }
 
-        return params?.let { params } ?: throw MissingUseCaseInputParamsException(this)
+        if (inputParams == null) {
+            throw MissingUseCaseInputParamsException(this)
+        }
+
+        return inputParams
     }
 }

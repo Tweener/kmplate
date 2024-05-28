@@ -20,7 +20,7 @@
 		9A36874D2B7BC5C60089C026 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9A36874C2B7BC5C60089C026 /* FirebaseAuth */; };
 		9A36874F2B7BC5C60089C026 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9A36874E2B7BC5C60089C026 /* FirebaseAuthCombine-Community */; };
 		9A3687512B7BC5C60089C026 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9A3687502B7BC5C60089C026 /* FirebaseCrashlytics */; };
-		9A3687532B7BC5C60089C026 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9A3687522B7BC5C60089C026 /* FirebaseDatabase */; };
+		9A3687532B7BC5C60089C026 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9A3687522B7BC5C60089C026 /* FirebaseDatabase */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9A3687552B7BC5C60089C026 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9A3687542B7BC5C60089C026 /* FirebaseDatabaseSwift */; };
 		9A3687572B7BC5C60089C026 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 9A3687562B7BC5C60089C026 /* FirebaseDynamicLinks */; };
 		9A3687592B7BC5C60089C026 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9A3687582B7BC5C60089C026 /* FirebaseFirestore */; };
@@ -329,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -385,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -408,7 +408,7 @@
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)\n$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,7 +439,7 @@
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)\n$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

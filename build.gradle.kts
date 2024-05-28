@@ -7,6 +7,7 @@ plugins {
     id("com.android.application").version(Dependencies.Versions.gradle).apply(false)
     id("com.android.library").version(Dependencies.Versions.gradle).apply(false)
     id("org.jetbrains.compose").version(Dependencies.Versions.composeMultiplatform).apply(false)
+    id("org.jetbrains.kotlin.plugin.compose").version(Dependencies.Versions.kotlin).apply(false)
     kotlin("android").version(Dependencies.Versions.kotlin).apply(false)
     kotlin("multiplatform").version(Dependencies.Versions.kotlin).apply(false)
     kotlin("plugin.serialization").version(Dependencies.Versions.kotlin).apply(false)
@@ -15,7 +16,13 @@ plugins {
     id("com.google.gms.google-services").version(Dependencies.Versions.googleServicesPlugin).apply(false)
     id("com.google.firebase.crashlytics").version(Dependencies.Versions.crashlyticsPlugin).apply(false)
     id("com.google.firebase.firebase-perf").version(Dependencies.Versions.performancePlugin).apply(false)
-    id("io.realm.kotlin").version(Dependencies.Versions.realm).apply(false)
+//    id("io.realm.kotlin").version(Dependencies.Versions.realm).apply(false)
+}
+
+buildscript {
+    dependencies {
+        classpath("io.realm.kotlin:gradle-plugin:${Dependencies.Versions.realm}")
+    }
 }
 
 tasks.register("clean", Delete::class) {

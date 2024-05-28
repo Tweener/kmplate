@@ -15,8 +15,8 @@ class SetDarkModeUseCase(
         val isDarkModeEnabled: Boolean
     )
 
-    override suspend fun buildUseCase(params: InputParams?) {
-        assertInputParamsNotNull(params)
+    override suspend fun buildUseCase(inputParams: InputParams?) {
+        val params = assertInputParamsNotNull(inputParams)
 
         settingsRepository.setDarkMode(SettingsRepository.InputParams.SetDarkMode(isDarkModeEnabled = params.isDarkModeEnabled))
     }

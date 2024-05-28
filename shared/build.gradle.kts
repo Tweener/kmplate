@@ -13,6 +13,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("org.jetbrains.compose")
+    id("org.jetbrains.kotlin.plugin.compose")
     kotlin("plugin.parcelize") // TODO Move this to Presentation build.gradle once Compose Multiplatform supports split modules
     id("com.codingfeline.buildkonfig").version("+")
 }
@@ -27,10 +28,6 @@ android {
 
     buildFeatures {
         compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = Dependencies.Versions.composeCompilerExtension
     }
 
     compileOptions {

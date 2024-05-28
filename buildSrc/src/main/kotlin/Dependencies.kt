@@ -29,13 +29,12 @@ object Dependencies {
             val javaCompatibility = JavaVersion.VERSION_17
         }
 
-        const val kotlin = "1.9.22"
+        const val kotlin = "2.0.0"
         const val gradle = "8.2.2"
-        const val composeMultiplatform = "1.6.0"
-        const val composeCompilerExtension = "1.5.11"
+        const val composeMultiplatform = "1.6.10"
         const val ktor = "2.3.9"
         const val napier = "2.7.1"
-        const val realm = "1.16.0"
+        const val realm = "2.0.0-SNAPSHOT"
         const val dependencyVersionsPlugin = "0.51.0"
         const val googleServicesPlugin = "4.4.1"
         const val crashlyticsPlugin = "2.9.9"
@@ -49,7 +48,7 @@ object Dependencies {
 
         object Tweener {
             const val czan = "2.2.1"
-            const val bom = "1.0.4"
+            const val bom = "2.0.0"
         }
 
         object Koin {
@@ -63,7 +62,6 @@ object Dependencies {
 
         object Android {
             const val firebase = "32.7.4"
-            const val composeCompilerExtension = "1.5.10" // See mapping with Kotlin version here: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
             const val activityCompose = "1.8.2"
             const val desugarJdkLibs = "2.0.4"
             const val accompanist = "0.34.0"
@@ -81,6 +79,7 @@ object Dependencies {
 
         const val napier = "io.github.aakira:napier:${Versions.napier}"
         const val toastCompose = "io.github.dokar3:sonner:${Versions.toastCompose}"
+        const val realm = "io.realm.kotlin:library-base:${Versions.realm}"
 
         object Tweener {
             const val czan = "io.github.tweener:czan:${Versions.Tweener.czan}"

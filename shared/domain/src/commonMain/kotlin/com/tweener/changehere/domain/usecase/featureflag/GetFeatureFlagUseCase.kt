@@ -20,8 +20,8 @@ class GetFeatureFlagUseCase(
         val enabled: Boolean
     )
 
-    override suspend fun buildUseCase(params: InputParams?): OutputParams {
-        assertInputParamsNotNull(params)
+    override suspend fun buildUseCase(inputParams: InputParams?): OutputParams {
+        val params = assertInputParamsNotNull(inputParams)
 
         return featureFlagRepository
             .get(FeatureFlagRepository.InputParams.Get(featureFlag = params.featureFlag))

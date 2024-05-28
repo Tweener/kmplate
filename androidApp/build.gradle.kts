@@ -4,6 +4,7 @@ plugins {
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
     id("com.google.firebase.firebase-perf")
+    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 android {
@@ -21,10 +22,6 @@ android {
     buildFeatures {
         compose = true
         buildConfig = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = Dependencies.Versions.Android.composeCompilerExtension
     }
 
     packaging {

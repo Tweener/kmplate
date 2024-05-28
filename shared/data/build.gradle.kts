@@ -54,6 +54,9 @@ kotlin {
             // Multiplatform Settings (equivalent to SharedPrefs but for all platforms)
             api(Dependencies.Libraries.MultiplatformSettings.core)
             api(Dependencies.Libraries.MultiplatformSettings.coroutines)
+
+            // Realm
+            api(Dependencies.Libraries.realm)
         }
 
         commonTest.dependencies {
@@ -70,4 +73,8 @@ kotlin {
             implementation(Dependencies.Libraries.Ktor.Client.iOS.client)
         }
     }
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor(0,TimeUnit.SECONDS)
 }
