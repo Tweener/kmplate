@@ -1,3 +1,5 @@
+<h1 align="center">Kmplate</h1>
+
 <h2 align="center">Template to easily creare new pre-configured Kotlin Multiplatform projects</h2>
 
 [![Website](https://img.shields.io/badge/Author-vivienmahe.com-orange)](https://vivienmahe.com/)
