@@ -74,7 +74,3 @@ kotlin {
         }
     }
 }
-
-configurations.all {
-    resolutionStrategy.cacheChangingModulesFor(0,TimeUnit.SECONDS)
-}

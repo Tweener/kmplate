@@ -34,7 +34,7 @@ object Dependencies {
         const val composeMultiplatform = "1.6.10"
         const val ktor = "2.3.9"
         const val napier = "2.7.1"
-        const val realm = "2.0.0-SNAPSHOT"
+        const val realm = "2.0.0"
         const val dependencyVersionsPlugin = "0.51.0"
         const val googleServicesPlugin = "4.4.1"
         const val crashlyticsPlugin = "2.9.9"
@@ -47,8 +47,8 @@ object Dependencies {
         const val multiplatformSettings = "1.1.1"
 
         object Tweener {
-            const val czan = "2.2.1"
-            const val bom = "2.0.0"
+            const val czan = "2.3.0"
+            const val bom = "2.0.1"
         }
 
         object Koin {
