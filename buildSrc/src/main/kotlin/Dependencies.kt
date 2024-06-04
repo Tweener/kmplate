@@ -31,8 +31,8 @@ object Dependencies {
 
         const val kotlin = "2.0.0"
         const val gradle = "8.2.2"
-        const val composeMultiplatform = "1.6.10"
-        const val ktor = "2.3.9"
+        const val composeMultiplatform = "1.6.11"
+        const val ktor = "2.3.11"
         const val napier = "2.7.1"
         const val realm = "2.0.0"
         const val dependencyVersionsPlugin = "0.51.0"
@@ -43,7 +43,7 @@ object Dependencies {
         const val coil = "3.0.0-alpha01"
         const val buildKonfig = "0.15.1"
         const val voyager = "1.0.0"
-        const val toastCompose = "0.3.4"
+        const val toastCompose = "0.3.6"
         const val multiplatformSettings = "1.1.1"
 
         object Tweener {
@@ -61,15 +61,15 @@ object Dependencies {
         }
 
         object Android {
-            const val firebase = "32.7.4"
-            const val activityCompose = "1.8.2"
+            const val firebase = "33.1.0"
+            const val activityCompose = "1.9.0"
             const val desugarJdkLibs = "2.0.4"
             const val accompanist = "0.34.0"
-            const val adMob = "23.0.0"
-            const val preferences = "1.2.0"
+            const val adMob = "23.1.0"
+            const val preferences = "1.2.1"
 
             object AndroidX {
-                const val activity = "1.8.2"
+                const val activity = "1.9.0"
                 const val splashscreen = "1.0.1"
             }
         }

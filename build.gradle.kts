@@ -19,7 +19,7 @@ plugins {
 }
 
 tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
+    delete(rootProject.layout.buildDirectory)
 }
 
 // region Configure dependencyUpdates task
@@ -30,7 +30,7 @@ tasks.withType<DependencyUpdatesTask> {
     }
 
     outputFormatter {
-        val reportFileDir = rootProject.buildDir.path + "/dependencyUpdates"
+        val reportFileDir = rootProject.layout.buildDirectory.asFile.get().path + "/dependencyUpdates"
         Files.createDirectories(Paths.get(reportFileDir))
         val reportFile = File("$reportFileDir/report.txt").apply { writeText("") }
 
