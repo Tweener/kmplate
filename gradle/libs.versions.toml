@@ -1,0 +1,105 @@
+[versions]
+kotlin = "2.0.0"
+gradle = "8.2.2"
+composeMultiplatform = "1.6.11"
+ktor = "2.3.11"
+napier = "2.7.1"
+realm = "2.0.0"
+dependencyVersionsPlugin = "0.51.0"
+googleServicesPlugin = "4.4.1"
+crashlyticsPlugin = "2.9.9"
+performancePlugin = "1.4.2"
+coil = "3.0.0-alpha01"
+buildKonfig = "0.15.1"
+voyager = "1.0.0"
+toastCompose = "0.3.6"
+multiplatformSettings = "1.1.1"
+moko = "0.16.1"
+
+# Tweener
+tweenerCzan = "2.3.1"
+tweenerBom = "2.0.1"
+
+# Koin
+koinCore = "3.6.0-alpha1"
+koinCompose = "1.1.2"
+
+# Android
+androidFirebase = "33.1.0"
+androidActivityCompose = "1.9.0"
+androidDesugarJdkLibs = "2.0.4"
+androidAccompanist = "0.34.0"
+androidAdMob = "23.1.0"
+androidPreferences = "1.2.1"
+androidActivity = "1.9.0"
+androidSplashscreen = "1.0.1"
+
+[libraries]
+napier = { group = "io.github.aakira", name = "napier", version.ref = "napier" }
+toast-compose = { group = "io.github.dokar3", name = "sonner", version.ref = "toastCompose" }
+realm = { group = "io.realm.kotlin", name = "library-base", version.ref = "realm" }
+compose-multiplatform-material3 = { group = "org.jetbrains.compose.material3", name = "material3", version.ref = "composeMultiplatform" }
+voyager-tab-navigator = { group = "cafe.adriel.voyager", name = "voyager-tab-navigator", version.ref = "voyager" }
+moko-mvvm-compose = { group = "dev.icerock.moko", name = "mvvm-compose", version.ref = "moko" }
+
+# Tweener
+tweener-czan = { group = "io.github.tweener", name = "czan", version.ref = "tweenerCzan" }
+tweener-bom = { group = "io.github.tweener", name = "kmp-bom", version.ref = "tweenerBom" }
+tweener-common = { group = "io.github.tweener", name = "kmp-common" }
+tweener-realm = { group = "io.github.tweener", name = "kmp-realm" }
+tweener-firebase = { group = "io.github.tweener", name = "kmp-firebase" }
+tweener-charts = { group = "io.github.tweener", name = "kmp-charts" }
+
+# Multiplatform settings
+multiplaform-settings-core = { group = "com.russhwolf", name = "multiplatform-settings", version.ref = "multiplatformSettings" }
+multiplaform-settings-coroutines = { group = "com.russhwolf", name = "multiplatform-settings-coroutines", version.ref = "multiplatformSettings" }
+
+# Coil
+coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
+coil-network = { group = "io.coil-kt.coil3", name = "coil-network", version.ref = "coil" }
+
+# Koin
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koinCore" }
+koin-compose = { group = "io.insert-koin", name = "koin-compose", version.ref = "koinCompose" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koinCore" }
+
+# Ktor
+ktor-serialization-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-auth = { group = "io.ktor", name = "ktor-client-auth", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
+ktor-client-android = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-ios = { group = "io.ktor", name = "ktor-client-ios", version.ref = "ktor" }
+
+# Android
+android-desugarjdklibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
+android-admob = { group = "com.google.android.gms", name = "play-services-ads", version.ref = "androidAdMob" }
+android-firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "androidFirebase" }
+android-firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
+android-firebase-performance = { group = "com.google.firebase", name = "firebase-perf-ktx" }
+android-activity = { group = "androidx.activity", name = "activity-ktx", version.ref = "androidActivity" }
+android-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidActivityCompose" }
+android-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "androidSplashscreen" }
+android-preferences = { group = "androidx.preference", name = "preference-ktx", version.ref = "androidPreferences" }
+android-accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "androidAccompanist" }
+
+[bundles]
+ktor-common = ["ktor-client-core", "ktor-client-auth", "ktor-client-content-negotiation", "ktor-client-logging", "ktor-serialization-json"]
+multiplaform-settings = ["multiplaform-settings-core", "multiplaform-settings-coroutines"]
+coil = ["coil-compose", "coil-network"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "gradle" }
+android-library = { id = "com.android.library", version.ref = "gradle" }
+jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
+jetbrains-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+dependency-versions = { id = "com.github.ben-manes.versions", version.ref = "dependencyVersionsPlugin" }
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServicesPlugin" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashlyticsPlugin" }
+firebase-performance = { id = "com.google.firebase.firebase-perf", version.ref = "performancePlugin" }
+realm = { id = "io.realm.kotlin", version.ref = "realm" }
+buildkonfig = { id = "com.codingfeline.buildkonfig", version.ref = "buildKonfig" }
