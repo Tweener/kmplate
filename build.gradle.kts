@@ -4,18 +4,18 @@ import java.nio.file.Files
 import java.nio.file.Paths
 
 plugins {
-    id("com.android.application").version(Dependencies.Versions.gradle).apply(false)
-    id("com.android.library").version(Dependencies.Versions.gradle).apply(false)
-    id("org.jetbrains.compose").version(Dependencies.Versions.composeMultiplatform).apply(false)
-    id("org.jetbrains.kotlin.plugin.compose").version(Dependencies.Versions.kotlin).apply(false)
-    kotlin("android").version(Dependencies.Versions.kotlin).apply(false)
-    kotlin("multiplatform").version(Dependencies.Versions.kotlin).apply(false)
-    kotlin("plugin.serialization").version(Dependencies.Versions.kotlin).apply(false)
-    id("com.github.ben-manes.versions").version(Dependencies.Versions.dependencyVersionsPlugin) // ./gradlew dependencyUpdates
-    id("com.google.gms.google-services").version(Dependencies.Versions.googleServicesPlugin).apply(false)
-    id("com.google.firebase.crashlytics").version(Dependencies.Versions.crashlyticsPlugin).apply(false)
-    id("com.google.firebase.firebase-perf").version(Dependencies.Versions.performancePlugin).apply(false)
-    id("io.realm.kotlin").version(Dependencies.Versions.realm).apply(false)
+    alias(libs.plugins.android.application).apply(false)
+    alias(libs.plugins.android.library).apply(false)
+    alias(libs.plugins.jetbrains.compose).apply(false)
+    alias(libs.plugins.jetbrains.compose.compiler).apply(false)
+    alias(libs.plugins.kotlin.android).apply(false)
+    alias(libs.plugins.kotlin.multiplatform).apply(false)
+    alias(libs.plugins.kotlin.serialization).apply(false)
+    alias(libs.plugins.dependency.versions) // ./gradlew dependencyUpdates
+    alias(libs.plugins.google.services).apply(false)
+    alias(libs.plugins.firebase.crashlytics).apply(false)
+    alias(libs.plugins.firebase.performance).apply(false)
+    alias(libs.plugins.realm).apply(false)
 }
 
 tasks.register("clean", Delete::class) {

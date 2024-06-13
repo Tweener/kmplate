@@ -1,20 +1,11 @@
 import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.BOOLEAN
 
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("com.codingfeline.buildkonfig:buildkonfig-gradle-plugin:${Dependencies.Versions.buildKonfig}")
-    }
-}
-
 plugins {
-    kotlin("multiplatform")
-    id("com.android.library")
-    id("org.jetbrains.compose")
-    id("org.jetbrains.kotlin.plugin.compose")
-    id("com.codingfeline.buildkonfig").version("+")
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.jetbrains.compose)
+    alias(libs.plugins.jetbrains.compose.compiler)
+    alias(libs.plugins.buildkonfig)
 }
 
 android {
@@ -70,12 +61,12 @@ kotlin {
             // Since Compose Multiplatform 1.6.0 is not yet compatible with multi-modules projects, we can't use Presentation module yet
 
             // Tweener
-            implementation(Dependencies.Libraries.Tweener.czan)
+            implementation(libs.tweener.czan)
 
-            implementation(project.dependencies.platform(Dependencies.Libraries.Tweener.bom))
-            implementation(Dependencies.Libraries.Tweener.common)
-            implementation(Dependencies.Libraries.Tweener.firebase)
-            implementation(Dependencies.Libraries.Tweener.charts)
+            implementation(project.dependencies.platform(libs.tweener.bom))
+            implementation(libs.tweener.common)
+            implementation(libs.tweener.realm)
+            implementation(libs.tweener.firebase)
 
             // Compose
             implementation(compose.runtime)
@@ -85,27 +76,26 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
-            implementation(Dependencies.Libraries.ComposeMultiplatform.material3)
+            implementation(libs.compose.multiplatform.material3)
 
             // DI
-            implementation(Dependencies.Libraries.Koin.core)
-            implementation(Dependencies.Libraries.Koin.compose)
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
 
             // Moko
-            implementation(Dependencies.Libraries.Moko.compose)
+            implementation(libs.moko.mvvm.compose)
 
             // Napier
-            implementation(Dependencies.Libraries.napier)
+            implementation(libs.napier)
 
-            // Image fetcher
-            implementation(Dependencies.Libraries.Coil.compose)
-            implementation(Dependencies.Libraries.Coil.network)
+            // Coil (Image fetcher)
+            implementation(libs.bundles.coil)
 
             // Voyager
-            implementation(Dependencies.Libraries.Voyager.tagNavigator)
+            implementation(libs.voyager.tab.navigator)
 
             // Toast Compose
-            implementation(Dependencies.Libraries.toastCompose)
+            implementation(libs.toast.compose)
         }
 
         commonTest.dependencies {
@@ -114,14 +104,14 @@ kotlin {
 
         androidMain.dependencies {
             // DI
-            implementation(Dependencies.Libraries.Koin.android)
+            implementation(libs.koin.android)
 
             // Compose
             implementation(compose.preview)
             implementation(compose.uiTooling)
 
             // Preferences
-            implementation(Dependencies.Libraries.Android.AndroidX.preferences)
+            implementation(libs.android.preferences)
         }
     }
 }

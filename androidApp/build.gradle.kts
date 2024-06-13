@@ -1,10 +1,10 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    id("com.google.gms.google-services")
-    id("com.google.firebase.crashlytics")
-    id("com.google.firebase.firebase-perf")
-    id("org.jetbrains.kotlin.plugin.compose")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.firebase.crashlytics)
+    alias(libs.plugins.firebase.performance)
+    alias(libs.plugins.jetbrains.compose.compiler)
 }
 
 android {
@@ -62,24 +62,24 @@ android {
 dependencies {
     implementation(project(":shared"))
 
-    coreLibraryDesugaring(Dependencies.Libraries.Android.desugarJdkLibs)
+    coreLibraryDesugaring(libs.android.desugarjdklibs)
 
     // Tweener
-    implementation(Dependencies.Libraries.Tweener.czan)
+    implementation(libs.tweener.czan)
 
     // Android
-    implementation(Dependencies.Libraries.Android.AndroidX.splashscreen)
-    implementation(Dependencies.Libraries.Android.AndroidX.activity)
-    implementation(Dependencies.Libraries.Android.Accompanist.permissions)
-    implementation(Dependencies.Libraries.Android.AndroidX.Compose.activity)
-    implementation(Dependencies.Libraries.Android.adMob)
+    implementation(libs.android.splashscreen)
+    implementation(libs.android.activity)
+    implementation(libs.android.activity.compose)
+    implementation(libs.android.accompanist.permissions)
+    implementation(libs.android.admob)
 
     // Firebase
-    implementation(platform(Dependencies.Libraries.Android.Firebase.bom))
-    implementation(Dependencies.Libraries.Android.Firebase.analytics)
-    implementation(Dependencies.Libraries.Android.Firebase.performance)
+    implementation(platform(libs.android.firebase.bom))
+    implementation(libs.android.firebase.analytics)
+    implementation(libs.android.firebase.performance)
 
     // DI
-    implementation(Dependencies.Libraries.Koin.core)
-    implementation(Dependencies.Libraries.Koin.android)
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
 }

@@ -1,8 +1,8 @@
 plugins {
-    kotlin("multiplatform")
-    id("com.android.library")
-    id("io.realm.kotlin")
-    kotlin("plugin.serialization")
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.realm)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -33,30 +33,25 @@ kotlin {
             implementation(project(":shared:domain"))
 
             // Tweener
-            implementation(project.dependencies.platform(Dependencies.Libraries.Tweener.bom))
-            implementation(Dependencies.Libraries.Tweener.common)
-            implementation(Dependencies.Libraries.Tweener.realm)
-            implementation(Dependencies.Libraries.Tweener.firebase)
+            implementation(project.dependencies.platform(libs.tweener.bom))
+            implementation(libs.tweener.common)
+            implementation(libs.tweener.realm)
+            implementation(libs.tweener.firebase)
 
             // DI
-            implementation(Dependencies.Libraries.Koin.core)
+            implementation(libs.koin.core)
 
             // Ktor
-            implementation(Dependencies.Libraries.Ktor.Client.core)
-            implementation(Dependencies.Libraries.Ktor.Client.auth)
-            implementation(Dependencies.Libraries.Ktor.Client.contentNegotiation)
-            implementation(Dependencies.Libraries.Ktor.Client.logging)
-            implementation(Dependencies.Libraries.Ktor.serializationJson)
+            implementation(libs.bundles.ktor.common)
 
             // Napier
-            implementation(Dependencies.Libraries.napier)
+            implementation(libs.napier)
 
             // Multiplatform Settings (equivalent to SharedPrefs but for all platforms)
-            api(Dependencies.Libraries.MultiplatformSettings.core)
-            api(Dependencies.Libraries.MultiplatformSettings.coroutines)
+            api(libs.bundles.multiplaform.settings)
 
             // Realm
-            api(Dependencies.Libraries.realm)
+            api(libs.realm)
         }
 
         commonTest.dependencies {
@@ -65,12 +60,12 @@ kotlin {
 
         androidMain.dependencies {
             // Ktor
-            implementation(Dependencies.Libraries.Ktor.Client.Android.okhttp)
+            implementation(libs.ktor.client.android)
         }
 
         iosMain.dependencies {
             // Ktor
-            implementation(Dependencies.Libraries.Ktor.Client.iOS.client)
+            implementation(libs.ktor.client.ios)
         }
     }
 }
