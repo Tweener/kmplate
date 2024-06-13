@@ -8,15 +8,15 @@ plugins {
 }
 
 android {
-    namespace = Dependencies.Versions.MyProject.Android.namespace
-    compileSdk = Dependencies.Versions.MyProject.Android.compileSDK
+    namespace = ProjectConfiguration.MyProject.Android.namespace
+    compileSdk = ProjectConfiguration.MyProject.Android.compileSDK
 
     defaultConfig {
-        applicationId = Dependencies.Versions.MyProject.Android.applicationId
-        minSdk = Dependencies.Versions.MyProject.Android.minSDK
-        targetSdk = Dependencies.Versions.MyProject.Android.targetSDK
-        versionCode = Dependencies.Versions.MyProject.Android.versionCode
-        versionName = Dependencies.Versions.MyProject.versionName
+        applicationId = ProjectConfiguration.MyProject.Android.applicationId
+        minSdk = ProjectConfiguration.MyProject.Android.minSDK
+        targetSdk = ProjectConfiguration.MyProject.Android.targetSDK
+        versionCode = ProjectConfiguration.MyProject.Android.versionCode
+        versionName = ProjectConfiguration.MyProject.versionName
     }
 
     buildFeatures {
@@ -48,14 +48,14 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = Dependencies.Versions.Compiler.javaCompatibility
-        targetCompatibility = Dependencies.Versions.Compiler.javaCompatibility
+        sourceCompatibility = ProjectConfiguration.Compiler.javaCompatibility
+        targetCompatibility = ProjectConfiguration.Compiler.javaCompatibility
 
         isCoreLibraryDesugaringEnabled = true
     }
 
     kotlinOptions {
-        jvmTarget = Dependencies.Versions.Compiler.jvmTarget
+        jvmTarget = ProjectConfiguration.Compiler.jvmTarget
     }
 }
 

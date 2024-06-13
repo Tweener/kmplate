@@ -9,11 +9,11 @@ plugins {
 }
 
 android {
-    namespace = Dependencies.Versions.MyProject.packageName
-    compileSdk = Dependencies.Versions.MyProject.Android.compileSDK
+    namespace = ProjectConfiguration.MyProject.packageName
+    compileSdk = ProjectConfiguration.MyProject.Android.compileSDK
 
     defaultConfig {
-        minSdk = Dependencies.Versions.MyProject.Android.minSDK
+        minSdk = ProjectConfiguration.MyProject.Android.minSDK
     }
 
     buildFeatures {
@@ -21,8 +21,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = Dependencies.Versions.Compiler.javaCompatibility
-        targetCompatibility = Dependencies.Versions.Compiler.javaCompatibility
+        sourceCompatibility = ProjectConfiguration.Compiler.javaCompatibility
+        targetCompatibility = ProjectConfiguration.Compiler.javaCompatibility
     }
 }
 
@@ -117,7 +117,7 @@ kotlin {
 }
 
 buildkonfig {
-    packageName = Dependencies.Versions.MyProject.packageName
+    packageName = ProjectConfiguration.MyProject.packageName
 
     // Release
     defaultConfigs {

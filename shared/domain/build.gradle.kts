@@ -4,16 +4,16 @@ plugins {
 }
 
 android {
-    namespace = Dependencies.Versions.MyProject.packageName + ".domain"
-    compileSdk = Dependencies.Versions.MyProject.Android.compileSDK
+    namespace = ProjectConfiguration.MyProject.packageName + ".domain"
+    compileSdk = ProjectConfiguration.MyProject.Android.compileSDK
 
     defaultConfig {
-        minSdk = Dependencies.Versions.MyProject.Android.minSDK
+        minSdk = ProjectConfiguration.MyProject.Android.minSDK
     }
 
     compileOptions {
-        sourceCompatibility = Dependencies.Versions.Compiler.javaCompatibility
-        targetCompatibility = Dependencies.Versions.Compiler.javaCompatibility
+        sourceCompatibility = ProjectConfiguration.Compiler.javaCompatibility
+        targetCompatibility = ProjectConfiguration.Compiler.javaCompatibility
     }
 }
 
