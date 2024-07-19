@@ -25,7 +25,7 @@ class MainViewModel(
 
     // endregion Observable properties
 
-    init {
+    fun initViewModel() {
         viewModelScope.launch {
             // Load all required app configuration
             loadAppConfigUseCase.execute()

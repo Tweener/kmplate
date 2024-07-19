@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.core.screen.Screen
@@ -58,6 +59,10 @@ class MainScreen : Screen {
                     CurrentTab()
                 }
             }
+        }
+
+        LaunchedEffect(Unit) {
+            viewModel.initViewModel()
         }
     }
 }
