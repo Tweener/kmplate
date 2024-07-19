@@ -1,12 +1,15 @@
 package com.tweener.changehere.presentation._internal.navigation.bar
 
 import androidx.compose.foundation.layout.RowScope
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import com.tweener.czan.designsystem.atom.bars.NavigationBar
+import com.tweener.czan.designsystem.atom.bars.NavigationBarDefaults
 import com.tweener.czan.designsystem.atom.bars.NavigationBarItem
+import com.tweener.czan.designsystem.atom.bars.NavigationBarItemDefaults
 
 /**
  * @author Vivien Mahe
@@ -15,10 +18,16 @@ import com.tweener.czan.designsystem.atom.bars.NavigationBarItem
 
 @Composable
 fun MyProjectNavigationBar(
-    modifier: Modifier = Modifier,
     navigationItems: List<Tab>,
+    modifier: Modifier = Modifier,
 ) {
-    NavigationBar(modifier = modifier) {
+    NavigationBar(
+        modifier = modifier,
+        colors = NavigationBarDefaults.colors(
+            containerColor = MaterialTheme.colorScheme.background,
+            contentColor = MaterialTheme.colorScheme.onBackground,
+        ),
+    ) {
         navigationItems.forEach { tab -> TabNavigationBarItem(tab = tab) }
     }
 }
@@ -28,9 +37,16 @@ private fun RowScope.TabNavigationBarItem(tab: Tab) {
     val tabNavigator = LocalTabNavigator.current
 
     NavigationBarItem(
-        selected = tabNavigator.current.key == tab.key,
+        selected = tabNavigator.current == tab,
         onClick = { tabNavigator.current = tab },
         icon = tab.options.icon,
-        label = tab.options.title
+        label = tab.options.title,
+        colors = NavigationBarItemDefaults.colors(
+            selectedIconColor = MaterialTheme.colorScheme.onBackground,
+            selectedTextColor = MaterialTheme.colorScheme.onBackground,
+            unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
+            unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
+            indicatorColor = MaterialTheme.colorScheme.secondaryContainer,
+        ),
     )
 }
