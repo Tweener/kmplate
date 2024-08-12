@@ -1,37 +1,34 @@
 [versions]
-kotlin = "2.0.0"
+kotlin = "2.0.10"
 gradle = "8.2.2"
 composeMultiplatform = "1.6.11"
-ktor = "2.3.11"
+ktor = "2.3.12"
 napier = "2.7.1"
 realm = "2.0.0"
 dependencyVersionsPlugin = "0.51.0"
-googleServicesPlugin = "4.4.1"
-crashlyticsPlugin = "2.9.9"
+googleServicesPlugin = "4.4.2"
+crashlyticsPlugin = "3.0.2"
 performancePlugin = "1.4.2"
 coil = "3.0.0-alpha01"
 buildKonfig = "0.15.1"
 voyager = "1.1.0-beta02"
-toastCompose = "0.3.6"
+toastCompose = "0.3.8"
 multiplatformSettings = "1.1.1"
 moko = "0.16.1"
+koinCore = "3.6.0-alpha1"
 
 # Tweener
 tweenerCzan = "2.3.1"
-tweenerBom = "2.0.1"
-
-# Koin
-koinCore = "3.6.0-alpha1"
-koinCompose = "1.1.2"
+tweenerBom = "2.0.2"
 
 # Android
-androidFirebase = "33.1.0"
-androidActivityCompose = "1.9.0"
+androidFirebase = "33.1.2"
+androidActivityCompose = "1.9.1"
 androidDesugarJdkLibs = "2.0.4"
 androidAccompanist = "0.34.0"
-androidAdMob = "23.1.0"
+androidAdMob = "23.2.0"
 androidPreferences = "1.2.1"
-androidActivity = "1.9.0"
+androidActivity = "1.9.1"
 androidSplashscreen = "1.0.1"
 
 [libraries]
@@ -60,7 +57,7 @@ coil-network = { group = "io.coil-kt.coil3", name = "coil-network", version.ref 
 
 # Koin
 koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koinCore" }
-koin-compose = { group = "io.insert-koin", name = "koin-compose", version.ref = "koinCompose" }
+koin-compose = { group = "io.insert-koin", name = "koin-compose", version.ref = "koinCore" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koinCore" }
 
 # Ktor
