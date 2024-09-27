@@ -6,6 +6,8 @@ import com.tweener.changehere.domain.entity.User
 import com.tweener.changehere.domain.error.UserNotAuthenticatedException
 import com.tweener.changehere.domain.repository.UserRepository
 import com.tweener.firebase.auth.datasource.FirebaseAuthDataSource
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 import kotlinx.datetime.LocalDateTime
 
 /**
@@ -27,8 +29,10 @@ class UserRepositoryImpl(
         return UserRepository.OutputParams.Authenticate(success = user != null)
     }
 
-    override suspend fun isAuthenticated(): UserRepository.OutputParams.IsAuthenticated =
-        UserRepository.OutputParams.IsAuthenticated(authenticated = firebaseAuthDataSource.isUserLoggedIn())
+    override suspend fun isAuthenticated(): Flow<UserRepository.OutputParams.IsAuthenticated> =
+        firebaseAuthDataSource
+            .isUserLoggedIn()
+            .map { UserRepository.OutputParams.IsAuthenticated(authenticated = it) }
 
     override suspend fun getAuthenticatedUser(): UserRepository.OutputParams.GetAuthenticatedUser {
         val email = firebaseAuthDataSource.getCurrentUser()?.email ?: throw UserNotAuthenticatedException()

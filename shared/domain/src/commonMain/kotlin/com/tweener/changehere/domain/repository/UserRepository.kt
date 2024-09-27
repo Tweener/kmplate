@@ -1,6 +1,7 @@
 package com.tweener.changehere.domain.repository
 
 import com.tweener.changehere.domain.entity.User
+import kotlinx.coroutines.flow.Flow
 import kotlinx.datetime.LocalDateTime
 
 /**
@@ -24,7 +25,7 @@ interface UserRepository {
 
     suspend fun authenticate(inputParams: InputParams.Authenticate): OutputParams.Authenticate
 
-    suspend fun isAuthenticated(): OutputParams.IsAuthenticated
+    suspend fun isAuthenticated(): Flow<OutputParams.IsAuthenticated>
 
     suspend fun getAuthenticatedUser(): OutputParams.GetAuthenticatedUser
 

@@ -1,11 +1,12 @@
 package com.tweener.changehere.presentation
 
+import androidx.lifecycle.viewModelScope
 import cafe.adriel.voyager.navigator.tab.Tab
+import com.tweener.changehere._internal.viewmodel.ViewModel
 import com.tweener.changehere.domain.usecase.config.LoadAppConfigUseCase
 import com.tweener.changehere.presentation._internal.navigation.tab.FavoritesTab
 import com.tweener.changehere.presentation._internal.navigation.tab.HomeTab
 import com.tweener.changehere.presentation._internal.navigation.tab.ProfileTab
-import dev.icerock.moko.mvvm.viewmodel.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

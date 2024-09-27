@@ -39,8 +39,8 @@ private fun RowScope.TabNavigationBarItem(tab: Tab) {
     NavigationBarItem(
         selected = tabNavigator.current == tab,
         onClick = { tabNavigator.current = tab },
-        icon = tab.options.icon,
-        label = tab.options.title,
+        icon = tab.options.icon!!,
+        label = tab.options.title.ifBlank { null },
         colors = NavigationBarItemDefaults.colors(
             selectedIconColor = MaterialTheme.colorScheme.onBackground,
             selectedTextColor = MaterialTheme.colorScheme.onBackground,

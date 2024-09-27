@@ -1,6 +1,7 @@
 package com.tweener.changehere.presentation.screen.favorites
 
-import dev.icerock.moko.mvvm.viewmodel.ViewModel
+import com.tweener.changehere._internal.viewmodel.ViewModel
+
 
 /**
  * @author Vivien Mahe

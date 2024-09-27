@@ -72,7 +72,6 @@ dependencies {
     implementation(libs.android.activity)
     implementation(libs.android.activity.compose)
     implementation(libs.android.accompanist.permissions)
-    implementation(libs.android.admob)
 
     // Firebase
     implementation(platform(libs.android.firebase.bom))

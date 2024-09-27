@@ -82,8 +82,11 @@ kotlin {
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
 
+            // ViewModel
+            implementation(libs.jetbrains.lifecycle.viewmodel.compose)
+
             // Moko
-            implementation(libs.moko.mvvm.compose)
+            implementation(libs.moko.permissions)
 
             // Napier
             implementation(libs.napier)

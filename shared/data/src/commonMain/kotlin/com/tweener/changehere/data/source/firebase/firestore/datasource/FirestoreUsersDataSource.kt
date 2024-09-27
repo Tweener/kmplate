@@ -20,7 +20,7 @@ class FirestoreUsersDataSource(
         firestoreService.get<FirestoreUserModel>(collection = USERS_COLLECTION_NAME, id = email)
 
     suspend fun createUser(email: String) {
-        firestoreService.create(
+        firestoreService.create<FirestoreUserModel>(
             collection = USERS_COLLECTION_NAME,
             id = email,
             data = hashMapOf(

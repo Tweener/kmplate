@@ -1,34 +1,34 @@
 [versions]
-kotlin = "2.0.10"
-gradle = "8.2.2"
+kotlin = "2.0.20"
+gradle = "8.5.2"
 composeMultiplatform = "1.6.11"
 ktor = "2.3.12"
 napier = "2.7.1"
-realm = "2.0.0"
+realm = "2.3.0"
+koin = "4.0.0"
+coil = "3.0.0-alpha01"
+voyager = "1.1.0-beta02"
 dependencyVersionsPlugin = "0.51.0"
 googleServicesPlugin = "4.4.2"
 crashlyticsPlugin = "3.0.2"
 performancePlugin = "1.4.2"
-coil = "3.0.0-alpha01"
 buildKonfig = "0.15.1"
-voyager = "1.1.0-beta02"
 toastCompose = "0.3.8"
 multiplatformSettings = "1.1.1"
-moko = "0.16.1"
-koinCore = "3.6.0-alpha1"
+mokoPermissions = "0.18.0"
+jetbrainsViewModel = "2.8.0"
 
 # Tweener
-tweenerCzan = "2.3.1"
-tweenerBom = "2.0.2"
+tweenerCzan = "2.3.3"
+tweenerBom = "2.0.4"
 
 # Android
-androidFirebase = "33.1.2"
-androidActivityCompose = "1.9.1"
-androidDesugarJdkLibs = "2.0.4"
+androidFirebase = "33.3.0"
+androidActivityCompose = "1.9.2"
+androidDesugarJdkLibs = "2.1.2"
 androidAccompanist = "0.34.0"
-androidAdMob = "23.2.0"
 androidPreferences = "1.2.1"
-androidActivity = "1.9.1"
+androidActivity = "1.9.2"
 androidSplashscreen = "1.0.1"
 
 [libraries]
@@ -36,8 +36,9 @@ napier = { group = "io.github.aakira", name = "napier", version.ref = "napier" }
 toast-compose = { group = "io.github.dokar3", name = "sonner", version.ref = "toastCompose" }
 realm = { group = "io.realm.kotlin", name = "library-base", version.ref = "realm" }
 compose-multiplatform-material3 = { group = "org.jetbrains.compose.material3", name = "material3", version.ref = "composeMultiplatform" }
+jetbrains-lifecycle-viewmodel-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "jetbrainsViewModel" }
 voyager-tab-navigator = { group = "cafe.adriel.voyager", name = "voyager-tab-navigator", version.ref = "voyager" }
-moko-mvvm-compose = { group = "dev.icerock.moko", name = "mvvm-compose", version.ref = "moko" }
+moko-permissions = { group = "dev.icerock.moko", name = "permissions-compose", version.ref = "mokoPermissions" }
 
 # Tweener
 tweener-czan = { group = "io.github.tweener", name = "czan", version.ref = "tweenerCzan" }
@@ -56,9 +57,9 @@ coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref 
 coil-network = { group = "io.coil-kt.coil3", name = "coil-network", version.ref = "coil" }
 
 # Koin
-koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koinCore" }
-koin-compose = { group = "io.insert-koin", name = "koin-compose", version.ref = "koinCore" }
-koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koinCore" }
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-compose = { group = "io.insert-koin", name = "koin-compose", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 
 # Ktor
 ktor-serialization-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
@@ -71,7 +72,6 @@ ktor-client-ios = { group = "io.ktor", name = "ktor-client-ios", version.ref = "
 
 # Android
 android-desugarjdklibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
-android-admob = { group = "com.google.android.gms", name = "play-services-ads", version.ref = "androidAdMob" }
 android-firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "androidFirebase" }
 android-firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
 android-firebase-performance = { group = "com.google.firebase", name = "firebase-perf-ktx" }

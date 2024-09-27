@@ -8,7 +8,7 @@ import com.tweener.changehere.domain.usecase.settings.SetDarkModeUseCase
 import com.tweener.changehere.domain.usecase.user.AuthenticateUserUseCase
 import com.tweener.changehere.domain.usecase.user.DeleteUserUseCase
 import com.tweener.changehere.domain.usecase.user.GetUserUseCase
-import com.tweener.changehere.domain.usecase.user.IsUserAuthenticatedInUseCase
+import com.tweener.changehere.domain.usecase.user.IsUserAuthenticatedUseCase
 import com.tweener.changehere.domain.usecase.user.ShouldAskForAppReviewUseCase
 import com.tweener.changehere.domain.usecase.user.SignOutUserUseCase
 import com.tweener.changehere.domain.usecase.user.UpdateLastAskForAppReviewDateUseCase
@@ -32,7 +32,7 @@ val useCaseModule = module {
 
     // User
     factory { GetUserUseCase(userRepository = get()) }
-    factory { IsUserAuthenticatedInUseCase(userRepository = get()) }
+    factory { IsUserAuthenticatedUseCase(userRepository = get()) }
     factory { ShouldAskForAppReviewUseCase(userRepository = get(), getAppRatingAskPeriodMonthsUseCase = get()) }
     factory { UpdateLastAskForAppReviewDateUseCase(userRepository = get()) }
     factory { AuthenticateUserUseCase(userRepository = get()) }

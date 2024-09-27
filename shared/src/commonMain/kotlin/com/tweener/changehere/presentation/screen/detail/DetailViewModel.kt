@@ -1,7 +1,8 @@
 package com.tweener.changehere.presentation.screen.detail
 
+import androidx.lifecycle.viewModelScope
+import com.tweener.changehere._internal.viewmodel.ViewModel
 import com.tweener.changehere.presentation.screen.detail.mapper.DetailToastMessage
-import dev.icerock.moko.mvvm.viewmodel.ViewModel
 import io.github.aakira.napier.Napier
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
