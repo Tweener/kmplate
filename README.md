@@ -5,8 +5,8 @@
 [![Website](https://img.shields.io/badge/Author-vivienmahe.com-orange)](https://vivienmahe.com/)
 [![X/Twitter](https://img.shields.io/twitter/follow/VivienMahe)](https://twitter.com/VivienMahe)
 
-[![Kotlin](https://img.shields.io/badge/kotlin-2.0.0-blue.svg?logo=kotlin)](http://kotlinlang.org)
-![gradle-version](https://img.shields.io/badge/gradle-8.2.2-blue?logo=gradle)
+[![Kotlin](https://img.shields.io/badge/kotlin-2.0.20-blue.svg?logo=kotlin)](http://kotlinlang.org)
+![gradle-version](https://img.shields.io/badge/gradle-8.5.2-blue?logo=gradle)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ---
@@ -19,7 +19,7 @@ Current stack:
 - UI framework: [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/)
     - Android look & feel: [Material Design](https://m3.material.io/)
     - iOS look & feel: Cupertino
-- ViewModel portage for KMP: [Moko MVVM](https://github.com/icerockdev/moko-mvvm)
+- ViewModel: [Jetpack ViewModel](https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-viewmodel.html)
 - Navigation: [Voyager](https://github.com/adrielcafe/voyager)
 - Toast message portage for KMP: [Compose Sonner](https://github.com/dokar3/compose-sonner)
 - Dependency Injection: [Koin](https://insert-koin.io/)
