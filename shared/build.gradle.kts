@@ -65,40 +65,11 @@ kotlin {
 
             implementation(project.dependencies.platform(libs.tweener.bom))
             implementation(libs.tweener.common)
-            implementation(libs.tweener.realm)
             implementation(libs.tweener.firebase)
-
-            // Compose
-            implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(compose.material)
-            implementation(compose.materialIconsExtended)
-            implementation(compose.ui)
-            implementation(compose.components.resources)
-            implementation(compose.components.uiToolingPreview)
-            implementation(libs.compose.multiplatform.material3)
 
             // DI
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
-
-            // ViewModel
-            implementation(libs.jetbrains.lifecycle.viewmodel.compose)
-
-            // Moko
-            implementation(libs.moko.permissions)
-
-            // Napier
-            implementation(libs.napier)
-
-            // Coil (Image fetcher)
-            implementation(libs.bundles.coil)
-
-            // Voyager
-            implementation(libs.voyager.tab.navigator)
-
-            // Toast Compose
-            implementation(libs.toast.compose)
         }
 
         commonTest.dependencies {
@@ -108,10 +79,6 @@ kotlin {
         androidMain.dependencies {
             // DI
             implementation(libs.koin.android)
-
-            // Compose
-            implementation(compose.preview)
-            implementation(compose.uiTooling)
 
             // Preferences
             implementation(libs.android.preferences)
