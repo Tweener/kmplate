@@ -19,7 +19,7 @@ Current stack:
 - UI framework: [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/)
     - Android look & feel: [Material Design](https://m3.material.io/)
     - iOS look & feel: Cupertino
-- ViewModel portage for KMP: [Moko MVVM](https://github.com/icerockdev/moko-mvvm)
+- ViewModel: [Jetpack ViewModel](https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-viewmodel.html)
 - Navigation: [Voyager](https://github.com/adrielcafe/voyager)
 - Toast message portage for KMP: [Compose Sonner](https://github.com/dokar3/compose-sonner)
 - Dependency Injection: [Koin](https://insert-koin.io/)
