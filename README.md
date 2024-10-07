@@ -24,10 +24,10 @@ Current stack:
 - Build Config portage for KMP: [BuildKonfig](https://github.com/yshrsmz/BuildKonfig)
 - Threading: [Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)
 - Network: [Ktor](https://ktor.io/)
-- Local database: [Realm Kotlin](https://realm.io/realm-kotlin/)
+- Local database: [Realm Kotlin](https://realm.io/realm-kotlin/) - Powered by [kmp-bom](https://github.com/Tweener/kmp-bom)
 - Logging: [Napier](https://github.com/AAkira/Napier)
 - Images loading: [Coil](https://coil-kt.github.io/coil/)
-- Firebase portage for KMP: [GitLiveApp Firebase SDK](https://firebaseopensource.com/projects/gitliveapp/firebase-kotlin-sdk/)
+- Firebase portage for KMP: [GitLiveApp Firebase SDK](https://firebaseopensource.com/projects/gitliveapp/firebase-kotlin-sdk/) - Powered by [kmp-bom](https://github.com/Tweener/kmp-bom)
 
 # 💾 Installation
 
