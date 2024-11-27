@@ -18,12 +18,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.tweener.changehere.presentation.screen.home.model.HomeUiAction
 import com.tweener.czan.designsystem.atom.button.Button
 import com.tweener.czan.designsystem.atom.text.Text
 import com.tweener.czan.theme.Size
 import kmplate.shared.presentation.generated.resources.Res
 import kmplate.shared.presentation.generated.resources.compose_multiplatform
-import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 
 /**
@@ -31,11 +31,10 @@ import org.jetbrains.compose.resources.painterResource
  * @since 14/02/2024
  */
 
-@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun HomeTemplate(
     modifier: Modifier = Modifier,
-    onClick: (() -> Unit)? = null,
+    onAction: (HomeUiAction) -> Unit,
 ) {
     var showContent by remember { mutableStateOf(false) }
 
@@ -65,7 +64,21 @@ fun HomeTemplate(
 
             Button(
                 text = "Open new screen",
-                onClick = { onClick?.invoke() }
+                onClick = { onAction(HomeUiAction.OpenDetailScreenClick) }
+            )
+
+            Spacer(modifier = Modifier.padding(vertical = Size.Padding.Default))
+
+            Button(
+                text = "📅 Set one-off alarm",
+                onClick = { onAction(HomeUiAction.SetOneOffAlarm) }
+            )
+
+            Spacer(modifier = Modifier.padding(vertical = Size.Padding.Default))
+
+            Button(
+                text = "🔁 Set repeating alarm",
+                onClick = { onAction(HomeUiAction.SetOneOffAlarm) }
             )
         }
     }

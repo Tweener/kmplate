@@ -66,6 +66,7 @@ kotlin {
             implementation(project.dependencies.platform(libs.tweener.bom))
             implementation(libs.tweener.common)
             implementation(libs.tweener.firebase)
+            implementation(libs.tweener.alarmee)
 
             // DI
             implementation(libs.koin.core)

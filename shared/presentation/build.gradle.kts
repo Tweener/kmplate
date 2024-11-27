@@ -40,6 +40,7 @@ kotlin {
 
             // Tweener
             implementation(libs.tweener.czan)
+            implementation(libs.tweener.alarmee)
 
             implementation(project.dependencies.platform(libs.tweener.bom))
             implementation(libs.tweener.common)
