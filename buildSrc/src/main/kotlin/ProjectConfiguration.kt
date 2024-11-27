@@ -15,7 +15,7 @@ object ProjectConfiguration {
         object Android {
             const val applicationId = packageName
             const val namespace = "$packageName.android"
-            const val compileSDK = 34
+            const val compileSDK = 35
             const val targetSDK = compileSDK
             const val minSDK = 24
             const val versionCode = 1
@@ -23,7 +23,7 @@ object ProjectConfiguration {
     }
 
     object Compiler {
-        const val jvmTarget = "17"
-        val javaCompatibility = JavaVersion.VERSION_17
+        val javaCompatibility = JavaVersion.VERSION_21
+        val jvmTarget = javaCompatibility.toString()
     }
 }

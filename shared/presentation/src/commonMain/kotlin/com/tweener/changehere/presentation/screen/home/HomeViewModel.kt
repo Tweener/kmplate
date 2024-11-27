@@ -15,9 +15,6 @@ class HomeViewModel : ViewModel() {
 
     // region Observable properties
 
-    private val _toastMessage = MutableSharedFlow<String>()
-    val toastMessage: SharedFlow<String> = _toastMessage.asSharedFlow()
-
     private val _openDetailScreen = MutableSharedFlow<String>() // id
     val openDetailScreen: SharedFlow<String> = _openDetailScreen.asSharedFlow()
 

@@ -7,7 +7,6 @@ import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 import com.tweener.changehere.presentation._internal.navigation.MainScreenTab
 import com.tweener.changehere.presentation.screen.home.ui.screen.HomeScreen
-import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.stringResource
 
 /**
@@ -19,7 +18,6 @@ object HomeTab : Tab {
 
     private val mainScreenTab = MainScreenTab.HOME
 
-    @OptIn(ExperimentalResourceApi::class)
     override val options: TabOptions
         @Composable
         get() {

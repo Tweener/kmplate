@@ -59,9 +59,11 @@ kotlin {
             // DI
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
+            implementation(libs.koin.compose.viewmodel)
 
             // ViewModel
             implementation(libs.jetbrains.lifecycle.viewmodel.compose)
+            implementation(libs.jetbrains.lifecycle.runtime.compose)
 
             // Moko
             implementation(libs.moko.permissions)

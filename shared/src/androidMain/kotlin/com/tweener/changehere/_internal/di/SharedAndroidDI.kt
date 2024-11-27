@@ -5,10 +5,8 @@ import androidx.preference.PreferenceManager
 import com.russhwolf.settings.ObservableSettings
 import com.russhwolf.settings.SharedPreferencesSettings
 import com.russhwolf.settings.coroutines.toFlowSettings
-import com.tweener.common.os.notification.channel.NotificationChannelRegister
-import com.tweener.common.os.permission.PermissionChecker
-import java.util.Locale
 import org.koin.dsl.module
+import java.util.Locale
 
 /**
  * @author Vivien Mahe
@@ -21,12 +19,8 @@ fun sharedAndroidModule(context: Context) = module {
 
     single { context }
     single { Locale.getDefault() }
-    single { PermissionChecker(context = get()) }
 
     // Multiplatform Settings
     single<ObservableSettings> { SharedPreferencesSettings(PreferenceManager.getDefaultSharedPreferences(context)) }
     single { get<ObservableSettings>().toFlowSettings() }
-
-    // Notifications
-    single { NotificationChannelRegister(context = get()) }
 }

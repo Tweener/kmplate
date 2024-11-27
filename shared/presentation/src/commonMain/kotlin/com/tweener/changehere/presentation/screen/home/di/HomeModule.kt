@@ -1,7 +1,7 @@
 package com.tweener.changehere.presentation.screen.home.di
 
-import com.tweener.changehere.presentation._internal.kotlinextensions.viewModelDefinition
 import com.tweener.changehere.presentation.screen.home.HomeViewModel
+import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
 /**
@@ -11,7 +11,7 @@ import org.koin.dsl.module
 
 val homeModule = module {
 
-    viewModelDefinition {
+    viewModel {
         HomeViewModel()
     }
 }
