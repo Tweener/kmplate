@@ -77,9 +77,6 @@ kotlin {
 
             // Voyager
             implementation(libs.voyager.tab.navigator)
-
-            // Toast Compose
-            implementation(libs.toast.compose)
         }
 
         commonTest.dependencies {

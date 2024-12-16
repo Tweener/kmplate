@@ -19,7 +19,6 @@ Current stack:
 - UI framework: [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/) - Powered by [C·ZAN](https://github.com/Tweener/czan/) design system
 - ViewModel: [Jetpack ViewModel](https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-viewmodel.html)
 - Navigation: [Voyager](https://github.com/adrielcafe/voyager)
-- Toast message portage for KMP: [Compose Sonner](https://github.com/dokar3/compose-sonner)
 - Dependency Injection: [Koin](https://insert-koin.io/)
 - Build Config portage for KMP: [BuildKonfig](https://github.com/yshrsmz/BuildKonfig)
 - Threading: [Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)

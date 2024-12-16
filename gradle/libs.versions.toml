@@ -13,7 +13,6 @@ googleServicesPlugin = "4.4.2"
 crashlyticsPlugin = "3.0.2"
 performancePlugin = "1.4.2"
 buildKonfig = "0.15.1"
-toastCompose = "0.3.8"
 multiplatformSettings = "1.1.1"
 mokoPermissions = "0.18.0"
 jetbrainsViewModel = "2.8.4"
@@ -34,7 +33,6 @@ androidSplashscreen = "1.0.1"
 
 [libraries]
 napier = { group = "io.github.aakira", name = "napier", version.ref = "napier" }
-toast-compose = { group = "io.github.dokar3", name = "sonner", version.ref = "toastCompose" }
 realm = { group = "io.realm.kotlin", name = "library-base", version.ref = "realm" }
 compose-multiplatform-material3 = { group = "org.jetbrains.compose.material3", name = "material3", version.ref = "composeMultiplatform" }
 jetbrains-lifecycle-viewmodel-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "jetbrainsViewModel" }
