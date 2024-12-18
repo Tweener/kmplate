@@ -23,7 +23,7 @@ tweenerCzan = "2.7.0"
 tweenerBom = "2.2.1"
 tweenerAlarmee = "1.3.4"
 tweenerPassage = "1.1.0"
-tweenerKmpKit = "1.0.0"
+tweenerKmpKit = "0.1.1"
 
 # Android
 androidFirebase = "33.7.0"
