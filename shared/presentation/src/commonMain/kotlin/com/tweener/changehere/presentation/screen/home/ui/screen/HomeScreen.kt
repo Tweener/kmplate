@@ -49,7 +49,7 @@ fun HomeScreen() {
                 notificationTitle = "🔁 Congratulations! You've schedule a repeating Alarmee!",
                 notificationBody = "This is the notification that will be displayed every day at 09:36.",
                 scheduledDateTime = dateTime,
-                repeatInterval = RepeatInterval.DAILY,
+                repeatInterval = RepeatInterval.Daily,
                 androidNotificationConfiguration = AndroidNotificationConfiguration(
                     priority = AndroidNotificationPriority.MAXIMUM,
                     channelId = "breakingNewsChannelId",
