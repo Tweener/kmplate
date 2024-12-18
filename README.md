@@ -1,8 +1,3 @@
-<h1 align="center">Kmplate</h1>
-
-<h2 align="center">Template to easily create new pre-configured Kotlin Multiplatform projects</h2>
-
-[![Maven Central Version](https://img.shields.io/maven-central/v/io.github.tweener/czan?color=orange)](https://central.sonatype.com/artifact/io.github.tweener/czan)
 [![Kotlin](https://img.shields.io/badge/kotlin-2.0.21-blue.svg?logo=kotlin)](http://kotlinlang.org)
 [![Compose](https://img.shields.io/badge/compose-1.7.1-blue.svg?logo=jetpackcompose)](https://www.jetbrains.com/lp/compose-multiplatform)
 ![gradle-version](https://img.shields.io/badge/gradle-8.5.2-blue?logo=gradle)
@@ -13,11 +8,15 @@
 
 ---
 
-# ⭐️ Introduction
+# Kmplate
 
-Kmplate is a template to easily create a new Kotlin Multiplatform project based on Clean Architecture with modularization by layer.
+**Kmplate** is a template to easily create a new Kotlin Multiplatform project based on Clean Architecture with modularization by layer.
 
-Current stack:
+<br>
+
+Be sure to show your support by starring ⭐️ this repository!
+
+## 📦 Current stack
 - UI framework: [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/) - Powered by [C·ZAN](https://github.com/Tweener/czan/) design system
 - ViewModel: [Jetpack ViewModel](https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-viewmodel.html)
 - Navigation: [Voyager](https://github.com/adrielcafe/voyager)
@@ -30,8 +29,7 @@ Current stack:
 - Images loading: [Coil](https://coil-kt.github.io/coil/)
 - Firebase portage for KMP: [GitLiveApp Firebase SDK](https://firebaseopensource.com/projects/gitliveapp/firebase-kotlin-sdk/) - Powered by [kmp-firebase](https://github.com/Tweener/kmp-bom/tree/main/kmp-firebase)
 
-# 💾 Installation
-
+## 🛠️ Installation
 ### 1. Clone this template
 
 Create your repository by cloning this template, using the green button at the top-right corner of the homepage.
