@@ -16,11 +16,14 @@ buildKonfig = "0.15.1"
 multiplatformSettings = "1.1.1"
 mokoPermissions = "0.18.0"
 jetbrainsViewModel = "2.8.4"
+coroutines = "1.9.0"
 
 # Tweener
 tweenerCzan = "2.7.0"
 tweenerBom = "2.2.1"
 tweenerAlarmee = "1.3.4"
+tweenerPassage = "1.1.0"
+tweenerKmpKit = "1.0.0"
 
 # Android
 androidFirebase = "33.7.0"
@@ -39,15 +42,17 @@ jetbrains-lifecycle-viewmodel-compose = { group = "org.jetbrains.androidx.lifecy
 jetbrains-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "jetbrainsViewModel" }
 voyager-tab-navigator = { group = "cafe.adriel.voyager", name = "voyager-tab-navigator", version.ref = "voyager" }
 moko-permissions = { group = "dev.icerock.moko", name = "permissions-compose", version.ref = "mokoPermissions" }
+kotlin-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 
 # Tweener
 tweener-czan = { group = "io.github.tweener", name = "czan", version.ref = "tweenerCzan" }
 tweener-bom = { group = "io.github.tweener", name = "kmp-bom", version.ref = "tweenerBom" }
-tweener-common = { group = "io.github.tweener", name = "kmp-common" }
 tweener-realm = { group = "io.github.tweener", name = "kmp-realm" }
 tweener-firebase = { group = "io.github.tweener", name = "kmp-firebase" }
 tweener-charts = { group = "io.github.tweener", name = "kmp-charts" }
 tweener-alarmee = { group = "io.github.tweener", name = "alarmee", version.ref = "tweenerAlarmee" }
+tweener-passage = { group = "io.github.tweener", name = "passage", version.ref = "tweenerPassage" }
+tweener-kmpkit = { group = "io.github.tweener", name = "kmpkit", version.ref = "tweenerKmpKit" }
 
 # Multiplatform settings
 multiplaform-settings-core = { group = "com.russhwolf", name = "multiplatform-settings", version.ref = "multiplatformSettings" }

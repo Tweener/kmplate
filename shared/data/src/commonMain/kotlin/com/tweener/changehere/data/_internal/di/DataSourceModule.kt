@@ -3,8 +3,6 @@ package com.tweener.changehere.data._internal.di
 import com.tweener.changehere.data.source.firebase.firestore.datasource.FirestoreUsersDataSource
 import com.tweener.changehere.data.source.local.datasource.LocalAppConfigurationDataSource
 import com.tweener.changehere.data.source.local.datasource.LocalStorageDataSource
-import com.tweener.firebase.auth.FirebaseAuthService
-import com.tweener.firebase.auth.datasource.FirebaseAuthDataSource
 import com.tweener.firebase.firestore.FirestoreService
 import com.tweener.firebase.functions.FirebaseFunctionsService
 import com.tweener.firebase.remoteconfig.RemoteConfigService
@@ -39,10 +37,6 @@ fun dataSourceModule(isDebug: Boolean) = module {
     // Remote Config
     single { RemoteConfigService(isDebug = isDebug) }
     single { RemoteConfigDataSource(firebaseRemoteConfigService = get()) }
-
-    // Firebase Auth
-    single { FirebaseAuthService() }
-    single { FirebaseAuthDataSource(firebaseAuthService = get()) }
 
     // Firebase Functions
     single { FirebaseFunctionsService() }

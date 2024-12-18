@@ -11,19 +11,15 @@ import kotlinx.datetime.LocalDateTime
 interface UserRepository {
 
     sealed class InputParams {
-        data class Authenticate(val idToken: String) : InputParams()
         data object UpdateAuthenticatedUser : InputParams() // TODO Update this object to a class and add the user's properties to update
         data class SetLastAskForAppReviewDate(val date: LocalDateTime) : InputParams()
     }
 
     sealed class OutputParams {
-        data class Authenticate(val success: Boolean) : OutputParams()
         data class IsAuthenticated(val authenticated: Boolean) : OutputParams()
         data class GetAuthenticatedUser(val user: User) : OutputParams()
         data class GetLastAskForAppReviewDate(val date: LocalDateTime?) : OutputParams()
     }
-
-    suspend fun authenticate(inputParams: InputParams.Authenticate): OutputParams.Authenticate
 
     suspend fun isAuthenticated(): Flow<OutputParams.IsAuthenticated>
 

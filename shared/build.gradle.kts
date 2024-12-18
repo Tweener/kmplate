@@ -46,6 +46,8 @@ kotlin {
             export(project(":shared:data"))
             export(project(":shared:domain"))
             export(project(":shared:presentation"))
+
+            export(libs.tweener.passage)
         }
     }
 
@@ -57,14 +59,14 @@ kotlin {
             api(project(":shared:domain"))
             api(project(":shared:presentation"))
 
-            // Everything below this part is for the Presentation layer
-            // Since Compose Multiplatform 1.6.0 is not yet compatible with multi-modules projects, we can't use Presentation module yet
+            implementation(libs.kotlin.coroutines.core)
 
             // Tweener
             implementation(libs.tweener.czan)
+            implementation(libs.tweener.passage)
+            implementation(libs.tweener.kmpkit)
 
             implementation(project.dependencies.platform(libs.tweener.bom))
-            implementation(libs.tweener.common)
             implementation(libs.tweener.firebase)
             implementation(libs.tweener.alarmee)
 

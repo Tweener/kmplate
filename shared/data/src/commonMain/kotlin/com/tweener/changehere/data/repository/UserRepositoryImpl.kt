@@ -5,7 +5,7 @@ import com.tweener.changehere.data.source.local.datasource.LocalStorageDataSourc
 import com.tweener.changehere.domain.entity.User
 import com.tweener.changehere.domain.error.UserNotAuthenticatedException
 import com.tweener.changehere.domain.repository.UserRepository
-import com.tweener.firebase.auth.datasource.FirebaseAuthDataSource
+import com.tweener.passage.Passage
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.datetime.LocalDateTime
@@ -15,8 +15,8 @@ import kotlinx.datetime.LocalDateTime
  * @since 17/10/2023
  */
 class UserRepositoryImpl(
+    private val passage: Passage,
     private val localStorageDataSource: LocalStorageDataSource,
-    private val firebaseAuthDataSource: FirebaseAuthDataSource,
     private val firestoreUsersDataSource: FirestoreUsersDataSource,
 ) : UserRepository {
 
@@ -24,18 +24,13 @@ class UserRepositoryImpl(
         private const val LOCAL_STORAGE_KEY_LAST_ASK_APP_REVIEW_DATE = "lastAskForAppReviewDate"
     }
 
-    override suspend fun authenticate(inputParams: UserRepository.InputParams.Authenticate): UserRepository.OutputParams.Authenticate {
-        val user = firebaseAuthDataSource.authenticateWithGoogleIdToken(idToken = inputParams.idToken)
-        return UserRepository.OutputParams.Authenticate(success = user != null)
-    }
-
     override suspend fun isAuthenticated(): Flow<UserRepository.OutputParams.IsAuthenticated> =
-        firebaseAuthDataSource
+        passage
             .isUserLoggedIn()
             .map { UserRepository.OutputParams.IsAuthenticated(authenticated = it) }
 
     override suspend fun getAuthenticatedUser(): UserRepository.OutputParams.GetAuthenticatedUser {
-        val email = firebaseAuthDataSource.getCurrentUser()?.email ?: throw UserNotAuthenticatedException()
+        val email = passage.getCurrentUser()?.email ?: throw UserNotAuthenticatedException()
 
         val firestoreUser = try {
             firestoreUsersDataSource.getUser(email = email)
@@ -53,7 +48,7 @@ class UserRepositoryImpl(
     }
 
     override suspend fun updateAuthenticatedUser(inputParams: UserRepository.InputParams.UpdateAuthenticatedUser) {
-        val email = firebaseAuthDataSource.getCurrentUser()?.email ?: throw UserNotAuthenticatedException()
+        val email = passage.getCurrentUser()?.email ?: throw UserNotAuthenticatedException()
         firestoreUsersDataSource.updateUser(email = email)
     }
 
@@ -67,12 +62,12 @@ class UserRepositoryImpl(
     }
 
     override suspend fun delete() {
-        val email = firebaseAuthDataSource.getCurrentUser()?.email ?: throw UserNotAuthenticatedException()
+        val email = passage.getCurrentUser()?.email ?: throw UserNotAuthenticatedException()
         firestoreUsersDataSource.deleteUser(email = email)
         signOut()
     }
 
     override suspend fun signOut() {
-        firebaseAuthDataSource.signOut()
+        passage.signOut()
     }
 }

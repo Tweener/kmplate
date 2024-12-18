@@ -10,6 +10,8 @@ import com.tweener.alarmee.channel.AlarmeeNotificationChannel
 import com.tweener.alarmee.configuration.AlarmeeAndroidPlatformConfiguration
 import com.tweener.alarmee.configuration.AlarmeePlatformConfiguration
 import com.tweener.changehere.R
+import com.tweener.passage.Passage
+import com.tweener.passage.PassageAndroid
 import org.koin.dsl.module
 import java.util.Locale
 
@@ -28,6 +30,9 @@ fun sharedAndroidModule(context: Context) = module {
     // Multiplatform Settings
     single<ObservableSettings> { SharedPreferencesSettings(PreferenceManager.getDefaultSharedPreferences(context)) }
     single { get<ObservableSettings>().toFlowSettings() }
+
+    // Passage
+    single<Passage> { PassageAndroid(context = get()) }
 
     // Alarmee
     factory<AlarmeePlatformConfiguration> {

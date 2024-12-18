@@ -1,7 +1,7 @@
 package com.tweener.changehere.data._internal.di
 
-import com.tweener.common._internal.provider.LocaleProvider
-import com.tweener.common._internal.provider.createLocaleProvider
+import com.tweener.kmpkit.provider.LocaleProvider
+import com.tweener.kmpkit.provider.createLocaleProvider
 import org.koin.dsl.module
 
 /**

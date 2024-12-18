@@ -32,9 +32,13 @@ kotlin {
         commonMain.dependencies {
             implementation(project(":shared:domain"))
 
+            implementation(libs.kotlin.coroutines.core)
+
             // Tweener
+            implementation(libs.tweener.passage)
+            implementation(libs.tweener.kmpkit)
+
             implementation(project.dependencies.platform(libs.tweener.bom))
-            implementation(libs.tweener.common)
             implementation(libs.tweener.realm)
             implementation(libs.tweener.firebase)
 

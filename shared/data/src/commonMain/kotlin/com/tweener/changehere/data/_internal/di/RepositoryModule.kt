@@ -23,6 +23,6 @@ val repositoryModule = module {
     factory<SettingsRepository> { SettingsRepositoryImpl(localStorageDataSource = get()) }
     factory<AppConfigurationRepository> { AppConfigurationRepositoryImpl(localAppConfigurationDataSource = get(), remoteConfigDataSource = get()) }
     factory<FeatureFlagRepository> { FeatureFlagRepositoryImpl(remoteConfigFeatureFlagModelMapper = get(), remoteConfigDataSource = get()) }
-    factory<UserRepository> { UserRepositoryImpl(localStorageDataSource = get(), firebaseAuthDataSource = get(), firestoreUsersDataSource = get()) }
+    factory<UserRepository> { UserRepositoryImpl(passage = get(), localStorageDataSource = get(), firestoreUsersDataSource = get()) }
 
 }
