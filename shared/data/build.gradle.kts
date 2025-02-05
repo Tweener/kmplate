@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
+    alias(libs.plugins.room)
+    alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.serialization)
 }
 
@@ -51,6 +53,10 @@ kotlin {
 
             // Multiplatform Settings (equivalent to SharedPrefs but for all platforms)
             api(libs.bundles.multiplaform.settings)
+
+            // Room
+            api(libs.room.runtime)
+            api(libs.sqlite.bundled)
         }
 
         commonTest.dependencies {
@@ -67,4 +73,15 @@ kotlin {
             implementation(libs.ktor.client.ios)
         }
     }
+}
+
+room {
+    schemaDirectory("$projectDir/schemas")
+}
+
+dependencies {
+    add("kspAndroid", libs.room.compiler)
+    add("kspIosSimulatorArm64", libs.room.compiler)
+    add("kspIosX64", libs.room.compiler)
+    add("kspIosArm64", libs.room.compiler)
 }

@@ -5,6 +5,8 @@ import com.russhwolf.settings.ObservableSettings
 import com.russhwolf.settings.coroutines.toFlowSettings
 import com.tweener.alarmee.configuration.AlarmeeIosPlatformConfiguration
 import com.tweener.alarmee.configuration.AlarmeePlatformConfiguration
+import com.tweener.changehere.data._internal.libs.room.RoomDatabaseHelper
+import com.tweener.changehere.data._internal.libs.room.RoomIosDatabaseHelper
 import com.tweener.passage.Passage
 import com.tweener.passage.PassageIos
 import org.koin.dsl.module
@@ -28,4 +30,7 @@ val sharedIosModule = module {
 
     // Alarmee
     factory<AlarmeePlatformConfiguration> { AlarmeeIosPlatformConfiguration }
+
+    // Room
+    factory<RoomDatabaseHelper> { RoomIosDatabaseHelper() }
 }

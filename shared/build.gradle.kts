@@ -1,4 +1,6 @@
 import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.BOOLEAN
+import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING
+import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -33,6 +35,8 @@ kotlin {
 
     // region iOS configuration
 
+    val xcFramework = XCFramework()
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -41,6 +45,7 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "shared"
             isStatic = true
+            xcFramework.add(this)
 
             // Add here any extra framework dependencies
             export(project(":shared:data"))
@@ -94,6 +99,8 @@ buildkonfig {
     // Release
     defaultConfigs {
         buildConfigField(BOOLEAN, "DEBUG", "false")
+        buildConfigField(STRING, "VERSION_NAME", ProjectConfiguration.MyProject.versionName)
+        buildConfigField(STRING, "APPLICATION_ID", ProjectConfiguration.MyProject.Android.applicationId)
     }
 
     // Debug

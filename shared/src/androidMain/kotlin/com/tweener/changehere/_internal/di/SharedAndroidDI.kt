@@ -10,6 +10,8 @@ import com.tweener.alarmee.channel.AlarmeeNotificationChannel
 import com.tweener.alarmee.configuration.AlarmeeAndroidPlatformConfiguration
 import com.tweener.alarmee.configuration.AlarmeePlatformConfiguration
 import com.tweener.changehere.R
+import com.tweener.changehere.data._internal.libs.room.RoomAndroidDatabaseHelper
+import com.tweener.changehere.data._internal.libs.room.RoomDatabaseHelper
 import com.tweener.passage.Passage
 import com.tweener.passage.PassageAndroid
 import org.koin.dsl.module
@@ -52,4 +54,7 @@ fun sharedAndroidModule(context: Context) = module {
             )
         )
     }
+
+    // Room
+    factory<RoomDatabaseHelper> { RoomAndroidDatabaseHelper(context = get()) }
 }

@@ -1,7 +1,9 @@
 package com.tweener.changehere.data.repository
 
+import com.tweener.changehere.data._internal.libs.room.RoomDatabaseHelper
 import com.tweener.changehere.data.source.firebase.firestore.datasource.FirestoreUsersDataSource
 import com.tweener.changehere.data.source.local.datasource.LocalStorageDataSource
+import com.tweener.changehere.data.source.room.datasource.RoomExampleDataSource
 import com.tweener.changehere.domain.entity.User
 import com.tweener.changehere.domain.error.UserNotAuthenticatedException
 import com.tweener.changehere.domain.repository.UserRepository
@@ -16,6 +18,8 @@ import kotlinx.datetime.LocalDateTime
  */
 class UserRepositoryImpl(
     private val passage: Passage,
+    private val roomDatabaseHelper: RoomDatabaseHelper,
+    private val roomExampleDataSource: RoomExampleDataSource,
     private val localStorageDataSource: LocalStorageDataSource,
     private val firestoreUsersDataSource: FirestoreUsersDataSource,
 ) : UserRepository {

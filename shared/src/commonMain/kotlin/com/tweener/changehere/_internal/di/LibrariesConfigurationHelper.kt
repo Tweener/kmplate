@@ -1,6 +1,6 @@
-package com.tweener.changehere.presentation._internal.di
+package com.tweener.changehere._internal.di
 
-import com.tweener.changehere.presentation._internal.libs.LibrariesConfiguration
+import com.tweener.changehere._internal.libs.LibrariesConfiguration
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

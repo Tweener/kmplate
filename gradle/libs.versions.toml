@@ -1,9 +1,11 @@
 [versions]
-kotlin = "2.1.0"
+kotlin = "2.1.10"
 gradle = "8.7.3"
 composeMultiplatform = "1.7.3"
 ktor = "3.0.3"
 napier = "2.7.1"
+room = "2.7.0-alpha13"
+sqlite = "2.5.0-alpha13"
 koin = "4.0.0"
 coil = "3.1.0"
 voyager = "1.1.0-beta03"
@@ -16,6 +18,7 @@ multiplatformSettings = "1.3.0"
 mokoPermissions = "0.18.1"
 jetbrainsViewModel = "2.8.4"
 coroutines = "1.10.1"
+ksp = "2.1.10-1.0.29"
 
 # Tweener
 tweenerCzan = "2.9.1"
@@ -88,6 +91,11 @@ android-splashscreen = { group = "androidx.core", name = "core-splashscreen", ve
 android-preferences = { group = "androidx.preference", name = "preference-ktx", version.ref = "androidPreferences" }
 android-accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "androidAccompanist" }
 
+# Room
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+sqlite-bundled = { group = "androidx.sqlite", name ="sqlite-bundled", version.ref = "sqlite" }
+
 [bundles]
 ktor-common = ["ktor-client-core", "ktor-client-auth", "ktor-client-content-negotiation", "ktor-client-logging", "ktor-serialization-json"]
 multiplaform-settings = ["multiplaform-settings-core", "multiplaform-settings-coroutines"]
@@ -107,3 +115,5 @@ google-services = { id = "com.google.gms.google-services", version.ref = "google
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashlyticsPlugin" }
 firebase-performance = { id = "com.google.firebase.firebase-perf", version.ref = "performancePlugin" }
 buildkonfig = { id = "com.codingfeline.buildkonfig", version.ref = "buildKonfig" }
+room = { id = "androidx.room", version.ref = "room" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

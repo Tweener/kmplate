@@ -2,16 +2,20 @@ import SwiftUI
 import shared
 
 @main
-class iOSApp: App {
+struct iOSApp: App {
     
-    required init() {
+    @UIApplicationDelegateAdaptor(AppDelegate.self)
+    var appDelegate: AppDelegate
+    
+    init() {
         KoinIosDIKt.doInitKoin()
-        LibrariesConfigurationHelper().doInitConfigurations()
     }
-
-	var body: some Scene {
-		WindowGroup {
-			ContentView()
-		}
-	}
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView().onOpenURL(perform: { url in
+                appDelegate.handleIncomingURL(url)
+            })
+        }
+    }
 }
