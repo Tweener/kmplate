@@ -1,53 +1,49 @@
 [versions]
-kotlin = "2.0.21"
-gradle = "8.5.2"
-composeMultiplatform = "1.7.1"
-ktor = "3.0.1"
+kotlin = "2.1.0"
+gradle = "8.7.3"
+composeMultiplatform = "1.7.3"
+ktor = "3.0.3"
 napier = "2.7.1"
-realm = "2.3.0"
 koin = "4.0.0"
-coil = "3.0.4"
+coil = "3.1.0"
 voyager = "1.1.0-beta03"
 dependencyVersionsPlugin = "0.51.0"
 googleServicesPlugin = "4.4.2"
 crashlyticsPlugin = "3.0.2"
 performancePlugin = "1.4.2"
-buildKonfig = "0.15.1"
-multiplatformSettings = "1.1.1"
-mokoPermissions = "0.18.0"
+buildKonfig = "0.15.2"
+multiplatformSettings = "1.3.0"
+mokoPermissions = "0.18.1"
 jetbrainsViewModel = "2.8.4"
-coroutines = "1.9.0"
+coroutines = "1.10.1"
 
 # Tweener
-tweenerCzan = "2.7.1"
+tweenerCzan = "2.9.1"
 tweenerBom = "2.3.0"
-tweenerAlarmee = "1.4.1"
+tweenerAlarmee = "1.5.1"
 tweenerPassage = "1.1.1"
-tweenerKmpKit = "0.1.1"
+tweenerKmpKit = "1.0.2"
 
 # Android
-androidFirebase = "33.7.0"
-androidActivityCompose = "1.9.3"
-androidDesugarJdkLibs = "2.1.3"
+androidFirebase = "33.8.0"
+androidActivityCompose = "1.10.0"
+androidDesugarJdkLibs = "2.1.4"
 androidAccompanist = "0.34.0"
 androidPreferences = "1.2.1"
-androidActivity = "1.9.3"
+androidActivity = "1.10.0"
 androidSplashscreen = "1.0.1"
 
 [libraries]
 napier = { group = "io.github.aakira", name = "napier", version.ref = "napier" }
-realm = { group = "io.realm.kotlin", name = "library-base", version.ref = "realm" }
 compose-multiplatform-material3 = { group = "org.jetbrains.compose.material3", name = "material3", version.ref = "composeMultiplatform" }
 jetbrains-lifecycle-viewmodel-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "jetbrainsViewModel" }
 jetbrains-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "jetbrainsViewModel" }
-voyager-tab-navigator = { group = "cafe.adriel.voyager", name = "voyager-tab-navigator", version.ref = "voyager" }
 moko-permissions = { group = "dev.icerock.moko", name = "permissions-compose", version.ref = "mokoPermissions" }
 kotlin-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 
 # Tweener
 tweener-czan = { group = "io.github.tweener", name = "czan", version.ref = "tweenerCzan" }
 tweener-bom = { group = "io.github.tweener", name = "kmp-bom", version.ref = "tweenerBom" }
-tweener-realm = { group = "io.github.tweener", name = "kmp-realm" }
 tweener-firebase = { group = "io.github.tweener", name = "kmp-firebase" }
 tweener-charts = { group = "io.github.tweener", name = "kmp-charts" }
 tweener-alarmee = { group = "io.github.tweener", name = "alarmee", version.ref = "tweenerAlarmee" }
@@ -67,6 +63,10 @@ koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin"
 koin-compose = { group = "io.insert-koin", name = "koin-compose", version.ref = "koin" }
 koin-compose-viewmodel = { group = "io.insert-koin", name = "koin-compose-viewmodel", version.ref = "koin" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+
+# Voyager
+voyager-koin = { group = "cafe.adriel.voyager", name = "voyager-koin", version.ref = "voyager" }
+voyager-tab-navigator = { group = "cafe.adriel.voyager", name = "voyager-tab-navigator", version.ref = "voyager" }
 
 # Ktor
 ktor-serialization-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
@@ -92,6 +92,7 @@ android-accompanist-permissions = { group = "com.google.accompanist", name = "ac
 ktor-common = ["ktor-client-core", "ktor-client-auth", "ktor-client-content-negotiation", "ktor-client-logging", "ktor-serialization-json"]
 multiplaform-settings = ["multiplaform-settings-core", "multiplaform-settings-coroutines"]
 coil = ["coil-compose", "coil-network-ktor"]
+voyager = ["voyager-koin", "voyager-tab-navigator"]
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "gradle" }
@@ -105,5 +106,4 @@ dependency-versions = { id = "com.github.ben-manes.versions", version.ref = "dep
 google-services = { id = "com.google.gms.google-services", version.ref = "googleServicesPlugin" }
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashlyticsPlugin" }
 firebase-performance = { id = "com.google.firebase.firebase-perf", version.ref = "performancePlugin" }
-realm = { id = "io.realm.kotlin", version.ref = "realm" }
 buildkonfig = { id = "com.codingfeline.buildkonfig", version.ref = "buildKonfig" }

@@ -2,6 +2,8 @@ package com.tweener.changehere.data.source.firebase.firestore.datasource
 
 import com.tweener.changehere.data.source.firebase.firestore.model.FirestoreUserModel
 import com.tweener.firebase.firestore.FirestoreService
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 
 /**
  * @author Vivien Mahe
@@ -16,8 +18,11 @@ class FirestoreUsersDataSource(
         // TODO Add here all user's properties
     }
 
-    suspend fun getUser(email: String): FirestoreUserModel =
-        firestoreService.get<FirestoreUserModel>(collection = USERS_COLLECTION_NAME, id = email)
+    suspend fun getUser(id: String): FirestoreUserModel =
+        firestoreService.get<FirestoreUserModel>(collection = USERS_COLLECTION_NAME, id = id)
+
+    fun getUserAsFlow(id: String): Flow<FirestoreUserModel> =
+        firestoreService.getAsFlow<FirestoreUserModel>(collection = USERS_COLLECTION_NAME, id = id).map { it.copy(id = id) }
 
     suspend fun createUser(email: String) {
         firestoreService.create<FirestoreUserModel>(

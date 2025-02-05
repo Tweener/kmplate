@@ -7,7 +7,6 @@ import com.tweener.firebase.firestore.FirestoreService
 import com.tweener.firebase.functions.FirebaseFunctionsService
 import com.tweener.firebase.remoteconfig.RemoteConfigService
 import com.tweener.firebase.remoteconfig.datasource.RemoteConfigDataSource
-import com.tweener.realm.RealmDatabase
 import org.koin.dsl.module
 
 /**
@@ -16,15 +15,6 @@ import org.koin.dsl.module
  */
 
 fun dataSourceModule(isDebug: Boolean) = module {
-
-    // Realm
-    single {
-        RealmDatabase(
-            schema = setOf(
-                // TODO Add here all RealmObjects models, ie: RealmUserModel::class,
-            )
-        )
-    }
 
     // Local
     factory { LocalStorageDataSource(settings = get()) }

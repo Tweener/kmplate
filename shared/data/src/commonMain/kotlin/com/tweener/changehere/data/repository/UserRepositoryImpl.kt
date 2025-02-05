@@ -33,11 +33,11 @@ class UserRepositoryImpl(
         val email = passage.getCurrentUser()?.email ?: throw UserNotAuthenticatedException()
 
         val firestoreUser = try {
-            firestoreUsersDataSource.getUser(email = email)
+            firestoreUsersDataSource.getUser(id = email)
         } catch (throwable: Throwable) {
             // User is not yet created in Firestore, let's create it
             firestoreUsersDataSource.createUser(email = email)
-            firestoreUsersDataSource.getUser(email = email)
+            firestoreUsersDataSource.getUser(id = email)
         }
 
         val user = User(

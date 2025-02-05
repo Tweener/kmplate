@@ -47,7 +47,6 @@ kotlin {
             implementation(libs.tweener.kmpkit)
 
             implementation(project.dependencies.platform(libs.tweener.bom))
-            implementation(libs.tweener.realm)
             implementation(libs.tweener.firebase)
 
             // Compose
@@ -79,7 +78,7 @@ kotlin {
             implementation(libs.bundles.coil)
 
             // Voyager
-            implementation(libs.voyager.tab.navigator)
+            implementation(libs.bundles.voyager)
         }
 
         commonTest.dependencies {

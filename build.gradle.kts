@@ -15,7 +15,6 @@ plugins {
     alias(libs.plugins.google.services).apply(false)
     alias(libs.plugins.firebase.crashlytics).apply(false)
     alias(libs.plugins.firebase.performance).apply(false)
-    alias(libs.plugins.realm).apply(false)
 }
 
 tasks.register("clean", Delete::class) {

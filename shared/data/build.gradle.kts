@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
-    alias(libs.plugins.realm)
     alias(libs.plugins.kotlin.serialization)
 }
 
@@ -39,7 +38,6 @@ kotlin {
             implementation(libs.tweener.kmpkit)
 
             implementation(project.dependencies.platform(libs.tweener.bom))
-            implementation(libs.tweener.realm)
             implementation(libs.tweener.firebase)
 
             // DI
@@ -53,9 +51,6 @@ kotlin {
 
             // Multiplatform Settings (equivalent to SharedPrefs but for all platforms)
             api(libs.bundles.multiplaform.settings)
-
-            // Realm
-            api(libs.realm)
         }
 
         commonTest.dependencies {
